@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histourical Adventure</title>
+    <title>Historical Adventure</title>
     <style>
         /* Ensure map fills the entire screen */
         #map {
@@ -18,18 +18,68 @@
     <script>
         // Initialize and display the map
         function initMap() {
+            //===========================================================================
             // Imus Center Coordinates 14.398770436677225, 120.93959478094531
-            var myLatLng = { lat: 14.398770436677225, lng: 120.93959478094531 };
+            var ImusCityMapCenter = { lat: 14.398770436677225, lng: 120.93959478094531 };
+            //ALL PLACE COORDINATES DECLARATION
+            var RobinsonsImus = { lat: 14.413274228994815, lng: 120.94085330376765 };
+            //BOUNDARIES OF IMUS to be Plotted Later
+            var point1 = { lat: 14.441806561694847, lng: 120.91055137669207 };
+            var point2 = { lat: 14.446494013713302, lng: 120.93080708953642 };
+            //===========================================================================
 
             // Create a new map centered at the specified coordinates
             var map = new google.maps.Map(document.getElementById("map"), {
-                center: myLatLng,
-                zoom: 14 // Specify the initial zoom level
+                center: ImusCityMapCenter,
+                zoom: 14, // Specify the initial zoom level
+                minZoom: 14, // Set minimum zoom level
+                maxZoom: 15, // Set maximum zoom level
+                mapTypeControl: false, // Remove map type control buttons
+                styles: [
+                    {
+                        featureType: "poi",
+                        stylers: [
+                            { visibility: "off" } // Hide points of interest
+                        ]
+                    }
+                ]
             });
+
+            // Add a marker at the specified coordinates
+            var marker = new google.maps.Marker({
+                position: RobinsonsImus,
+                map: map,
+                title: 'Robinsons Imus' // Optional title for the marker
+            });
+
+            // Create an info window to display place name
+            var infoWindow = new google.maps.InfoWindow({
+                content: 'Robinsons Imus'
+            });
+
+            // Add click event listener to the marker
+            marker.addListener('click', function() {
+                infoWindow.open(map, marker);
+            });
+
+            // POLYLINES BOUNDARIES OF IMUS
+            var polyline = new google.maps.Polyline({
+                path: [point1, point2],
+                geodesic: true,
+                strokeColor: "#000000",
+                strokeOpacity: 1.0,
+                strokeWeight: 2
+            });
+
+            // Set the polyline to the map
+            polyline.setMap(map);
         }
     </script>
     <!-- GOOGLE CONSOLE API'S AND SERVICES-->
     <!-- Load the Google Maps JavaScript API using your API key -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo-JsadJUL3sFBFYqC7sVJekHuCUhQwj8&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo-JsadJUL3sFBFYqC7sVJekHuCUhQwj8&callback=initMap" 
+    async defer>
+    </script>
+
 </body>
 </html>
