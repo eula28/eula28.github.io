@@ -3,41 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML File</title>
+    <title>Google Maps Example</title>
     <style>
-        /* CSS styles can be included here */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
+        /* Ensure map fills the entire screen */
+        #map {
+            height: 100vh;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My HTML Page</h1>
-        <p>This is a sample HTML file generated using HTML tags and CSS styles.</p>
-        <p>You can modify and add more content to this file as needed.</p>
+    <div id="map"></div>
 
-        <!-- New section added for testing -->
-        <section>
-            <h2>New Section for Testing</h2>
-            <p>This is a new section added to the HTML file for testing purposes. You can add any content or elements here to test.</p>
-        </section>
-    </div>
+    <script>
+        // Initialize and display the map
+        function initMap() {
+            // Specify the coordinates where the map will be centered
+            var myLatLng = { lat: -34.397, lng: 150.644 };
+
+            // Create a new map centered at the specified coordinates
+            var map = new google.maps.Map(document.getElementById("map"), {
+                center: myLatLng,
+                zoom: 8 // Specify the initial zoom level
+            });
+        }
+    </script>
+
+    <!-- Load the Google Maps JavaScript API using your API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo-JsadJUL3sFBFYqC7sVJekHuCUhQwj8&callback=initMap" async defer></script>
 </body>
 </html>
