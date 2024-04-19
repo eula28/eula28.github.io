@@ -45,21 +45,48 @@
                 ]
             });
 
-            // Add a marker at the specified coordinates
-            var marker = new google.maps.Marker({
+            // Add a marker at the specified coordinates with custom marker icon and info window
+            var markerRobinsons = new google.maps.Marker({
                 position: RobinsonsImus,
                 map: map,
-                title: 'Robinsons Imus' // Optional title for the marker
+                title: 'Robinsons Imus', // Optional title for the marker
+                icon: {
+                    url: 'https://github.com/eula28/eula28.github.io/blob/main/pngwing.com.png?raw=true', // URL of the marker icon
+                    scaledSize: new google.maps.Size(50, 50), // Size of the marker icon
+                }
             });
 
-            // Create an info window to display place name
-            var infoWindow = new google.maps.InfoWindow({
+            var markerImusCenter = new google.maps.Marker({
+                position: ImusCityMapCenter,
+                map: map,
+                title: 'Map Center', // Optional title for the marker
+                icon: {
+                    url: 'https://github.com/eula28/eula28.github.io/blob/main/pngwing.com.png?raw=true', // URL of the marker icon
+                    scaledSize: new google.maps.Size(50, 50), // Size of the marker icon
+                }
+            });
+
+            // Create info windows for each marker
+            var infoWindowRobinsons = new google.maps.InfoWindow({
                 content: 'Robinsons Imus'
             });
 
-            // Add click event listener to the marker
-            marker.addListener('click', function() {
-                infoWindow.open(map, marker);
+            var infoWindowImusCenter = new google.maps.InfoWindow({
+                content: 'Map Center'
+            });
+
+            // Add click event listeners to the markers to open the info windows
+            markerRobinsons.addListener('click', function() {
+                infoWindowRobinsons.open(map, markerRobinsons);
+            });
+
+            markerImusCenter.addListener('click', function() {
+                infoWindowImusCenter.open(map, markerImusCenter);
+            });
+
+            // Only the Markers can User Interacts
+            google.maps.event.addListener(map, 'click', function(event) {
+                event.stop(); // Stop default behavior
             });
 
             // POLYLINES BOUNDARIES OF IMUS
