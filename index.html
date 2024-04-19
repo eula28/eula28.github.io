@@ -18,17 +18,17 @@
     <script>
         // Initialize and display the map
         function initMap() {
-            // Specify the coordinates where the map will be centered
-            var myLatLng = { lat: -34.397, lng: 150.644 };
+            // Imus Center Coordinates 14.398770436677225, 120.93959478094531
+            var myLatLng = { lat: 14.398770436677225, lng: 120.93959478094531 };
 
             // Create a new map centered at the specified coordinates
             var map = new google.maps.Map(document.getElementById("map"), {
                 center: myLatLng,
-                zoom: 8 // Specify the initial zoom level
+                zoom: 14 // Specify the initial zoom level
             });
         }
     </script>
-
+    <!-- GOOGLE CONSOLE API'S AND SERVICES-->
     <!-- Load the Google Maps JavaScript API using your API key -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo-JsadJUL3sFBFYqC7sVJekHuCUhQwj8&callback=initMap" async defer></script>
 </body>
