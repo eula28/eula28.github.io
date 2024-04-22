@@ -26,106 +26,121 @@
     <div id="map"></div>
     <!-- Button to switch to another HTML page -->
     <button id="switchButton">Go ></button>
+    
 
-    <script>    
+    <script>//MAP SCRIPT   
         // Function to switch to another HTML page
         function switchPage() {
             window.location.href = "test1.html";
         }
 
-        // Initialize and display the map
-        function initMap() {
-            //===========================================================================
-            // Imus Center Coordinates 14.398770436677225, 120.93959478094531
-            var ImusCityMapCenter = { lat: 14.398770436677225, lng: 120.93959478094531 };
-            //ALL PLACE COORDINATES DECLARATION
-            var RobinsonsImus = { lat: 14.413274228994815, lng: 120.94085330376765 };
-            //BOUNDARIES OF IMUS
-            var mainBoundaryImus = [
+// Initialize and display the map
+    function initMap() {
+        //===========================================================================
+        // Imus Center Coordinates 14.398770436677225, 120.93959478094531
+        var ImusCityMapCenter = { lat: 14.398770436677225, lng: 120.93959478094531 };
+        //ALL PLACE COORDINATES DECLARATION
+        var RobinsonsImus = { lat: 14.413274228994815, lng: 120.94085330376765 };
+        //BOUNDARIES OF IMUS
+        var mainBoundaryImus = [
             { lat: 14.409021435150649, lng: 120.89292564135285 },
             { lat: 14.410603029441729, lng: 120.89731116766127 },
             { lat: 14.409120508667009, lng: 120.89887047072506 }
-            ];
-            // POLYLINES BOUNDARIES OF IMUSs
-            var polyline = new google.maps.Polyline({
+        ];
+        // POLYLINES BOUNDARIES OF IMUS
+        var polyline = new google.maps.Polyline({
             path: mainBoundaryImus,
             geodesic: true,
             strokeColor: "#000000",
             strokeOpacity: 1.0,
             strokeWeight: 10
-            });
+        });
 
-            //===========================================================================
+        //===========================================================================
 
-            // Create a new map centered at the specified coordinates
-            var map = new google.maps.Map(document.getElementById("map"), {
-                center: ImusCityMapCenter,
-                zoom: 14, // Specify the initial zoom level
-                minZoom: 14, // Set minimum zoom level
-                maxZoom: 15, // Set maximum zoom level
-                mapTypeControl: false, // Remove map type control buttons
-                zoomControl: false, // Remove zoom in/out buttons
-                styles: [
-                    {
-                        featureType: "poi",
-                        stylers: [
-                            { visibility: "off" } // Hide points of interest
-                        ]
-                    }
-                ]
-            });
-
-
-            // Add a marker at the specified coordinates with custom marker icon and info window
-            var markerRobinsons = new google.maps.Marker({
-                position: RobinsonsImus,
-                map: map,
-                title: 'Robinsons Imus', // Optional title for the marker
-                icon: {
-                    url: 'https://github.com/eula28/eula28.github.io/blob/main/pngwing.com.png?raw=true', // URL of the marker icon
-                    scaledSize: new google.maps.Size(50, 50), // Size of the marker icon
+        // Create a new map centered at the specified coordinates
+        var map = new google.maps.Map(document.getElementById("map"), {
+            center: ImusCityMapCenter,
+            zoom: 14, // Specify the initial zoom level
+            minZoom: 14, // Set minimum zoom level
+            maxZoom: 15, // Set maximum zoom level
+            mapTypeControl: false, // Remove map type control buttons
+            zoomControl: false, // Remove zoom in/out buttons
+            styles: [
+                {
+                    featureType: "water",
+                    elementType: "geometry",
+                    stylers: [
+                        { color: "#aadaf9" } // Blue water color
+                    ]
+                },
+                {
+                    featureType: "landscape",
+                    elementType: "geometry",
+                    stylers: [
+                        { color: "#c2e5b6" } // Green landscape color
+                    ]
+                },
+                {
+                    featureType: "poi",
+                    stylers: [
+                        { visibility: "off" } // Hide points of interest
+                    ]
                 }
-            });
+            ]
+        });
 
-            var markerImusCenter = new google.maps.Marker({
-                position: ImusCityMapCenter,
-                map: map,
-                title: 'Map Center', // Optional title for the marker
-                icon: {
-                    url: 'https://github.com/eula28/eula28.github.io/blob/main/pngwing.com.png?raw=true', // URL of the marker icon
-                    scaledSize: new google.maps.Size(50, 50), // Size of the marker icon
-                }
-            });
+        // Add a marker at the specified coordinates with custom marker icon and info window
+        var markerRobinsons = new google.maps.Marker({
+            position: RobinsonsImus,
+            map: map,
+            title: 'Robinsons Imus', // Optional title for the marker
+            icon: {
+                url: 'https://github.com/eula28/eula28.github.io/blob/main/pngwing.com.png?raw=true', // URL of the marker icon
+                scaledSize: new google.maps.Size(50, 50), // Size of the marker icon
+            }   
+        });
 
-            // Create info windows for each marker
-            var infoWindowRobinsons = new google.maps.InfoWindow({
-                content: 'Robinsons Imus'
-            });
+        var markerImusCenter = new google.maps.Marker({
+            position: ImusCityMapCenter,
+            map: map,
+            title: 'Map Center', // Optional title for the marker
+            icon: {
+                url: 'https://github.com/eula28/eula28.github.io/blob/main/pngwing.com.png?raw=true', // URL of the marker icon
+                scaledSize: new google.maps.Size(50, 50), // Size of the marker icon
+            }
+        });
 
-            var infoWindowImusCenter = new google.maps.InfoWindow({
-                content: 'Map Center'
-            });
+        // Create info windows for each marker
+        var infoWindowRobinsons = new google.maps.InfoWindow({
+            content: 'Robinsons Imus'
+        });
 
-            // Add click event listeners to the markers to open the info windows
-            markerRobinsons.addListener('click', function() {
-                infoWindowRobinsons.open(map, markerRobinsons);
-            });
+        var infoWindowImusCenter = new google.maps.InfoWindow({
+            content: 'Map Center'
+        });
 
-            markerImusCenter.addListener('click', function() {
-                infoWindowImusCenter.open(map, markerImusCenter);
-            });
+        // Add click event listeners to the markers to open the info windows
+        markerRobinsons.addListener('click', function() {
+            infoWindowRobinsons.open(map, markerRobinsons);
+        });
 
-            // Only the Markers can User Interacts
-            google.maps.event.addListener(map, 'click', function(event) {
-                event.stop(); // Stop default behavior
-            });
+        markerImusCenter.addListener('click', function() {
+            infoWindowImusCenter.open(map, markerImusCenter);
+        });
 
-            // Set the polyline to the map
-            polyline.setMap(map);
+        // Only the Markers can User Interacts
+        google.maps.event.addListener(map, 'click', function(event) {
+            event.stop(); // Stop default behavior
+        });
 
-            // Add event listener to the button to switch pages
-            document.getElementById("switchButton").addEventListener("click", switchPage);
-        }
+        // Set the polyline to the map
+        polyline.setMap(map);
+
+        // Add event listener to the button to switch pages
+        document.getElementById("switchButton").addEventListener("click", switchPage);
+    }
+
     </script>
     <!-- GOOGLE CONSOLE API'S AND SERVICES-->
     <!-- Load the Google Maps JavaScript API using your API key -->
