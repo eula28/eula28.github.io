@@ -64,6 +64,7 @@
                 minZoom: 14, // Set minimum zoom level
                 maxZoom: 15, // Set maximum zoom level
                 mapTypeControl: false, // Remove map type control buttons
+                zoomControl: false, // Remove zoom in/out buttons
                 styles: [
                     {
                         featureType: "poi",
@@ -73,6 +74,7 @@
                     }
                 ]
             });
+
 
             // Add a marker at the specified coordinates with custom marker icon and info window
             var markerRobinsons = new google.maps.Marker({
