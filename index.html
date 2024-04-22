@@ -10,12 +10,29 @@
             height: 100vh;
             width: 100%;
         }
+        #switchButton {
+            position: absolute;
+            top: 20px;
+            right: 70px;
+            z-index: 9999;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div id="map"></div>
+    <!-- Button to switch to another HTML page -->
+    <button id="switchButton">Go ></button>
 
-    <script>
+    <script>    
+        // Function to switch to another HTML page
+        function switchPage() {
+            window.location.href = "test1.html";
+        }
+
         // Initialize and display the map
         function initMap() {
             //===========================================================================
@@ -23,9 +40,21 @@
             var ImusCityMapCenter = { lat: 14.398770436677225, lng: 120.93959478094531 };
             //ALL PLACE COORDINATES DECLARATION
             var RobinsonsImus = { lat: 14.413274228994815, lng: 120.94085330376765 };
-            //BOUNDARIES OF IMUS to be Plotted Later
-            var point1 = { lat: 14.441806561694847, lng: 120.91055137669207 };
-            var point2 = { lat: 14.446494013713302, lng: 120.93080708953642 };
+            //BOUNDARIES OF IMUS
+            var mainBoundaryImus = [
+            { lat: 14.409021435150649, lng: 120.89292564135285 },
+            { lat: 14.410603029441729, lng: 120.89731116766127 },
+            { lat: 14.409120508667009, lng: 120.89887047072506 }
+            ];
+            // POLYLINES BOUNDARIES OF IMUSs
+            var polyline = new google.maps.Polyline({
+            path: mainBoundaryImus,
+            geodesic: true,
+            strokeColor: "#000000",
+            strokeOpacity: 1.0,
+            strokeWeight: 10
+            });
+
             //===========================================================================
 
             // Create a new map centered at the specified coordinates
@@ -89,17 +118,11 @@
                 event.stop(); // Stop default behavior
             });
 
-            // POLYLINES BOUNDARIES OF IMUS
-            var polyline = new google.maps.Polyline({
-                path: [point1, point2],
-                geodesic: true,
-                strokeColor: "#000000",
-                strokeOpacity: 1.0,
-                strokeWeight: 2
-            });
-
             // Set the polyline to the map
             polyline.setMap(map);
+
+            // Add event listener to the button to switch pages
+            document.getElementById("switchButton").addEventListener("click", switchPage);
         }
     </script>
     <!-- GOOGLE CONSOLE API'S AND SERVICES-->
