@@ -32,18 +32,18 @@
         // Function to switch to another HTML page
         function switchPage() {
             window.location.href = "test1.html";
-        }
+            }
 
-// Initialize and display the map
-    function initMap() {
-
-        var NORTH_BOUND = 14.447888422647624;
+        // Initialize and display the map
+        function initMap() {
         var SOUTH_BOUND = 14.352585025793426;
         var WEST_BOUND = 120.8966690606892;
+        var NORTH_BOUND = 14.447888422647624;
         var EAST_BOUND = 120.97914326686244;
+        
         //===========================================================================
         // Imus Center
-        var ImusCityMapCenter = { lat: 14.398770436677225, lng: 120.93959478094531 };
+        var ImusCityMapCenter = { lat: 14.395677384943586, lng: 120.9367301272163 };
         //ALL PLACE COORDINATES DECLARATION
         var RobinsonsImus = { lat: 14.413274228994815, lng: 120.94085330376765 };
         //BOUNDARIES OF IMUS
@@ -184,8 +184,133 @@
             {lat: 14.406837077846175, lng: 120.89565584497012},
             {lat: 14.408962549373726, lng: 120.89293823668535},
             { lat: 14.409021435150649, lng: 120.89292564135285},
-        ];
-        // POLYLINES BOUNDARIES OF IMUS
+        ];         
+        // POLYGON BOUNDARIES OF IMUS
+        var northbound = [
+                { lat:14.40788179660906 , lng:120.8874906763245 },
+                { lat:14.411291108632021 , lng:120.89774794315663  },
+                { lat:14.409939021514068 , lng: 120.8989617586605 },
+                {lat: 14.414170345488156, lng: 120.9168678837563},
+                {lat: 14.419069206397344, lng: 120.91464734901916},
+                {lat: 14.421646072066064, lng: 120.9145615795069},
+                {lat: 14.433283493768787, lng: 120.91430437380232},
+                {lat: 14.439102294120513, lng: 120.91018440293335},
+                {lat: 14.442094824039662, lng: 120.90992691046118},
+                {lat: 14.446914944042234, lng: 120.91919645888565},
+                {lat: 14.447330536294396, lng: 120.9307837977003},
+                {lat: 14.445003184105383, lng: 120.93189955861355},
+                {lat: 14.443257732816496, lng: 120.93189961516178},
+                {lat: 14.443839591873255, lng: 120.9332728723422},
+                {lat: 14.438520180792004, lng: 120.93662028605954},
+                {lat: 14.436192896972523, lng: 120.93670613829016},
+                {lat: 14.432701964954854, lng: 120.94013919951989},
+                {lat: 14.434114813392375, lng: 120.94743443452782},
+                {lat: 14.483811363186971, lng: 121.06125557465646},
+                {lat: 14.65579122792277, lng: 121.01167620873656},
+                {lat: 14.51590003506309, lng: 120.61229624465518},
+                {lat: 14.347662948819812, lng: 120.70776833442557},
+            ];
+        var rightbound = [
+        {lat: 14.43507558850459, lng: 120.9449739321983},
+        {lat: 14.432999836800263, lng: 120.95079255789808},
+        {lat: 14.422718733812289, lng: 120.94854742860132},
+        {lat: 14.4184680798454, lng: 120.95150770201339},
+        {lat: 14.416787660810494, lng: 120.95579468436158},
+        {lat: 14.413723161411575, lng: 120.9565092160568},
+        {lat: 14.410658670352248, lng: 120.95987745866748},
+        {lat: 14.408582696451626, lng: 120.96089811779188},
+        {lat: 14.406210148287169, lng: 120.95987746204749},
+        {lat: 14.405221581687922, lng: 120.96069397839847},
+        {lat: 14.405023854318177, lng: 120.9625311366751},
+        {lat: 14.40462838242169, lng: 120.96498067689816},
+        {lat: 14.403442060710006, lng: 120.96630748784746},
+        {lat: 14.398597897260053, lng: 120.96936925889723},
+        {lat: 14.396224692729117, lng: 120.9697772310467},
+        {lat: 14.392368819433864, lng: 120.97324812454286},
+        {lat: 14.389402676641698, lng: 120.97375866542848},
+        {lat: 14.383371536461949, lng: 120.97457554826981},
+        {lat: 14.381394122354287, lng: 120.97498392039122},
+        {lat: 14.380800989622138, lng: 120.9776377680166},
+        {lat: 14.378526950778205, lng: 120.97784197584106},
+        {lat: 14.372396979960008, lng: 120.9814144661228},
+        {lat: 14.363992669576046, lng: 120.97784236368693},
+        {lat: 14.363695900043226, lng: 120.97427019700939},
+        {lat: 14.358950008870217, lng: 120.97661778296595},
+        {lat: 14.284269505465977, lng: 121.02249503052612},
+        {lat: 14.389330975725853, lng: 121.26148205417569},
+        {lat: 14.52629135632532, lng: 121.19051349036863}
+        ]
+        var southbound = [
+        {lat: 14.358487449397147, lng: 120.97584544411494},
+        {lat: 14.35806896987173, lng: 120.96169878566009},
+        {lat: 14.359747195621429, lng: 120.94582037963063},
+        {lat: 14.359536936301835, lng: 120.93513838449655},
+        {lat: 14.35813897942282, lng: 120.9356438559224},
+        {lat: 14.35660072752093, lng: 120.93521074532542},
+        {lat: 14.353734082257542, lng: 120.92532278781661},
+        {lat: 14.353454254497757, lng: 120.91904363687185},
+        {lat: 14.330481732969599, lng: 120.84454150860213},
+        {lat: 14.273318135430582, lng: 120.87414060271313},
+        {lat: 14.293265871629295, lng: 121.05297302208157},
+        {lat: 14.358487449397147, lng: 120.97584544411494} 
+        ]
+        var leftbound = [
+        {lat: 14.352572631744074, lng: 120.92039848336533},
+        {lat: 14.354303088160359, lng: 120.91958198056292},
+        {lat: 14.355835753077132, lng: 120.91942890928159},
+        {lat: 14.357022341424928, lng: 120.91876548831563},
+        {lat: 14.358752752450597, lng: 120.91886758964742},
+        {lat: 14.359197733327086, lng: 120.91794897484326},
+        {lat: 14.359098873279603, lng: 120.91652000585268},
+        {lat: 14.359939367871602, lng: 120.91519311275678},
+        {lat: 14.361472013892687, lng: 120.91509105015552},
+        {lat: 14.367849802938519, lng: 120.9138662043927},
+        {lat: 14.369382456729507, lng: 120.91407035036279},
+        {lat: 14.369530778015118, lng: 120.91366205474607},
+        {lat: 14.37091510964466, lng: 120.91218196894727},
+        {lat: 14.371706160278931, lng: 120.91192677292683},
+        {lat: 14.372447777874106, lng: 120.91269233091542},
+        {lat: 14.373238835199484, lng: 120.91304959070048},
+        {lat: 14.376551408080232, lng: 120.91330476592154},
+        {lat: 14.377687837935657, lng: 120.9122330442119},
+        {lat: 14.380654043001934, lng: 120.91080410820365},
+        {lat: 14.382483202205337, lng: 120.90932409352897},
+        {lat: 14.383817986566884, lng: 120.90911995897089},
+        {lat: 14.384213480570988, lng: 120.90855856246044},
+        {lat: 14.387038165256673, lng: 120.90486773338388},
+        {lat: 14.387742571555306, lng: 120.90504636074277},
+        {lat: 14.388125691960356, lng: 120.90565878890621},
+        {lat: 14.388879576515837, lng: 120.90563327344807},
+        {lat: 14.389472798894714, lng: 120.90514843286948},
+        {lat: 14.390028945621792, lng: 120.90526326470864},
+        {lat: 14.390399710526784, lng: 120.905671556003},
+        {lat: 14.392315217526878, lng: 120.9059012007591},
+        {lat: 14.393254455602829, lng: 120.90568430211898},
+        {lat: 14.394379069483914, lng: 120.90457427609391},
+        {lat: 14.394996983798091, lng: 120.90309422925935},
+        {lat: 14.395899145970006, lng: 120.90220107956104},
+        {lat: 14.397048432466201, lng: 120.90189493817819},
+        {lat: 14.397728127785534, lng: 120.90236701151888},
+        {lat: 14.398024721427559, lng: 120.90222666435974},
+        {lat: 14.398000002705812, lng: 120.90142285932747},
+        {lat: 14.398667337705374, lng: 120.90116767860243},
+        {lat: 14.39981663969265, lng: 120.90104008109525},
+        {lat: 14.400990659652262, lng: 120.90063178230957},
+        {lat: 14.40158384698275, lng: 120.89987898929793},
+        {lat: 14.401843322748679, lng: 120.89882005429006},
+        {lat: 14.402226423690637, lng: 120.89787590707695},
+        {lat: 14.402856675083596, lng: 120.89726348814702},
+        {lat: 14.404599127190044, lng: 120.89697004063765},
+        {lat: 14.405328240189316, lng: 120.89617898749415},
+        {lat: 14.406699917980244, lng: 120.89540070636195},
+        {lat: 14.40939388471219, lng: 120.89195579073616},
+        {lat: 14.484290163598029, lng: 120.81564206118506},
+        {lat: 14.404808267392577, lng: 120.67761874770213},
+        {lat: 14.231497238709965, lng: 120.75833743405826},
+        {lat: 14.280278323927591, lng: 120.98532067550643},
+        {lat: 14.352572631744074, lng: 120.92039848336533} 
+        ]
+            // POLYLINES BOUNDARIES OF IMUS
             var polyline = new google.maps.Polyline({
                 path: mainBoundaryImus,
                 geodesic: true,
@@ -201,10 +326,21 @@
                     repeat: '15px' // Adjust the spacing between the dots
                 }]
             });
+
+             // Create the polygon
+            var polygon = new google.maps.Polygon({
+                paths: [northbound, rightbound , southbound , leftbound],
+                strokeColor: "#000000", // Solid black stroke color
+                strokeOpacity: 1,       // Full opacity for stroke
+                strokeWeight: 2,
+                fillColor: "#000000",   // Solid black fill color
+                fillOpacity: 1          // Full opacity for fill
+            });
+
         
 
 
-        //===========================================================================
+        //============================================================================================================================
 
         // Create a new map centered at the specified coordinates
         var map = new google.maps.Map(document.getElementById("map"), {
@@ -263,7 +399,11 @@
                 map.setCenter(new google.maps.LatLng(y, x));
             });
 
-        // Add a marker at the specified coordinates with custom marker icon and info window
+
+
+// FOR MARKERS FUNCTIONALITY IN THE MAP
+//======================================================================================================================================
+// Add a marker at the specified coordinates with custom marker icon and info window
         var markerRobinsons = new google.maps.Marker({
             position: RobinsonsImus,
             map: map,
@@ -274,32 +414,14 @@
             }   
         }); 
 
-        var markerImusCenter = new google.maps.Marker({
-            position: ImusCityMapCenter,
-            map: map,
-            title: 'Map Center', // Optional title for the marker
-            icon: {
-                url: 'https://github.com/eula28/eula28.github.io/blob/main/pngwing.com.png?raw=true', // URL of the marker icon
-                scaledSize: new google.maps.Size(50, 50), // Size of the marker icon
-            }
-        });
-
-        // Create info windows for each marker
+        // INFO WINDOWS
         var infoWindowRobinsons = new google.maps.InfoWindow({
             content: 'Robinsons Imus'
         });
 
-        var infoWindowImusCenter = new google.maps.InfoWindow({
-            content: 'Map Center'
-        });
-
-        // Add click event listeners to the markers to open the info windows
+        // EVENT LISTENER FOR WINDOWS
         markerRobinsons.addListener('click', function() {
             infoWindowRobinsons.open(map, markerRobinsons);
-        });
-
-        markerImusCenter.addListener('click', function() {
-            infoWindowImusCenter.open(map, markerImusCenter);
         });
 
         // Only the Markers can User Interacts
@@ -307,8 +429,11 @@
             event.stop(); // Stop default behavior
         });
 
+//======================================================================================================================================
+
         // Set the polyline to the map
         polyline.setMap(map);
+        polygon.setMap(map);
 
         // Add event listener to the button to switch pages
         document.getElementById("switchButton").addEventListener("click", switchPage);
