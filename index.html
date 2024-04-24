@@ -43,10 +43,10 @@
         
         //===========================================================================
         // Imus Center
-        var ImusCityMapCenter = { lat: 14.395677384943586, lng: 120.9367301272163 };
+        var ImusCityMapCenter = { lat: 14.395677384943586, lng: 120.9367301272163};
         //ALL PLACE COORDINATES DECLARATION
-        var RobinsonsImus = { lat: 14.413274228994815, lng: 120.94085330376765 };
-        //BOUNDARIES OF IMUS
+        var old_municipal_building_imus = { lat: 14.428749765395215, lng: 120.93605731719475};
+        // POLYLINES BOUNDARIES OF IMUS
         var mainBoundaryImus = [
             { lat: 14.409021435150649, lng: 120.89292564135285 },
             { lat: 14.410603029441729, lng: 120.89731116766127 },
@@ -404,25 +404,26 @@
 // FOR MARKERS FUNCTIONALITY IN THE MAP
 //======================================================================================================================================
 // Add a marker at the specified coordinates with custom marker icon and info window
-        var markerRobinsons = new google.maps.Marker({
-            position: RobinsonsImus,
+
+//OLD MUNICIPAL BUILDING
+        var marker_old_municipal_building_imus = new google.maps.Marker({
+            position: old_municipal_building_imus,
             map: map,
-            title: 'Robinsons Imus', // Optional title for the marker
+            title: 'Old Municipal Building', // Optional title for the marker
             icon: {
                 url: 'https://github.com/eula28/eula28.github.io/blob/main/Marker%201.png?raw=true', // URL of the marker icon
-                scaledSize: new google.maps.Size(50, 50), // Size of the marker icon
+                scaledSize: new google.maps.Size(40, 50), // Size of the marker icon
             }   
         }); 
-
         // INFO WINDOWS
-        var infoWindowRobinsons = new google.maps.InfoWindow({
-            content: 'Robinsons Imus'
+        var infoWindow_oldMunicipalBuilding = new google.maps.InfoWindow({
+            content: 'Old Municipal Building'
         });
-
         // EVENT LISTENER FOR WINDOWS
-        markerRobinsons.addListener('click', function() {
-            infoWindowRobinsons.open(map, markerRobinsons);
+        marker_old_municipal_building_imus.addListener('click', function() {
+            infoWindow_oldMunicipalBuilding.open(map, marker_old_municipal_building_imus);
         });
+//======================================================================================================================================
 
         // Only the Markers can User Interacts
         google.maps.event.addListener(map, 'click', function(event) {
