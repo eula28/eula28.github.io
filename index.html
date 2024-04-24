@@ -44,11 +44,13 @@
         //===========================================================================
         // Imus Center
         var ImusCityMapCenter = { lat: 14.395677384943586, lng: 120.9367301272163};
-        //ALL PLACE COORDINATES DECLARATION
-        var old_municipal_building_imus = { lat: 14.428626427899525, lng: 120.93605931129582};
-        var imus_cathedral = {lat: 14.429568525477132 , lng: 120.93611550032706};
-        var gen_topacio_monument = {lat:14.42889465944171 , lng:120.93630771898016 };
-
+        
+        
+        //ALL HISTOURICAL LANDMARKS LOCATIONS
+        var old_municipal_building_imus = { lat: 14.428526237363837, lng: 120.93591280278889};
+        var imus_cathedral = {lat: 14.429569469324324 , lng: 120.93610305205902};
+        var gen_topacio_monument = {lat:14.428913280961114 , lng:120.9363325685149 };
+        var bahay_ng_mga_tirona = {lat:14.427989399701048 , lng:120.93644793963766};
 
         
         
@@ -368,9 +370,9 @@
         // Create a new map centered at the specified coordinates
         var map = new google.maps.Map(document.getElementById("map"), {
             center: ImusCityMapCenter,
-            zoom: 14.5, // Specify the initial zoom level
-            minZoom: 14, // Set minimum zoom level
-            maxZoom: 16.5, // Set maximum zoom level
+            zoom: 15.5, // Specify the initial zoom level
+            minZoom: 15, // Set minimum zoom level
+            maxZoom: 18, // Set maximum zoom level
             mapTypeControl: false, // Remove map type control buttons
             zoomControl: false, // Remove zoom in/out buttons
             styles: [
@@ -435,7 +437,7 @@
             title: 'Old Municipal Building', // Optional title for the marker
             icon: {
                 url: 'https://github.com/eula28/eula28.github.io/blob/main/images/old_municipal_building.png?raw=true', // URL of the marker icon
-                scaledSize: new google.maps.Size(50, 60), // Size of the marker icon
+                scaledSize: new google.maps.Size(90, 100), // Size of the marker icon
             }   
         }); 
         // INFO WINDOWS
@@ -455,7 +457,7 @@
                     title: 'Imus Cathedral (Diocesan Shrine and Parish of Our Lady of the Pillar)', // Optional title for the marker
                     icon: {
                         url: 'https://github.com/eula28/eula28.github.io/blob/main/images/imus_cathedral.png?raw=true', // URL of the marker icon
-                        scaledSize: new google.maps.Size(50, 60), // Size of the marker icon
+                        scaledSize: new google.maps.Size(90, 100), // Size of the marker icon
                     }   
                 }); 
                 // INFO WINDOWS
@@ -474,8 +476,8 @@
                     map: map,
                     title: 'General Licerio Topacio Monument)', // Optional title for the marker
                     icon: {
-                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/imus_cathedral.png?raw=true', // URL of the marker icon
-                        scaledSize: new google.maps.Size(50, 60), // Size of the marker icon
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/gen_topacio_monument.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 100), // Size of the marker icon
                     }   
                 }); 
                 // INFO WINDOWS
@@ -486,10 +488,26 @@
         marker_gen_topacio_monument.addListener('click', function() {
             infoWindow_gen_topacio_monument.open(map, marker_gen_topacio_monument);
         });
+//======================================================================================================================================
 
-
-
-
+//ANG BAHAY NG MGA TIRONA
+        var marker_bahay_ng_mga_tirona = new google.maps.Marker({
+                    position: bahay_ng_mga_tirona,  
+                    map: map,
+                    title: 'Ang Bahay Ng Mga Tirona)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/gen_topacio_monument.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 100), // Size of the marker icon
+                    }   
+                }); 
+                // INFO WINDOWS
+        var infoWindow_bahay_ng_mga_tirona = new google.maps.InfoWindow({
+            content: 'Ang Bahay Ng Mga Tirona)'
+        });
+                // EVENT LISTENER FOR WINDOWS
+        marker_bahay_ng_mga_tirona.addListener('click', function() {
+            infoWindow_bahay_ng_mga_tirona.open(map, marker_bahay_ng_mga_tirona);
+        });
 
 
 
