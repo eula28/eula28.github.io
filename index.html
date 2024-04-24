@@ -370,9 +370,9 @@
         // Create a new map centered at the specified coordinates
         var map = new google.maps.Map(document.getElementById("map"), {
             center: ImusCityMapCenter,
-            zoom: 15.5, // Specify the initial zoom level
+            zoom: 15, // Specify the initial zoom level
             minZoom: 15, // Set minimum zoom level
-            maxZoom: 18, // Set maximum zoom level
+            maxZoom: 19, // Set maximum zoom level
             mapTypeControl: false, // Remove map type control buttons
             zoomControl: false, // Remove zoom in/out buttons
             styles: [
@@ -446,11 +446,20 @@
             content: '<div style="text-align: center;">Old Municipal Building</div>'
         });
 
-
         // Event Listener for Old Municipal Building Marker
         marker_old_municipal_building_imus.addListener('click', function() {
             infoWindow_oldMunicipalBuilding.open(map, marker_old_municipal_building_imus);
+            map.setZoom(19);
             map.panTo(marker_old_municipal_building_imus.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_old_municipal_building_imus.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_old_municipal_building_imus.setAnimation(null);
+        }, 2100);
+
         });
 
 //======================================================================================================================================
@@ -472,7 +481,17 @@
                 // EVENT LISTENER FOR WINDOWS
         marker_imus_cathedral.addListener('click', function() {
             infoWindow_imuscathedral.open(map, marker_imus_cathedral);
+            map.setZoom(19);
             map.panTo(marker_imus_cathedral.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_imus_cathedral.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_imus_cathedral.setAnimation(null);
+        }, 2100);
+
         });
 //======================================================================================================================================
 
@@ -493,7 +512,17 @@
                 // EVENT LISTENER FOR WINDOWS
         marker_gen_topacio_monument.addListener('click', function() {
             infoWindow_gen_topacio_monument.open(map, marker_gen_topacio_monument);
+            map.setZoom(19);
             map.panTo(marker_gen_topacio_monument.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_gen_topacio_monument.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_gen_topacio_monument.setAnimation(null);
+        }, 2100);
+
         });
 //======================================================================================================================================
 
@@ -514,7 +543,17 @@
                 // EVENT LISTENER FOR WINDOWS
         marker_bahay_ng_mga_tirona.addListener('click', function() {
             infoWindow_bahay_ng_mga_tirona.open(map, marker_bahay_ng_mga_tirona);
+            map.setZoom(19);
             map.panTo(marker_bahay_ng_mga_tirona.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_bahay_ng_mga_tirona.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_bahay_ng_mga_tirona.setAnimation(null);
+        }, 2100);
+
         });
 //======================================================================================================================================
 
@@ -535,7 +574,16 @@
                 // EVENT LISTENER FOR WINDOWS
         marker_pillar_lodge_no3.addListener('click', function() {
             infoWindow_pillar_lodge_no3.open(map, marker_pillar_lodge_no3);
+            map.setZoom(19);
             map.panTo(marker_pillar_lodge_no3.getPosition(), 2000);
+            
+        // Add bouncing animation
+        marker_pillar_lodge_no3.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_pillar_lodge_no3.setAnimation(null);
+        }, 2100);
         });
 
 
