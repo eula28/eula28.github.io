@@ -439,15 +439,19 @@
                 url: 'https://github.com/eula28/eula28.github.io/blob/main/images/old_municipal_building.png?raw=true', // URL of the marker icon
                 scaledSize: new google.maps.Size(90, 100), // Size of the marker icon
             }   
-        }); 
-        // INFO WINDOWS
+        });
+
+        // Info Window for Old Municipal Building
         var infoWindow_oldMunicipalBuilding = new google.maps.InfoWindow({
             content: 'Old Municipal Building'
         });
-        // EVENT LISTENER FOR WINDOWS
+
+        // Event Listener for Old Municipal Building Marker
         marker_old_municipal_building_imus.addListener('click', function() {
             infoWindow_oldMunicipalBuilding.open(map, marker_old_municipal_building_imus);
+            map.panTo(marker_old_municipal_building_imus.getPosition(), 2000);
         });
+
 //======================================================================================================================================
 
 //IMUS CATHEDRAL
@@ -467,6 +471,7 @@
                 // EVENT LISTENER FOR WINDOWS
         marker_imus_cathedral.addListener('click', function() {
             infoWindow_imuscathedral.open(map, marker_imus_cathedral);
+            map.panTo(marker_imus_cathedral.getPosition(), 2000);
         });
 //======================================================================================================================================
 
@@ -487,6 +492,7 @@
                 // EVENT LISTENER FOR WINDOWS
         marker_gen_topacio_monument.addListener('click', function() {
             infoWindow_gen_topacio_monument.open(map, marker_gen_topacio_monument);
+            map.panTo(marker_gen_topacio_monument.getPosition(), 2000);
         });
 //======================================================================================================================================
 
@@ -507,6 +513,7 @@
                 // EVENT LISTENER FOR WINDOWS
         marker_bahay_ng_mga_tirona.addListener('click', function() {
             infoWindow_bahay_ng_mga_tirona.open(map, marker_bahay_ng_mga_tirona);
+            map.panTo(marker_bahay_ng_mga_tirona.getPosition(), 2000);
         });
 //======================================================================================================================================
 
@@ -527,6 +534,7 @@
                 // EVENT LISTENER FOR WINDOWS
         marker_pillar_lodge_no3.addListener('click', function() {
             infoWindow_pillar_lodge_no3.open(map, marker_pillar_lodge_no3);
+            map.panTo(marker_pillar_lodge_no3.getPosition(), 2000);
         });
 
 
