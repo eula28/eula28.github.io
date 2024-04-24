@@ -51,7 +51,7 @@
         var imus_cathedral = {lat: 14.429569469324324 , lng: 120.93610305205902};
         var gen_topacio_monument = {lat:14.428913280961114 , lng:120.9363325685149 };
         var bahay_ng_mga_tirona = {lat:14.427989399701048 , lng:120.93644793963766};
-
+        var pillar_lodge_no3 = {lat: 14.430293339707998 , lng:120.9361460681215 };
         
         
         // POLYLINES BOUNDARIES OF IMUS
@@ -482,7 +482,7 @@
                 }); 
                 // INFO WINDOWS
         var infoWindow_gen_topacio_monument = new google.maps.InfoWindow({
-            content: 'General Licerio Topacio Monument)'
+            content: 'General Licerio Topacio Monument'
         });
                 // EVENT LISTENER FOR WINDOWS
         marker_gen_topacio_monument.addListener('click', function() {
@@ -496,21 +496,38 @@
                     map: map,
                     title: 'Ang Bahay Ng Mga Tirona)', // Optional title for the marker
                     icon: {
-                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/gen_topacio_monument.png?raw=true', // URL of the marker icon
-                        scaledSize: new google.maps.Size(90, 100), // Size of the marker icon
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/bahay_ng_mga_tirona.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(70, 60), // Size of the marker icon
                     }   
                 }); 
                 // INFO WINDOWS
         var infoWindow_bahay_ng_mga_tirona = new google.maps.InfoWindow({
-            content: 'Ang Bahay Ng Mga Tirona)'
+            content: 'Ang Bahay Ng Mga Tirona'
         });
                 // EVENT LISTENER FOR WINDOWS
         marker_bahay_ng_mga_tirona.addListener('click', function() {
             infoWindow_bahay_ng_mga_tirona.open(map, marker_bahay_ng_mga_tirona);
         });
+//======================================================================================================================================
 
-
-
+//PILLAR LODGE NO.3 F&AM
+        var marker_pillar_lodge_no3 = new google.maps.Marker({
+                    position:pillar_lodge_no3,  
+                    map: map,
+                    title: 'Pilar Lodge No.3 F&AM)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/bahay_ng_mga_tirona.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 100), // Size of the marker icon
+                    }   
+                }); 
+                // INFO WINDOWS
+        var infoWindow_pillar_lodge_no3 = new google.maps.InfoWindow({
+            content: 'Pilar Lodge No.3 F&AM'
+        });
+                // EVENT LISTENER FOR WINDOWS
+        marker_pillar_lodge_no3.addListener('click', function() {
+            infoWindow_pillar_lodge_no3.open(map, marker_pillar_lodge_no3);
+        });
 
 
 
