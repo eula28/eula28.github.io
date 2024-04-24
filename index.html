@@ -443,8 +443,9 @@
 
         // Info Window for Old Municipal Building
         var infoWindow_oldMunicipalBuilding = new google.maps.InfoWindow({
-            content: 'Old Municipal Building'
+            content: '<div style="text-align: center;">Old Municipal Building</div>'
         });
+
 
         // Event Listener for Old Municipal Building Marker
         marker_old_municipal_building_imus.addListener('click', function() {
@@ -466,7 +467,7 @@
                 }); 
                 // INFO WINDOWS
         var infoWindow_imuscathedral = new google.maps.InfoWindow({
-            content: 'Imus Cathedral (Diocesan Shrine and Parish of Our Lady of the Pillar)'
+            content: '<div style="text-align: center;">Imus Cathedral (Diocesan Shrine and Parish of Our Lady of the Pillar)</div>'
         });
                 // EVENT LISTENER FOR WINDOWS
         marker_imus_cathedral.addListener('click', function() {
@@ -487,7 +488,7 @@
                 }); 
                 // INFO WINDOWS
         var infoWindow_gen_topacio_monument = new google.maps.InfoWindow({
-            content: 'General Licerio Topacio Monument'
+            content: '<div style="text-align: center;">General Licerio Topacio Monument</div>'
         });
                 // EVENT LISTENER FOR WINDOWS
         marker_gen_topacio_monument.addListener('click', function() {
@@ -504,11 +505,11 @@
                     icon: {
                         url: 'https://github.com/eula28/eula28.github.io/blob/main/images/bahay_ng_mga_tirona.png?raw=true', // URL of the marker icon
                         scaledSize: new google.maps.Size(70, 60), // Size of the marker icon
-                    }   
-                }); 
+                    }
+                });
                 // INFO WINDOWS
         var infoWindow_bahay_ng_mga_tirona = new google.maps.InfoWindow({
-            content: 'Ang Bahay Ng Mga Tirona'
+            content: '<div style="text-align: center;">Ang Bahay Ng Mga Tirona</div>'
         });
                 // EVENT LISTENER FOR WINDOWS
         marker_bahay_ng_mga_tirona.addListener('click', function() {
@@ -529,7 +530,7 @@
                 }); 
                 // INFO WINDOWS
         var infoWindow_pillar_lodge_no3 = new google.maps.InfoWindow({
-            content: 'Pilar Lodge No.3 F&AM'
+            content: '<div style="text-align: center;">Pilar Lodge No.3 F&AM</div>'
         });
                 // EVENT LISTENER FOR WINDOWS
         marker_pillar_lodge_no3.addListener('click', function() {
