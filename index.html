@@ -46,6 +46,12 @@
         var ImusCityMapCenter = { lat: 14.395677384943586, lng: 120.9367301272163};
         //ALL PLACE COORDINATES DECLARATION
         var old_municipal_building_imus = { lat: 14.428749765395215, lng: 120.93605731719475};
+        var imus_cathedral = {lat: 14.42954639555879 , lng:120.93610710271794};
+        
+
+
+        
+        
         // POLYLINES BOUNDARIES OF IMUS
         var mainBoundaryImus = [
             { lat: 14.409021435150649, lng: 120.89292564135285 },
@@ -412,7 +418,7 @@
             title: 'Old Municipal Building', // Optional title for the marker
             icon: {
                 url: 'https://github.com/eula28/eula28.github.io/blob/main/images/old_municipal_building.png?raw=true', // URL of the marker icon
-                scaledSize: new google.maps.Size(40, 50), // Size of the marker icon
+                scaledSize: new google.maps.Size(50, 60), // Size of the marker icon
             }   
         }); 
         // INFO WINDOWS
@@ -425,11 +431,47 @@
         });
 //======================================================================================================================================
 
+//IMUS CATHEDRAL
+        var marker_imus_cathedral = new google.maps.Marker({
+                    position: imus_cathedral,  
+                    map: map,
+                    title: 'Imus Cathedral (Diocesan Shrine and Parish of Our Lady of the Pillar)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/old_municipal_building.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(50, 60), // Size of the marker icon
+                    }   
+                }); 
+                // INFO WINDOWS
+        var infoWindow_imuscathedral = new google.maps.InfoWindow({
+            content: 'Imus Cathedral (Diocesan Shrine and Parish of Our Lady of the Pillar)'
+        });
+                // EVENT LISTENER FOR WINDOWS
+        marker_imus_cathedral.addListener('click', function() {
+            infoWindow_imuscathedral.open(map, marker_imus_cathedral);
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//======================================================================================================================================
         // Only the Markers can User Interacts
         google.maps.event.addListener(map, 'click', function(event) {
             event.stop(); // Stop default behavior
         });
-
 //======================================================================================================================================
 
         // Set the polyline to the map
