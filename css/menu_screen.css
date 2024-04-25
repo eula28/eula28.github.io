@@ -1,0 +1,70 @@
+/*FOR OLD MUNICIPAL BUILDING LANDMARK*/
+.side-menu_1 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_1 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_1 a:hover {
+    color: #c62828;
+}
+
+.side-menu_1 .close-btn_1 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR IMUS CATHEDRAL LANDMARK*/
+.side-menu_2 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_2 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_2 a:hover {
+    color: #c62828;
+}
+
+.side-menu_2 .close-btn_2 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+

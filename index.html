@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historical Adventure</title>
+    <link rel="stylesheet" type="text/css" href="css/menu_screen.css">
     <style>
 
         /* MAP */
@@ -14,19 +15,9 @@
 
         /* BUTTONS */
 
-        #switchButton {
-            position: absolute;
-            top: 20px;
-            left: 10px;
-            z-index: 9999;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
         #menubutton {
             position: absolute;
-            top: 70px;
+            top: 10px;
             left: 10px;
             z-index: 9999;
             background-color: #fff;
@@ -73,20 +64,33 @@
 </head>
 <body>
 
-    <div id="centercontent" style="display: flex; justify-content: center; align-items: center;">
         <div id="map"></div>
+
+
         <div id="sideMenu" class="side-menu">
             <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
             <a href="#">CONTENT HERE</a>
-            <a href="#">CONTENT HERE</a>
-            <a href="#">CONTENT HERE </a>
         </div>
-    </div>
+
+        <!--OLD MUNICIPAL BUILDING DETAILS WINDOW -->
+        <div id="sideMenu_1" class="side-menu_1">
+            <a href="javascript:void(0)" class="close-btn_1" onclick="toggleMenu_1_old_municipal_building()">&times;</a>
+            <a href="#">CONTENT HERE</a>
+            <a href="#">CONTENT HERE</a>
+        </div>
+
+        <!--IMUS CATHEDRAL DETAILS WINDOW-->
+        <div id="sideMenu_2" class="side-menu_2">
+            <a href="javascript:void(0)" class="close-btn_2" onclick="toggleMenu_2_imus_cathedral()">&times;</a>
+            <a href="#">CONTENT HERE</a>
+            <a href="#">CONTENT HERE</a>
+            <a href="#">CONTENT HERE</a>
+        </div>
     
 
 
     <!-- Button to switch to another HTML page -->
-    <button id="switchButton">Go ></button>
+    <!--<button id="switchButton">Go ></button>-->
     <button id="menubutton" onclick="toggleMenu()">Open Menu</button>
     
     <script>//MAP SCRIPT   
@@ -103,6 +107,31 @@
             sideMenu.style.height = '400px';
             }
         }
+
+        //FOR OLD MUNICIPAL BUILDING
+        function toggleMenu_1_old_municipal_building() {
+        var sideMenu = document.getElementById('sideMenu_1');
+        if (sideMenu_1.style.height === '400px') {
+            sideMenu_1.style.height = '0';
+        } else {
+            sideMenu_1.style.height = '400px';
+            }
+        }
+
+        //FOR IMUS CATHEDRAL
+        function toggleMenu_2_imus_cathedral() {
+        var sideMenu = document.getElementById('sideMenu_2');
+        if (sideMenu_2.style.height === '400px') {
+            sideMenu_2.style.height = '0';
+        } else {
+            sideMenu_2.style.height = '400px';
+            }
+        }
+
+
+        
+        // Add event listener to the button to switch pages
+        document.getElementById("switchButton").addEventListener("click", switchPage);
 
         // Initialize and display the map
         function initMap() {
@@ -530,6 +559,7 @@
             infoWindow_oldMunicipalBuilding.open(map, marker_old_municipal_building_imus);
             map.setZoom(19);
             map.panTo(marker_old_municipal_building_imus.getPosition(), 2000);
+            toggleMenu_1_old_municipal_building();
 
         // Add bouncing animation
         marker_old_municipal_building_imus.setAnimation(google.maps.Animation.BOUNCE);
@@ -561,7 +591,7 @@
             infoWindow_imuscathedral.open(map, marker_imus_cathedral);
             map.setZoom(19);
             map.panTo(marker_imus_cathedral.getPosition(), 2000);
-
+            toggleMenu_2_imus_cathedral();
         // Add bouncing animation
         marker_imus_cathedral.setAnimation(google.maps.Animation.BOUNCE);
 
@@ -962,8 +992,6 @@
         polyline.setMap(map);
         polygon.setMap(map);
 
-        // Add event listener to the button to switch pages
-        document.getElementById("switchButton").addEventListener("click", switchPage);
     }
 
     </script>
