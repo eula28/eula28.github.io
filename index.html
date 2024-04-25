@@ -52,17 +52,15 @@
         var gen_topacio_monument = {lat:14.428913280961114 , lng:120.9363325685149 };
         var bahay_ng_mga_tirona = {lat:14.427989399701048 , lng:120.93644793963766};
         var pillar_lodge_no3 = {lat: 14.430293339707998 , lng:120.9361460681215 };
-        //var arsenal_ng_imus = {lat:14.429673277062152 , lng:120.940190014956};
-        //var labanan_sa_imus = {lat:14.430015399656357 , lng:120.94034211321578};
-        //var bridge_of_isabell = {lat:14.430432450634289 , lng:120.94028275204953};
-        //var francisca_tirona_benitez = {lat: 14.427299406624076, lng:120.93850005131215};
-        //var bayan_luma = {lat:14.418599371096303 , lng:120.93538874450672};
-        //var julian_bridge_cannon = {lat:14.40631342719528  , lng:120.93219619005443};
-        //var labanan_sa_pasongsantol = {lat:14.366308087704255 , lng:120.93897462985774};
-        //var bantayog_ngmga_bayani = {lat:14.361940709037837 , lng:120.9405616839925 };
-        //var battle_of_alapan = {lat:14.404023544887746 , lng:120.9150278744321};  
-
-
+        var arsenal_ng_imus = {lat:14.429673277062152 , lng:120.940190014956};
+        var labanan_sa_imus = {lat:14.430015399656357 , lng:120.94034211321578};
+        var bridge_of_isabell = {lat:14.430432450634289 , lng:120.94028275204953};
+        var francisca_tirona_benitez = {lat: 14.427299406624076, lng:120.93850005131215};
+        var bayan_luma = {lat:14.418599371096303 , lng:120.93538874450672};
+        var julian_bridge_cannon = {lat:14.40631342719528  , lng:120.93219619005443};
+        var labanan_sa_pasongsantol = {lat:14.366308087704255 , lng:120.93897462985774};
+        var bantayog_ngmga_bayani = {lat:14.361940709037837 , lng:120.9405616839925 };
+        var battle_of_alapan = {lat:14.404023544887746 , lng:120.9150278744321};  
 
         
         // POLYLINES BOUNDARIES OF IMUS
@@ -575,7 +573,7 @@
                     title: 'Pilar Lodge No.3 F&AM)', // Optional title for the marker
                     icon: {
                         url: 'https://github.com/eula28/eula28.github.io/blob/main/images/pillar_lodge_no3.png?raw=true', // URL of the marker icon
-                        scaledSize: new google.maps.Size(90, 100), // Size of the marker icon
+                        scaledSize: new google.maps.Size(90, 80), // Size of the marker icon
                     }   
                 }); 
                 // INFO WINDOWS
@@ -596,6 +594,304 @@
             marker_pillar_lodge_no3.setAnimation(null);
         }, 2100);
         });
+
+//======================================================================================================================================
+
+//ARSENAL NG IMUS
+        var marker_arsenal_ng_imus = new google.maps.Marker({
+                    position: arsenal_ng_imus,  
+                    map: map,
+                    title: 'Arsenal ng Imus)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/arsenal_ng_imus.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 90), // Size of the marker icon
+                    }   
+                }); 
+                // INFO WINDOWS
+        var infoWindow_arsenal_ng_imus = new google.maps.InfoWindow({
+            content: '<div style="text-align: center;">Arsenal ng Imus</div>'
+        });
+                // EVENT LISTENER FOR WINDOWS
+        marker_arsenal_ng_imus.addListener('click', function() {
+            infoWindow_arsenal_ng_imus.open(map, marker_arsenal_ng_imus);
+            map.setZoom(19);
+            map.panTo(marker_arsenal_ng_imus.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_arsenal_ng_imus.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_arsenal_ng_imus.setAnimation(null);
+        }, 2100);
+        });
+
+//======================================================================================================================================
+
+//LABANAN SA IMUS
+        var marker_labanan_sa_imus = new google.maps.Marker({
+                    position: labanan_sa_imus,  
+                    map: map,
+                    title: 'Labanan sa Imus)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/labanan_sa_imus.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 90), // Size of the marker icon
+                    }   
+                }); 
+                // INFO WINDOWS
+        var infoWindow_labanan_sa_imus = new google.maps.InfoWindow({
+            content: '<div style="text-align: center;">Labanan sa Imus</div>'
+        });
+                // EVENT LISTENER FOR WINDOWS
+        marker_labanan_sa_imus.addListener('click', function() {
+            infoWindow_labanan_sa_imus.open(map, marker_labanan_sa_imus);
+            map.setZoom(19);
+            map.panTo(marker_labanan_sa_imus.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_labanan_sa_imus.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_labanan_sa_imus.setAnimation(null);
+        }, 2100);
+        });
+
+//======================================================================================================================================
+
+//BRIDGE OF ISABEL
+
+        var marker_bridge_of_isabel = new google.maps.Marker({
+                    position: bridge_of_isabell,  
+                    map: map,
+                    title: 'Bridge of Isabel)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/bridge_of_isabell.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 90), // Size of the marker icon
+                    }   
+                }); 
+                // INFO WINDOWS
+        var infoWindow_bridge_of_isabel = new google.maps.InfoWindow({
+            content: '<div style="text-align: center;">Bridge of Isabel</div>'
+        });
+                // EVENT LISTENER FOR WINDOWS
+        marker_bridge_of_isabel.addListener('click', function() {
+            infoWindow_bridge_of_isabel.open(map, marker_bridge_of_isabel);
+            map.setZoom(19);
+            map.panTo(marker_bridge_of_isabel.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_bridge_of_isabel.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_bridge_of_isabel.setAnimation(null);
+        }, 2100);
+        });
+//======================================================================================================================================
+
+//FRANCISCA TIRONA BENITEZ
+
+        var marker_francisca_tirona_benitez = new google.maps.Marker({
+                    position: francisca_tirona_benitez,  
+                    map: map,
+                    title: 'Francisca Tirona Benitez)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/francisca_tirona_benitez.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 90), // Size of the marker icon
+                    }   
+                }); 
+                // INFO WINDOWS
+        var infoWindow_francisca_tirona_benitez = new google.maps.InfoWindow({
+            content: '<div style="text-align: center;">Francisca Tirona Benitez</div>'
+        });
+                // EVENT LISTENER FOR WINDOWS
+        marker_francisca_tirona_benitez.addListener('click', function() {
+            infoWindow_francisca_tirona_benitez.open(map, marker_francisca_tirona_benitez);
+            map.setZoom(19);
+            map.panTo(marker_francisca_tirona_benitez.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_francisca_tirona_benitez.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_francisca_tirona_benitez.setAnimation(null);
+        }, 2100);
+        });
+
+//======================================================================================================================================
+
+//BAYAN LUMA
+
+        var marker_bayan_luma = new google.maps.Marker({
+                    position: bayan_luma,  
+                    map: map,
+                    title: 'Bayan Luma - Jose S. Tagle)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/bayan_luma.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 90), // Size of the marker icon
+                    }   
+                }); 
+                // INFO WINDOWS
+        var infoWindow_bayan_luma = new google.maps.InfoWindow({
+            content: '<div style="text-align: center;">Bayan Luma - Jose S. Tagle</div>'
+        });
+                // EVENT LISTENER FOR WINDOWS
+        marker_bayan_luma.addListener('click', function() {
+            infoWindow_bayan_luma.open(map, marker_bayan_luma);
+            map.setZoom(19);
+            map.panTo(marker_bayan_luma.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_bayan_luma.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_bayan_luma.setAnimation(null);
+        }, 2100);
+        });
+
+//======================================================================================================================================
+
+// JULIAN BRIDGE CANNON
+
+        var marker_julian_bridge_cannon = new google.maps.Marker({
+                    position: julian_bridge_cannon,  
+                    map: map,
+                    title: 'Battle of Julian Bridge Memorial Cannon)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/julian_bridge_cannon.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 90), // Size of the marker icon
+                    }   
+                }); 
+                // INFO WINDOWS
+        var infoWindow_julian_bridge_cannon = new google.maps.InfoWindow({
+            content: '<div style="text-align: center;">Battle of Julian Bridge Memorial Cannon</div>'
+        });
+                // EVENT LISTENER FOR WINDOWS
+        marker_julian_bridge_cannon.addListener('click', function() {
+            infoWindow_julian_bridge_cannon.open(map, marker_julian_bridge_cannon);
+            map.setZoom(19);
+            map.panTo(marker_julian_bridge_cannon.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_julian_bridge_cannon.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_julian_bridge_cannon.setAnimation(null);
+        }, 2100);
+        });
+
+//======================================================================================================================================
+
+// LABANAN SA PASONG SANTOL
+
+        var marker_labanan_sa_pasongsantol = new google.maps.Marker({
+                    position: labanan_sa_pasongsantol,  
+                    map: map,
+                    title: 'Labanan sa Pasong Santol)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/labanan_sa_pasongsantol.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 90), // Size of the marker icon
+                    }   
+                }); 
+                // INFO WINDOWS
+        var infoWindow_labanan_sa_pasongsantol = new google.maps.InfoWindow({
+            content: '<div style="text-align: center;">Labanan sa Pasong Santol</div>'
+        });
+                // EVENT LISTENER FOR WINDOWS
+        marker_labanan_sa_pasongsantol.addListener('click', function() {
+            infoWindow_labanan_sa_pasongsantol.open(map, marker_labanan_sa_pasongsantol);
+            map.setZoom(19);
+            map.panTo(marker_labanan_sa_pasongsantol.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_labanan_sa_pasongsantol.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_labanan_sa_pasongsantol.setAnimation(null);
+        }, 2100);
+        });
+
+//======================================================================================================================================
+
+// BANTAYOG NG MGA BAYANI
+
+        var marker_bantayog_ngmga_bayani = new google.maps.Marker({
+                    position: bantayog_ngmga_bayani,  
+                    map: map,
+                    title: 'Bantayog ng mga Bayani sa Pasong Santol)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/bantayog_ngmga_bayani.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 90), // Size of the marker icon
+                    }   
+                }); 
+                // INFO WINDOWS
+        var infoWindow_bantayog_ngmga_bayani = new google.maps.InfoWindow({
+            content: '<div style="text-align: center;">Bantayog ng mga Bayani sa Pasong Santol</div>'
+        });
+                // EVENT LISTENER FOR WINDOWS
+        marker_bantayog_ngmga_bayani.addListener('click', function() {
+            infoWindow_bantayog_ngmga_bayani.open(map, marker_bantayog_ngmga_bayani);
+            map.setZoom(19);
+            map.panTo(marker_bantayog_ngmga_bayani.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_bantayog_ngmga_bayani.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_bantayog_ngmga_bayani.setAnimation(null);
+        }, 2100);
+        });
+
+//======================================================================================================================================
+
+// BATTLE OF ALAPAN
+
+        var marker_battle_of_alapan = new google.maps.Marker({
+                    position: battle_of_alapan,  
+                    map: map,
+                    title: 'Battle of Alapan)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/battle_of_alapan.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 90), // Size of the marker icon
+                    }   
+                }); 
+                // INFO WINDOWS
+        var infoWindow_battle_of_alapan = new google.maps.InfoWindow({
+            content: '<div style="text-align: center;">Battle of Alapan</div>'
+        });
+                // EVENT LISTENER FOR WINDOWS
+        marker_battle_of_alapan.addListener('click', function() {
+            infoWindow_battle_of_alapan.open(map, marker_battle_of_alapan);
+            map.setZoom(19);
+            map.panTo(marker_battle_of_alapan.getPosition(), 2000);
+
+        // Add bouncing animation
+        marker_battle_of_alapan.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_battle_of_alapan.setAnimation(null);
+        }, 2100);
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
