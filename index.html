@@ -5,34 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historical Adventure</title>
     <style>
-        /* Ensure map fills the entire screen */
+
+        /* MAP */
         #map {
             height: 100vh;
             width: 100%;
         }
+
+        /* BUTTONS */
+
         #switchButton {
             position: absolute;
             top: 20px;
-            right: 70px;
+            left: 10px;
             z-index: 9999;
             background-color: #fff;
             border: 1px solid #ccc;
             padding: 10px 20px;
             cursor: pointer;
         }
+        #menubutton {
+            position: absolute;
+            top: 70px;
+            left: 10px;
+            z-index: 9999;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        /* MENU FUNCTION */
+        .side-menu {
+            height: 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: #111;
+            overflow-y: auto;
+            transition: height 0.5s;
+            padding-top: 0px;
+            z-index: 1000;
+        }
+
+        .side-menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .side-menu a:hover {
+            color: #c62828;
+        }
+
+        .side-menu .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
     </style>
 </head>
 <body>
-    <div id="map"></div>
-    <!-- Button to switch to another HTML page -->
-    <button id="switchButton">Go ></button>
+
+    <div id="centercontent" style="display: flex; justify-content: center; align-items: center;">
+        <div id="map"></div>
+        <div id="sideMenu" class="side-menu">
+            <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+            <a href="#">CONTENT HERE</a>
+            <a href="#">CONTENT HERE</a>
+            <a href="#">CONTENT HERE </a>
+        </div>
+    </div>
     
 
+
+    <!-- Button to switch to another HTML page -->
+    <button id="switchButton">Go ></button>
+    <button id="menubutton" onclick="toggleMenu()">Open Menu</button>
+    
     <script>//MAP SCRIPT   
         // Function to switch to another HTML page
         function switchPage() {
             window.location.href = "test1.html";
             }
+        //MENU
+        function toggleMenu() {
+        var sideMenu = document.getElementById('sideMenu');
+        if (sideMenu.style.height === '400px') {
+            sideMenu.style.height = '0';
+        } else {
+            sideMenu.style.height = '400px';
+            }
+        }
 
         // Initialize and display the map
         function initMap() {
@@ -468,7 +538,6 @@
         setTimeout(function() {
             marker_old_municipal_building_imus.setAnimation(null);
         }, 2100);
-
         });
 
 //======================================================================================================================================

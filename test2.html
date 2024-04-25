@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Side Menu Example</title>
+<style>
+    /* Styling for the side menu */
+    .side-menu {
+        height: 0;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #111;
+        overflow-y: auto;
+        transition: height 0.5s;
+        padding-top: 0px;
+        z-index: 1000;
+    }
+
+    .side-menu a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .side-menu a:hover {
+        color: #c62828;
+    }
+
+    .side-menu .close-btn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+</style>
+</head>
+<body>
+
+<button onclick="toggleMenu()">Open Menu</button>
+
+<div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+    <a href="#">Menu Item 1</a>
+    <a href="#">Menu Item 2</a>
+    <a href="#">Menu Item 3</a>
+</div>
+
+<script>
+    function toggleMenu() {
+        var sideMenu = document.getElementById('sideMenu');
+        if (sideMenu.style.height === '300px') {
+            sideMenu.style.height = '0';
+        } else {
+            sideMenu.style.height = '300px';
+        }
+    }
+</script>
+
+</body>
+</html>
