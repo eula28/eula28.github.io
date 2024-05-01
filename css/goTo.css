@@ -1,0 +1,23 @@
+#gotoOldMunicipalBuilding {
+    position: absolute;
+    top: 40px;
+    left: 45px;
+    font-size: 23px;
+    }
+#gotoOldMunicipalBuilding:hover {
+color: #29ff3e; /* Change color on hover */
+cursor: pointer;
+font-size: 25px; /* Change cursor to indicate interactivity */
+}
+
+#gotoImusCathedral {
+position: absolute;
+top: 80px;
+left: 90px;
+font-size: 23px;
+}
+#gotoImusCathedral:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 25px; /* Change cursor to indicate interactivity */
+    }

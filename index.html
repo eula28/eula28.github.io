@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historical Adventure</title>
     <link rel="stylesheet" type="text/css" href="css/menu_screen.css">
+    <link rel="stylesheet" type="text/css" href="css/goTo.css">
     <style>
 
         /* MAP */
@@ -13,100 +14,139 @@
             width: 100%;
         }
 
-        /* BUTTONS */
-
-        #menubutton {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 9999;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        
-        /* MENU FUNCTION */
-        .side-menu {
-            height: 0;
-            width: 100%;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            background-color: #111;
-            overflow-y: auto;
-            transition: height 0.5s;
-            padding-top: 0px;
-            z-index: 1000;
+        #navigationmenu {
+        position: absolute;
+        top: 10px; /* Adjust as needed */
+        right: 10px; /* Adjust as needed */
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure the button appears above the map */
         }
 
-        .side-menu a {
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .side-menu a:hover {
-            color: #c62828;
-        }
-
-        .side-menu .close-btn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
     </style>
 </head>
 <body>
 
-        <div id="map"></div>
-
-
-        <div id="sideMenu" class="side-menu">
-            <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
-            <a href="#">CONTENT HERE</a>
+        <div id="map"></div>    
+        <button id="navigationmenu" onclick="toggleMenu_0()">NAVIGATE</button>
+        <!-- -->
+        <div id="sideMenu_0" class="side-menu_0">
+            <a href="javascript:void(0)" class="close-btn_0" onclick="toggleMenu_0()">&times;</a>
+            <a <button id="gotoOldMunicipalBuilding" onclick="toggleMenu_0()">Old Municipal Building</button> </a>
+            <a <button id="gotoImusCathedral" onclick="toggleMenu_0()">Imus Cathedral</button> </a>
         </div>
 
         <!--OLD MUNICIPAL BUILDING DETAILS WINDOW -->
         <div id="sideMenu_1" class="side-menu_1">
             <a href="javascript:void(0)" class="close-btn_1" onclick="toggleMenu_1_old_municipal_building()">&times;</a>
-            <a href="#">CONTENT HERE</a>
-            <a href="#">CONTENT HERE</a>
+            <a href="#">MUNICIPAL BUILDING</a>
         </div>
 
         <!--IMUS CATHEDRAL DETAILS WINDOW-->
         <div id="sideMenu_2" class="side-menu_2">
             <a href="javascript:void(0)" class="close-btn_2" onclick="toggleMenu_2_imus_cathedral()">&times;</a>
-            <a href="#">CONTENT HERE</a>
-            <a href="#">CONTENT HERE</a>
-            <a href="#">CONTENT HERE</a>
+            <a href="#">IMUS CATHEDRAL</a>
+        </div>
+
+        <!--GENERAL TOPACIO MONUMENT DETAILS WINDOW-->
+        <div id="sideMenu_3" class="side-menu_3">
+            <a href="javascript:void(0)" class="close-btn_3" onclick="toggleMenu_3_gen_topacio()">&times;</a>
+            <a href="#">GENERAL TOPACIO MONUMENT</a>
+        </div>
+
+        <!--BAHAY NG MGA TIRONA DETAILS WINDOW-->
+        <div id="sideMenu_4" class="side-menu_4">
+            <a href="javascript:void(0)" class="close-btn_4" onclick="toggleMenu_4_bahay_ngmga_tirona()">&times;</a>
+            <a href="#">BAHAY NG MGA TIRONA</a>
+        </div>
+        
+        <!--PILLAR LODGE No.3 DETAILS WINDOW-->
+        <div id="sideMenu_5" class="side-menu_5">
+            <a href="javascript:void(0)" class="close-btn_5" onclick="toggleMenu_5_pillar_lodge_no3()">&times;</a>
+            <a href="#">PILLAR LODGE NO.3</a>
+        </div>
+
+        <!--ARSENAL NG IMUS DETAILS WINDOW-->
+        <div id="sideMenu_6" class="side-menu_6">
+            <a href="javascript:void(0)" class="close-btn_6" onclick="toggleMenu_6_arsenal_ng_imus()">&times;</a>
+            <a href="#">ARSENAL NG IMUS</a>
+        </div>
+
+        <!--LABANAN SA IMUS DETAILS WINDOW-->
+        <div id="sideMenu_7" class="side-menu_7">
+            <a href="javascript:void(0)" class="close-btn_7" onclick="toggleMenu_7_labanan_sa_imus()">&times;</a>
+            <a href="#">LABANAN SA IMUS</a>
+        </div>
+
+        <!-- BRIDGE OF ISABEL DETAILS WINDOW-->
+        <div id="sideMenu_8" class="side-menu_8">
+            <a href="javascript:void(0)" class="close-btn_8" onclick="toggleMenu_8_bridge_of_isabel()">&times;</a>
+            <a href="#">BRIDGE OF ISABEL</a>
+        </div>
+
+        <!-- FRANCISCA TIRONA BENITEZ DETAILS WINDOW-->
+        <div id="sideMenu_9" class="side-menu_9">
+            <a href="javascript:void(0)" class="close-btn_9" onclick="toggleMenu_9_francisca_tirona_benitez()">&times;</a>
+            <a href="#">FRANCISCA TIRONA BENITEZ</a>
+        </div>
+
+        <!-- BAYAN LUMA DETAILS WINDOW-->
+        <div id="sideMenu_10" class="side-menu_10">
+            <a href="javascript:void(0)" class="close-btn_10" onclick="toggleMenu_10_bayan_luma()">&times;</a>
+            <a href="#">BAYAN LUMA</a>
+        </div>
+
+        <!-- JULIAN BRIDGE CANNON DETAILS WINDOW-->
+        <div id="sideMenu_11" class="side-menu_11">
+            <a href="javascript:void(0)" class="close-btn_11" onclick="toggleMenu_11_julian_bridge_cannon()">&times;</a>
+            <a href="#">JULIAN BRIDGE CANNON</a>
+        </div>
+
+        <!-- LABANAN SA PASONG SANTOL DETAILS WINDOW-->
+        <div id="sideMenu_12" class="side-menu_12">
+            <a href="javascript:void(0)" class="close-btn_12" onclick="toggleMenu_12_labanan_sa_pasongsantol()">&times;</a>
+            <a href="#">LABANAN SA PASONG SANTOL</a>
         </div>
     
+        <!-- BANTAYOG NG MGA BAYANI DETAILS WINDOW-->
+        <div id="sideMenu_13" class="side-menu_13">
+            <a href="javascript:void(0)" class="close-btn_13" onclick="toggleMenu_13_bantayog_ngmga_bayani()">&times;</a>
+            <a href="#">BANTAYOG NG MGA BAYANI</a>
+        </div>
+
+        <!-- BATTLE OF ALAPAN DETAILS WINDOW-->
+        <div id="sideMenu_14" class="side-menu_14">
+            <a href="javascript:void(0)" class="close-btn_14" onclick="toggleMenu_14_battle_of_alapan()">&times;</a>
+            <a href="#">BATTLE OF ALAPAN</a>
+        </div>
 
 
     <!-- Button to switch to another HTML page -->
     <!--<button id="switchButton">Go ></button>-->
-    <button id="menubutton" onclick="toggleMenu()">Open Menu</button>
+
     
     <script>//MAP SCRIPT   
         // Function to switch to another HTML page
         function switchPage() {
             window.location.href = "test1.html";
             }
-        //MENU
-        function toggleMenu() {
-        var sideMenu = document.getElementById('sideMenu');
-        if (sideMenu.style.height === '400px') {
-            sideMenu.style.height = '0';
-        } else {
-            sideMenu.style.height = '400px';
+        
+        //
+        function toggleMenu_0() {
+            var sideMenu = document.getElementById('sideMenu_0');
+            if (sideMenu_0.style.width === '350px') { /* Change 400px to 300px */
+                sideMenu_0.style.width = '0';
+                sideMenu_0.style.left = '-300px'; /* Move the menu off the screen to the left */
+            } else {
+                sideMenu_0.style.width = '350px'; /* Change 400px to 300px */
+                sideMenu_0.style.left = '0'; /* Slide the menu into view from the left */
             }
         }
+
 
         //FOR OLD MUNICIPAL BUILDING
         function toggleMenu_1_old_municipal_building() {
@@ -128,8 +168,126 @@
             }
         }
 
-
+        //FOR IMUS CATHEDRAL
+        function toggleMenu_3_gen_topacio() {
+        var sideMenu = document.getElementById('sideMenu_3');
+        if (sideMenu_3.style.height === '400px') {
+            sideMenu_3.style.height = '0';
+        } else {
+            sideMenu_3.style.height = '400px';
+            }
+        }
         
+        //FOR BAHAY NG MGA TIRONA
+        function toggleMenu_4_bahay_ngmga_tirona() {
+        var sideMenu = document.getElementById('sideMenu_4');
+        if (sideMenu_4.style.height === '400px') {
+            sideMenu_4.style.height = '0';
+        } else {
+            sideMenu_4.style.height = '400px';
+            }
+        }
+
+        //FOR PILLAR LODGE NO.3
+        function toggleMenu_5_pillar_lodge_no3() {
+        var sideMenu = document.getElementById('sideMenu_5');
+        if (sideMenu_5.style.height === '400px') {
+            sideMenu_5.style.height = '0';
+        } else {
+            sideMenu_5.style.height = '400px';
+            }
+        }
+        
+        //FOR ARSENAL NG IMUS
+        function toggleMenu_6_arsenal_ng_imus() {
+        var sideMenu = document.getElementById('sideMenu_6');
+        if (sideMenu_6.style.height === '400px') {
+            sideMenu_6.style.height = '0';
+        } else {
+            sideMenu_6.style.height = '400px';
+            }
+        }
+
+        //FOR LABANAN SA IMUS
+        function toggleMenu_7_labanan_sa_imus() {
+        var sideMenu = document.getElementById('sideMenu_7');
+        if (sideMenu_7.style.height === '400px') {
+            sideMenu_7.style.height = '0';
+        } else {
+            sideMenu_7.style.height = '400px';
+            }
+        }
+
+        //FOR BRIDGE OF ISABEL
+        function toggleMenu_8_bridge_of_isabel() {
+        var sideMenu = document.getElementById('sideMenu_8');
+        if (sideMenu_8.style.height === '400px') {
+            sideMenu_8.style.height = '0';
+        } else {
+            sideMenu_8.style.height = '400px';
+            }
+        }
+
+        //FOR FRANCISCA TORINA BENITEZ
+        function toggleMenu_9_francisca_tirona_benitez() {
+        var sideMenu = document.getElementById('sideMenu_9');
+        if (sideMenu_9.style.height === '400px') {
+            sideMenu_9.style.height = '0';
+        } else {
+            sideMenu_9.style.height = '400px';
+            }
+        }
+        
+        //FOR BAYAN LUMA
+        function toggleMenu_10_bayan_luma() {
+        var sideMenu = document.getElementById('sideMenu_10');
+        if (sideMenu_10.style.height === '400px') {
+            sideMenu_10.style.height = '0';
+        } else {
+            sideMenu_10.style.height = '400px';
+            }
+        }
+
+        //FOR JuLIAN BRIDGE CANNON
+        function toggleMenu_11_julian_bridge_cannon() {
+        var sideMenu = document.getElementById('sideMenu_11');
+        if (sideMenu_11.style.height === '400px') {
+            sideMenu_11.style.height = '0';
+        } else {
+            sideMenu_11.style.height = '400px';
+            }
+        }
+
+        //FOR LABANAN SA PASONG SANTOL
+        function toggleMenu_12_labanan_sa_pasongsantol() {
+        var sideMenu = document.getElementById('sideMenu_12');
+        if (sideMenu_12.style.height === '400px') {
+            sideMenu_12.style.height = '0';
+        } else {
+            sideMenu_12.style.height = '400px';
+            }
+        }
+
+        //FOR BANTAYOG NG MGA BAYANI
+        function toggleMenu_13_bantayog_ngmga_bayani() {
+        var sideMenu = document.getElementById('sideMenu_13');
+        if (sideMenu_13.style.height === '400px') {
+            sideMenu_13.style.height = '0';
+        } else {
+            sideMenu_13.style.height = '400px';
+            }
+        }
+
+        //FOR BATTLE OF ALAPAN
+        function toggleMenu_14_battle_of_alapan() {
+        var sideMenu = document.getElementById('sideMenu_14');
+        if (sideMenu_14.style.height === '400px') {
+            sideMenu_14.style.height = '0';
+        } else {
+            sideMenu_14.style.height = '400px';
+            }
+        }
+
         // Add event listener to the button to switch pages
         document.getElementById("switchButton").addEventListener("click", switchPage);
 
@@ -483,6 +641,7 @@
             maxZoom: 19, // Set maximum zoom level
             mapTypeControl: false, // Remove map type control buttons
             zoomControl: false, // Remove zoom in/out buttons
+            fullscreenControl: false,
             styles: [
                 {
                     featureType: "water",
@@ -570,6 +729,23 @@
         }, 2100);
         });
 
+        // Add event listener to the button
+        document.getElementById('gotoOldMunicipalBuilding').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_old_municipal_building_imus.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_oldMunicipalBuilding.open(map, marker_old_municipal_building_imus);
+            toggleMenu_1_old_municipal_building();
+
+            // Optionally, animate the marker
+            marker_old_municipal_building_imus.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_old_municipal_building_imus.setAnimation(null);
+            }, 2100);
+        });
+
 //======================================================================================================================================
 
 //IMUS CATHEDRAL
@@ -601,6 +777,23 @@
         }, 2100);
 
         });
+
+        // Add event listener to the button
+        document.getElementById('gotoImusCathedral').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_imus_cathedral.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_imuscathedral.open(map, marker_imus_cathedral);
+            toggleMenu_2_imus_cathedral();
+
+            // Optionally, animate the marker
+            marker_imus_cathedral.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_imus_cathedral.setAnimation(null);
+            }, 2100);
+        });
 //======================================================================================================================================
 
 //GEN TOPACIO MONUMENT
@@ -622,6 +815,7 @@
             infoWindow_gen_topacio_monument.open(map, marker_gen_topacio_monument);
             map.setZoom(19);
             map.panTo(marker_gen_topacio_monument.getPosition(), 2000);
+            toggleMenu_3_gen_topacio();
 
         // Add bouncing animation
         marker_gen_topacio_monument.setAnimation(google.maps.Animation.BOUNCE);
@@ -653,6 +847,7 @@
             infoWindow_bahay_ng_mga_tirona.open(map, marker_bahay_ng_mga_tirona);
             map.setZoom(19);
             map.panTo(marker_bahay_ng_mga_tirona.getPosition(), 2000);
+            toggleMenu_4_bahay_ngmga_tirona();
 
         // Add bouncing animation
         marker_bahay_ng_mga_tirona.setAnimation(google.maps.Animation.BOUNCE);
@@ -684,6 +879,7 @@
             infoWindow_pillar_lodge_no3.open(map, marker_pillar_lodge_no3);
             map.setZoom(19);
             map.panTo(marker_pillar_lodge_no3.getPosition(), 2000);
+            toggleMenu_5_pillar_lodge_no3();
 
         // Add bouncing animation
         marker_pillar_lodge_no3.setAnimation(google.maps.Animation.BOUNCE);
@@ -715,6 +911,7 @@
             infoWindow_arsenal_ng_imus.open(map, marker_arsenal_ng_imus);
             map.setZoom(19);
             map.panTo(marker_arsenal_ng_imus.getPosition(), 2000);
+            toggleMenu_6_arsenal_ng_imus();
 
         // Add bouncing animation
         marker_arsenal_ng_imus.setAnimation(google.maps.Animation.BOUNCE);
@@ -746,6 +943,7 @@
             infoWindow_labanan_sa_imus.open(map, marker_labanan_sa_imus);
             map.setZoom(19);
             map.panTo(marker_labanan_sa_imus.getPosition(), 2000);
+            toggleMenu_7_labanan_sa_imus();
 
         // Add bouncing animation
         marker_labanan_sa_imus.setAnimation(google.maps.Animation.BOUNCE);
@@ -778,6 +976,7 @@
             infoWindow_bridge_of_isabel.open(map, marker_bridge_of_isabel);
             map.setZoom(19);
             map.panTo(marker_bridge_of_isabel.getPosition(), 2000);
+            toggleMenu_8_bridge_of_isabel();
 
         // Add bouncing animation
         marker_bridge_of_isabel.setAnimation(google.maps.Animation.BOUNCE);
@@ -809,6 +1008,7 @@
             infoWindow_francisca_tirona_benitez.open(map, marker_francisca_tirona_benitez);
             map.setZoom(19);
             map.panTo(marker_francisca_tirona_benitez.getPosition(), 2000);
+            toggleMenu_9_francisca_tirona_benitez();
 
         // Add bouncing animation
         marker_francisca_tirona_benitez.setAnimation(google.maps.Animation.BOUNCE);
@@ -841,6 +1041,7 @@
             infoWindow_bayan_luma.open(map, marker_bayan_luma);
             map.setZoom(19);
             map.panTo(marker_bayan_luma.getPosition(), 2000);
+            toggleMenu_10_bayan_luma();
 
         // Add bouncing animation
         marker_bayan_luma.setAnimation(google.maps.Animation.BOUNCE);
@@ -873,6 +1074,7 @@
             infoWindow_julian_bridge_cannon.open(map, marker_julian_bridge_cannon);
             map.setZoom(19);
             map.panTo(marker_julian_bridge_cannon.getPosition(), 2000);
+            toggleMenu_11_julian_bridge_cannon();
 
         // Add bouncing animation
         marker_julian_bridge_cannon.setAnimation(google.maps.Animation.BOUNCE);
@@ -905,6 +1107,8 @@
             infoWindow_labanan_sa_pasongsantol.open(map, marker_labanan_sa_pasongsantol);
             map.setZoom(19);
             map.panTo(marker_labanan_sa_pasongsantol.getPosition(), 2000);
+            toggleMenu_12_labanan_sa_pasongsantol();
+            
 
         // Add bouncing animation
         marker_labanan_sa_pasongsantol.setAnimation(google.maps.Animation.BOUNCE);
@@ -937,6 +1141,7 @@
             infoWindow_bantayog_ngmga_bayani.open(map, marker_bantayog_ngmga_bayani);
             map.setZoom(19);
             map.panTo(marker_bantayog_ngmga_bayani.getPosition(), 2000);
+            toggleMenu_13_bantayog_ngmga_bayani();
 
         // Add bouncing animation
         marker_bantayog_ngmga_bayani.setAnimation(google.maps.Animation.BOUNCE);
@@ -969,6 +1174,7 @@
             infoWindow_battle_of_alapan.open(map, marker_battle_of_alapan);
             map.setZoom(19);
             map.panTo(marker_battle_of_alapan.getPosition(), 2000);
+            toggleMenu_14_battle_of_alapan();
 
         // Add bouncing animation
         marker_battle_of_alapan.setAnimation(google.maps.Animation.BOUNCE);
@@ -995,6 +1201,7 @@
     }
 
     </script>
+
     <!-- GOOGLE CONSOLE API'S AND SERVICES-->
     <!-- Load the Google Maps JavaScript API using your API key -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo-JsadJUL3sFBFYqC7sVJekHuCUhQwj8&callback=initMap" 

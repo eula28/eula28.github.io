@@ -1,3 +1,38 @@
+.side-menu_0 {
+    width: 0; /* Change height to width */
+    height: 100%; /* Add height: 100% to cover the whole height of the viewport */
+    position: fixed;
+    top: 0; /* Change bottom to top */
+    left: -300px; /* Initial position off the screen from the left */
+    background-color: #000000;
+    overflow-y: auto;
+    transition: width 0.5s; /* Change height to width */
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_0 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_0 a:hover {
+    color: #c62828;
+}
+
+.side-menu_0 .close-btn_0 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
 /*FOR OLD MUNICIPAL BUILDING LANDMARK*/
 .side-menu_1 {
     height: 0;
@@ -5,7 +40,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: #000000;
     overflow-y: auto;
     transition: height 0.5s;
     padding-top: 0px;
@@ -40,7 +75,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: #000000;
     overflow-y: auto;
     transition: height 0.5s;
     padding-top: 0px;
@@ -68,3 +103,422 @@
     margin-left: 50px;
 }
 
+/*FOR GEN TOPACIO MONUMENT LANDMARK*/
+.side-menu_3 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_3 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_3 a:hover {
+    color: #c62828;
+}
+
+.side-menu_3 .close-btn_3 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR BAHAY NG MGA TIRONA LANDMARK*/
+.side-menu_4 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_4 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_4 a:hover {
+    color: #c62828;
+}
+
+.side-menu_4 .close-btn_4 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR PILLAR LODGE No.3 LANDMARK*/
+.side-menu_5 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_5 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_5 a:hover {
+    color: #c62828;
+}
+
+.side-menu_5 .close-btn_5 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR ARSENAL NG IMUS LANDMARK*/
+.side-menu_6 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_6 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_6 a:hover {
+    color: #c62828;
+}
+
+.side-menu_6 .close-btn_6 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR LABANAN SA IMUS LANDMARK*/
+.side-menu_7 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_7 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_7 a:hover {
+    color: #c62828;
+}
+
+.side-menu_7 .close-btn_7 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR BRIDGE OF ISABELL*/
+.side-menu_8 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_8 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_8 a:hover {
+    color: #c62828;
+}
+
+.side-menu_8 .close-btn_8 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR FRANCISCA TIRONA BENITEZ*/
+.side-menu_9 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_9 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_9 a:hover {
+    color: #c62828;
+}
+
+.side-menu_9 .close-btn_9 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR BAYAN LUMA*/
+.side-menu_10 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_10 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_10 a:hover {
+    color: #c62828;
+}
+
+.side-menu_10 .close-btn_10 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR JULIAN BRIDGE CANNON*/
+.side-menu_11 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_11 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_11 a:hover {
+    color: #c62828;
+}
+
+.side-menu_11 .close-btn_11 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR LABANAN SA PASONG SANTOL */
+.side-menu_12 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_12 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_12 a:hover {
+    color: #c62828;
+}
+
+.side-menu_12 .close-btn_12 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR BANTAYOG NG MGA BAYANI */
+.side-menu_13 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_13 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_13 a:hover {
+    color: #c62828;
+}
+
+.side-menu_13 .close-btn_13 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR BATTLE OF ALAPAN */
+.side-menu_14 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+}
+
+.side-menu_14 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_13 a:hover {
+    color: #c62828;
+}
+
+.side-menu_14 .close-btn_14 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
