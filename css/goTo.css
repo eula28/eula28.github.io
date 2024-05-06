@@ -1,23 +1,190 @@
+.applogo {
+    width: 55px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
 #gotoOldMunicipalBuilding {
     position: absolute;
-    top: 40px;
-    left: 45px;
-    font-size: 23px;
+    top: 120px;
+    left: 40px;
+    font-size: 20px;
     }
 #gotoOldMunicipalBuilding:hover {
 color: #29ff3e; /* Change color on hover */
 cursor: pointer;
-font-size: 25px; /* Change cursor to indicate interactivity */
+font-size: 23px; /* Change cursor to indicate interactivity */
+text-decoration: underline;
+text-underline-offset: 10px;
 }
 
 #gotoImusCathedral {
-position: absolute;
-top: 80px;
-left: 90px;
-font-size: 23px;
+    position: absolute;
+    top: 155px;
+    left: 40px;
+    font-size: 20px;
 }
 #gotoImusCathedral:hover {
     color: #29ff3e; /* Change color on hover */
     cursor: pointer;
-    font-size: 25px; /* Change cursor to indicate interactivity */
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoGenTopacioMonument {
+    position: absolute;
+    top: 190px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoGenTopacioMonument:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoBahayngmgaTirona {
+    position: absolute;
+    top: 225px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoBahayngmgaTirona:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoPillarLodgeNo3 {
+    position: absolute;
+    top: 260px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoPillarLodgeNo3:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoArsenalngImus {
+    position: absolute;
+    top: 295px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoArsenalngImus:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoLabanansaImus {
+    position: absolute;
+    top: 330px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoLabanansaImus:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoBridgeofIsabel {
+    position: absolute;
+    top: 365px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoBridgeofIsabel:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoFranciscaTironaBenitez {
+    position: absolute;
+    top: 400px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoFranciscaTironaBenitez:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoBayanLuma {
+    position: absolute;
+    top: 435px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoBayanLuma:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoJulianBridgeCannon {
+    position: absolute;
+    top: 470px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoJulianBridgeCannon:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoLabanansaPasongSantol {
+    position: absolute;
+    top: 505px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoLabanansaPasongSantol:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoBantayogngmgaBayani {
+    position: absolute;
+    top: 540px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoBantayogngmgaBayani:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoBattleofAlapan {
+    position: absolute;
+    top: 575px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoBattleofAlapan:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
     }

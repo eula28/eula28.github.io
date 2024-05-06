@@ -18,7 +18,7 @@
         position: absolute;
         top: 20px; /* Adjust as needed */
         right: 20px; /* Adjust as needed */
-        background-color: #fff;
+        background-color: #74d3ff;
         border: 1px solid #ccc;
         border-radius: 5px;
         padding: 10px 20px;
@@ -33,12 +33,37 @@
 
         <div id="map"></div>    
         <button id="navigationmenu" onclick="toggleMenu_0()">NAVIGATE</button>
-        <!-- -->
+
+
+<!--========================================== NAVIGATION PANEL CONTROL=================================================================================================================================== -->
         <div id="sideMenu_0" class="side-menu_0">
             <a href="javascript:void(0)" class="close-btn_0" onclick="toggleMenu_0()">&times;</a>
-            <a <button id="gotoOldMunicipalBuilding" onclick="toggleMenu_0()">Old Municipal Building</button> </a>
-            <a <button id="gotoImusCathedral" onclick="toggleMenu_0()">Imus Cathedral</button> </a>
+            <h1 style="color: #999999; position: absolute; left: 27%; top: 1px;">NAVIGATE</h1>
+            <img src="images/AppLogo.png" alt="Description of the image" class="applogo">
+            <h3 style="color: #999999; position: absolute; left: 2%; top: 70px;">Historical Landmarks:</h3>
+
+
+            <a <button id="gotoOldMunicipalBuilding" onclick="toggleMenu_0()">→ Old Municipal Building</button></a>
+            <a <button id="gotoImusCathedral" onclick="toggleMenu_0()">→ Imus Cathedral</button></a>
+            <a <button id="gotoGenTopacioMonument" onclick="toggleMenu_0()">→ Gen. Topacio Monument</button></a>
+            <a <button id="gotoBahayngmgaTirona" onclick="toggleMenu_0()">→ Bahay ng mga Tirona</button></a>
+            <a <button id="gotoPillarLodgeNo3" onclick="toggleMenu_0()">→ Pillar Lodge No.3</button></a>
+            <a <button id="gotoArsenalngImus" onclick="toggleMenu_0()">→ Arsenal ng Imus</button></a>
+            <a <button id="gotoLabanansaImus" onclick="toggleMenu_0()">→ Labanan sa Imus</button></a>
+            <a <button id="gotoBridgeofIsabel" onclick="toggleMenu_0()">→ Bridge of Isabel</button></a>
+            <a <button id="gotoFranciscaTironaBenitez" onclick="toggleMenu_0()">→ Francisca Tirona Benitez</button></a>
+            <a <button id="gotoBayanLuma" onclick="toggleMenu_0()">→ Bayan Luma</button></a>
+            <a <button id="gotoJulianBridgeCannon" onclick="toggleMenu_0()">→ Julian Bridge Cannon</button></a>
+            <a <button id="gotoLabanansaPasongSantol" onclick="toggleMenu_0()">→ Labanan sa Pasong Santol</button></a>
+            <a <button id="gotoBantayogngmgaBayani" onclick="toggleMenu_0()">→ Bantayog ng mga Bayani</button></a>
+            <a <button id="gotoBattleofAlapan" onclick="toggleMenu_0()">→ Battle of Alapan</button></a>
+
+        
+        
         </div>
+<!--======================================================================================================================================================================================================= -->
+
+
 
         <!--OLD MUNICIPAL BUILDING DETAILS WINDOW -->
         <div id="sideMenu_1" class="side-menu_1">
@@ -827,6 +852,23 @@
         }, 2100);
 
         });
+
+                // Add event listener to the button
+        document.getElementById('gotoGenTopacioMonument').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_gen_topacio_monument.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_gen_topacio_monument.open(map, marker_gen_topacio_monument);
+            toggleMenu_3_gen_topacio();
+
+            // Optionally, animate the marker
+            marker_gen_topacio_monument.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_gen_topacio_monument.setAnimation(null);
+            }, 2100);
+        });
 //======================================================================================================================================
 
 //ANG BAHAY NG MGA TIRONA
@@ -858,6 +900,23 @@
             marker_bahay_ng_mga_tirona.setAnimation(null);
         }, 2100);
 
+        });
+
+        // Add event listener to the button
+        document.getElementById('gotoBahayngmgaTirona').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_bahay_ng_mga_tirona.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_bahay_ng_mga_tirona.open(map, marker_bahay_ng_mga_tirona);
+            toggleMenu_4_bahay_ngmga_tirona();
+
+            // Optionally, animate the marker
+            marker_bahay_ng_mga_tirona.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_bahay_ng_mga_tirona.setAnimation(null);
+            }, 2100);
         });
 //======================================================================================================================================
 
@@ -891,6 +950,24 @@
         }, 2100);
         });
 
+        // Add event listener to the button
+        document.getElementById('gotoPillarLodgeNo3').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_pillar_lodge_no3.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_pillar_lodge_no3.open(map, marker_pillar_lodge_no3);
+            toggleMenu_5_pillar_lodge_no3();
+
+            // Optionally, animate the marker
+            marker_pillar_lodge_no3.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_pillar_lodge_no3.setAnimation(null);
+            }, 2100);
+        });
+        
+
 //======================================================================================================================================
 
 //ARSENAL NG IMUS
@@ -921,6 +998,23 @@
         setTimeout(function() {
             marker_arsenal_ng_imus.setAnimation(null);
         }, 2100);
+        });
+
+        // Add event listener to the button
+        document.getElementById('gotoArsenalngImus').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_arsenal_ng_imus.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_arsenal_ng_imus.open(map, marker_arsenal_ng_imus);
+            toggleMenu_6_arsenal_ng_imus();
+
+            // Optionally, animate the marker
+            marker_arsenal_ng_imus.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_arsenal_ng_imus.setAnimation(null);
+            }, 2100);
         });
 
 //======================================================================================================================================
@@ -955,6 +1049,23 @@
         }, 2100);
         });
 
+        // Add event listener to the button
+        document.getElementById('gotoLabanansaImus').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_labanan_sa_imus.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_labanan_sa_imus.open(map, marker_labanan_sa_imus);
+            toggleMenu_7_labanan_sa_imus();
+
+            // Optionally, animate the marker
+            marker_labanan_sa_imus.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_labanan_sa_imus.setAnimation(null);
+            }, 2100);
+        });
+
 //======================================================================================================================================
 
 //BRIDGE OF ISABEL
@@ -987,6 +1098,23 @@
             marker_bridge_of_isabel.setAnimation(null);
         }, 2100);
         });
+
+        // Add event listener to the button
+        document.getElementById('gotoBridgeofIsabel').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_bridge_of_isabel.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_bridge_of_isabel.open(map, marker_bridge_of_isabel);
+            toggleMenu_8_bridge_of_isabel();
+
+            // Optionally, animate the marker
+            marker_bridge_of_isabel.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_bridge_of_isabel.setAnimation(null);
+            }, 2100);
+        });
 //======================================================================================================================================
 
 //FRANCISCA TIRONA BENITEZ
@@ -1018,6 +1146,23 @@
         setTimeout(function() {
             marker_francisca_tirona_benitez.setAnimation(null);
         }, 2100);
+        });
+
+        // Add event listener to the button
+        document.getElementById('gotoFranciscaTironaBenitez').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_francisca_tirona_benitez.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_francisca_tirona_benitez.open(map, marker_francisca_tirona_benitez);
+            toggleMenu_9_francisca_tirona_benitez();
+
+            // Optionally, animate the marker
+            marker_francisca_tirona_benitez.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_francisca_tirona_benitez.setAnimation(null);
+            }, 2100);
         });
 
 //======================================================================================================================================
@@ -1053,6 +1198,23 @@
         }, 2100);
         });
 
+        // Add event listener to the button
+        document.getElementById('gotoBayanLuma').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_bayan_luma.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_bayan_luma.open(map, marker_bayan_luma);
+            toggleMenu_10_bayan_luma();
+
+            // Optionally, animate the marker
+            marker_bayan_luma.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_bayan_luma.setAnimation(null);
+            }, 2100);
+        });
+
 //======================================================================================================================================
 
 // JULIAN BRIDGE CANNON
@@ -1084,6 +1246,23 @@
         setTimeout(function() {
             marker_julian_bridge_cannon.setAnimation(null);
         }, 2100);
+        });
+
+        // Add event listener to the button
+        document.getElementById('gotoJulianBridgeCannon').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_julian_bridge_cannon.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_julian_bridge_cannon.open(map, marker_julian_bridge_cannon);
+            toggleMenu_11_julian_bridge_cannon();
+
+            // Optionally, animate the marker
+            marker_julian_bridge_cannon.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_julian_bridge_cannon.setAnimation(null);
+            }, 2100);
         });
 
 //======================================================================================================================================
@@ -1120,6 +1299,23 @@
         }, 2100);
         });
 
+        // Add event listener to the button
+        document.getElementById('gotoLabanansaPasongSantol').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_labanan_sa_pasongsantol.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_labanan_sa_pasongsantol.open(map, marker_labanan_sa_pasongsantol);
+            toggleMenu_12_labanan_sa_pasongsantol();
+
+            // Optionally, animate the marker
+            marker_labanan_sa_pasongsantol.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_labanan_sa_pasongsantol.setAnimation(null);
+            }, 2100);
+        });
+
 //======================================================================================================================================
 
 // BANTAYOG NG MGA BAYANI
@@ -1151,6 +1347,23 @@
         setTimeout(function() {
             marker_bantayog_ngmga_bayani.setAnimation(null);
         }, 2100);
+        });
+
+        // Add event listener to the button
+        document.getElementById('gotoBantayogngmgaBayani').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_bantayog_ngmga_bayani.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_bantayog_ngmga_bayani.open(map, marker_bantayog_ngmga_bayani);
+            toggleMenu_13_bantayog_ngmga_bayani();
+
+            // Optionally, animate the marker
+            marker_bantayog_ngmga_bayani.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_bantayog_ngmga_bayani.setAnimation(null);
+            }, 2100);
         });
 
 //======================================================================================================================================
@@ -1186,10 +1399,27 @@
         }, 2100);
         });
 
+        // Add event listener to the button
+        document.getElementById('gotoBattleofAlapan').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_battle_of_alapan.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_battle_of_alapan.open(map, marker_battle_of_alapan);
+            toggleMenu_14_battle_of_alapan();
+
+            // Optionally, animate the marker
+            marker_battle_of_alapan.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_battle_of_alapan.setAnimation(null);
+            }, 2100);
+        });
+
 
 
 //======================================================================================================================================
-        // Only the Markers can User Interacts
+        // Only the Markers can User Interacts //G MAP JAVASCRIPT JS DEFAULT CONTROLS // DISABLE USER INTERACT BY DEFAULT
         google.maps.event.addListener(map, 'click', function(event) {
             event.stop(); // Stop default behavior
         });
