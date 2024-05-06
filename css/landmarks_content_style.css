@@ -62,6 +62,7 @@
     position: absolute;
     top: -15px;
     left: 50%;
+    text-align: center;
     transform: translateX(-50%);
     outline: 2px solid black; /* Outline style */
     color: rgb(255, 255, 255); /* Default color */
