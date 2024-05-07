@@ -29,7 +29,7 @@
         cursor: pointer;
         z-index: 1000; /* Ensure the button appears above the map */
         }
-
+        
     </style>
 </head>
 <body>
@@ -65,106 +65,162 @@
         
         </div>
 <!--======================================================================================================================================================================================================= -->
-
-        <!--OLD MUNICIPAL BUILDING DETAILS WINDOW -->
+<!--OLD MUNICIPAL BUILDING DETAILS WINDOW -->
         <div id="sideMenu_1" class="side-menu_1">
             <a href="javascript:void(0)" class="close-btn_1" onclick="toggleMenu_1_old_municipal_building()">&times;</a>
             <a style="text-align: center; color: white; font-size: 30px;">OLD MUNICIPAL BUILDING</a>
-            <h5 style="color: white; text-align: center;">DESCRIPTION HERE , INTRODUCTION SA LUGAR NA ITO HEHE</h5>
-            <p>&nbsp;</p>
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="images/old_municipal_hall/1.jpg" style="width:100%">
+            <h5 style="color: white; text-align: center;">DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
+            
+            <div class="slider-container">
+                <div class="slider slider-1">
+                    <div class="slide"><img src="images/old_municipal_hall/1.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images/old_municipal_hall/2.jpg" alt="Slide 2"></div>
+                    <!-- Add more slides if needed -->
                 </div>
-                <div class="mySlides fade">
-                    <img src="images/old_municipal_hall/2.jpg" style="width:100%">
-                </div>
-                <!-- ADD MORE PICS -->
-                <!-- Navigation buttons -->
-                <a id="showPhotosButton" onclick="plusSlides(1); showPhotos();">SHOW PHOTO'S</a>
-                <a class="prev" onclick="plusSlides(-1); showPhotos();">&#10094;</a>
-                <a class="next" onclick="plusSlides(1); showPhotos();">&#10095;</a>
             </div>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <h5 style="color: white; text-align: center;">ADD MORE DESCRIPTION HERE , PATUNGKOL SA LUGAR NA ITO HEHEHE</h5>
+
+            <h5 style="color: white; text-align: center;">MORE DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
         </div>
-
-
-
-        <!--IMUS CATHEDRAL DETAILS WINDOW-->
+        <script>
+            const slider1 = document.querySelector('.slider-1');
+            const slides1 = document.querySelectorAll('.slider-1 .slide');
+            const slideWidth1 = slides1[0].clientWidth;
+            let currentIndex1 = 0;
+        
+            function nextSlide1() {
+                currentIndex1 = (currentIndex1 + 1) % slides1.length;
+                slider1.style.transition = 'transform 0.5s ease-in-out';
+                slider1.style.transform = `translateX(-${currentIndex1 * slideWidth1}px)`;
+            }
+            setInterval(nextSlide1, 3000); // EVERY 3 SECONDS SLIDES
+        </script>
+<!--======================================================================================================================================================================================================= -->
+<!--IMUS CATHEDRAL DETAILS WINDOW-->
         <div id="sideMenu_2" class="side-menu_2">
             <a href="javascript:void(0)" class="close-btn_2" onclick="toggleMenu_2_imus_cathedral()">&times;</a>
-            <a href="#">IMUS CATHEDRAL</a>
-        </div>
+            <a style="text-align: center; color: white; font-size: 30px;">IMUS CATHEDRAL</a>
+            <h5 style="color: white; text-align: center;">DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
 
-        <!--GENERAL TOPACIO MONUMENT DETAILS WINDOW-->
+
+            <div class="slider-container">
+                <div class="slider slider-2">
+                    <div class="slide"><img src="images/imus_cathedral/1.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images/imus_cathedral/2.jpg" alt="Slide 2"></div>
+                    <div class="slide"><img src="images/imus_cathedral/3.jpg" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+
+            <h5 style="color: white; text-align: center;">MORE DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
+        </div>
+        <script>
+            const slider2 = document.querySelector('.slider-2');
+            const slides2 = document.querySelectorAll('.slider-2 .slide');
+            const slideWidth2 = slides2[0].clientWidth;
+            let currentIndex2 = 0;
+
+            function nextSlide2() {
+                currentIndex2 = (currentIndex2 + 1) % slides2.length;
+                slider2.style.transition = 'transform 0.5s ease-in-out';
+                slider2.style.transform = `translateX(-${currentIndex2 * slideWidth2}px)`;
+            }
+            setInterval(nextSlide2, 3000); // EVERY 3 SECONDS SLIDES
+        </script>
+<!--======================================================================================================================================================================================================= -->
+<!--GENERAL TOPACIO MONUMENT DETAILS WINDOW-->
         <div id="sideMenu_3" class="side-menu_3">
             <a href="javascript:void(0)" class="close-btn_3" onclick="toggleMenu_3_gen_topacio()">&times;</a>
-            <a href="#">GENERAL TOPACIO MONUMENT</a>
-        </div>
+            <a style="text-align: center; color: white; font-size: 30px;">GEN. TOPACIO MONUMENT</a>
+            <h5 style="color: white; text-align: center;">DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
 
-        <!--BAHAY NG MGA TIRONA DETAILS WINDOW-->
+           
+            <div class="slider-container">
+                <div class="slider slider-3">
+                    <div class="slide"><img src="images/gen_topacio_monument/1.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images/gen_topacio_monument/2.jpg" alt="Slide 2"></div>
+                    <div class="slide"><img src="images/gen_topacio_monument/3.jpg" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+
+            <h5 style="color: white; text-align: center;">MORE DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
+        </div>
+        <script>
+            const slider3 = document.querySelector('.slider-3');
+            const slides3 = document.querySelectorAll('.slider-3 .slide');
+            const slideWidth3 = slides3[0].clientWidth;
+            let currentIndex3 = 0;
+
+            function nextSlide3() {
+                currentIndex3 = (currentIndex3 + 1) % slides3.length;
+                slider3.style.transition = 'transform 0.5s ease-in-out';
+                slider3.style.transform = `translateX(-${currentIndex3 * slideWidth3}px)`;
+            }
+
+            setInterval(nextSlide3, 3000); // EVERY 3 SECONDS SLIDES
+        </script>
+<!--======================================================================================================================================================================================================= -->
+<!--BAHAY NG MGA TIRONA DETAILS WINDOW-->
         <div id="sideMenu_4" class="side-menu_4">
             <a href="javascript:void(0)" class="close-btn_4" onclick="toggleMenu_4_bahay_ngmga_tirona()">&times;</a>
             <a href="#">BAHAY NG MGA TIRONA</a>
         </div>
         
-        <!--PILLAR LODGE No.3 DETAILS WINDOW-->
+<!--PILLAR LODGE No.3 DETAILS WINDOW-->
         <div id="sideMenu_5" class="side-menu_5">
             <a href="javascript:void(0)" class="close-btn_5" onclick="toggleMenu_5_pillar_lodge_no3()">&times;</a>
             <a href="#">PILLAR LODGE NO.3</a>
         </div>
 
-        <!--ARSENAL NG IMUS DETAILS WINDOW-->
+<!--ARSENAL NG IMUS DETAILS WINDOW-->
         <div id="sideMenu_6" class="side-menu_6">
             <a href="javascript:void(0)" class="close-btn_6" onclick="toggleMenu_6_arsenal_ng_imus()">&times;</a>
             <a href="#">ARSENAL NG IMUS</a>
         </div>
 
-        <!--LABANAN SA IMUS DETAILS WINDOW-->
+<!--LABANAN SA IMUS DETAILS WINDOW-->
         <div id="sideMenu_7" class="side-menu_7">
             <a href="javascript:void(0)" class="close-btn_7" onclick="toggleMenu_7_labanan_sa_imus()">&times;</a>
             <a href="#">LABANAN SA IMUS</a>
         </div>
 
-        <!-- BRIDGE OF ISABEL DETAILS WINDOW-->
+<!-- BRIDGE OF ISABEL DETAILS WINDOW-->
         <div id="sideMenu_8" class="side-menu_8">
             <a href="javascript:void(0)" class="close-btn_8" onclick="toggleMenu_8_bridge_of_isabel()">&times;</a>
             <a href="#">BRIDGE OF ISABEL</a>
         </div>
 
-        <!-- FRANCISCA TIRONA BENITEZ DETAILS WINDOW-->
+<!-- FRANCISCA TIRONA BENITEZ DETAILS WINDOW-->
         <div id="sideMenu_9" class="side-menu_9">
             <a href="javascript:void(0)" class="close-btn_9" onclick="toggleMenu_9_francisca_tirona_benitez()">&times;</a>
             <a href="#">FRANCISCA TIRONA BENITEZ</a>
         </div>
 
-        <!-- BAYAN LUMA DETAILS WINDOW-->
+<!-- BAYAN LUMA DETAILS WINDOW-->
         <div id="sideMenu_10" class="side-menu_10">
             <a href="javascript:void(0)" class="close-btn_10" onclick="toggleMenu_10_bayan_luma()">&times;</a>
             <a href="#">BAYAN LUMA</a>
         </div>
 
-        <!-- JULIAN BRIDGE CANNON DETAILS WINDOW-->
+<!-- JULIAN BRIDGE CANNON DETAILS WINDOW-->
         <div id="sideMenu_11" class="side-menu_11">
             <a href="javascript:void(0)" class="close-btn_11" onclick="toggleMenu_11_julian_bridge_cannon()">&times;</a>
             <a href="#">JULIAN BRIDGE CANNON</a>
         </div>
 
-        <!-- LABANAN SA PASONG SANTOL DETAILS WINDOW-->
+<!-- LABANAN SA PASONG SANTOL DETAILS WINDOW-->
         <div id="sideMenu_12" class="side-menu_12">
             <a href="javascript:void(0)" class="close-btn_12" onclick="toggleMenu_12_labanan_sa_pasongsantol()">&times;</a>
             <a href="#">LABANAN SA PASONG SANTOL</a>
         </div>
     
-        <!-- BANTAYOG NG MGA BAYANI DETAILS WINDOW-->
+<!-- BANTAYOG NG MGA BAYANI DETAILS WINDOW-->
         <div id="sideMenu_13" class="side-menu_13">
             <a href="javascript:void(0)" class="close-btn_13" onclick="toggleMenu_13_bantayog_ngmga_bayani()">&times;</a>
             <a href="#">BANTAYOG NG MGA BAYANI</a>
         </div>
 
-        <!-- BATTLE OF ALAPAN DETAILS WINDOW-->
+<!-- BATTLE OF ALAPAN DETAILS WINDOW-->
         <div id="sideMenu_14" class="side-menu_14">
             <a href="javascript:void(0)" class="close-btn_14" onclick="toggleMenu_14_battle_of_alapan()">&times;</a>
             <a href="#">BATTLE OF ALAPAN</a>
@@ -807,7 +863,7 @@
                 }); 
                 // INFO WINDOWS
         var infoWindow_imuscathedral = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Imus Cathedral (Diocesan Shrine and Parish of Our Lady of the Pillar)</div>'
+            content: '<div style="text-align: center;">Imus Cathedral (Diocesan Shrine and Parish of Our Lady of the Pillar)<br><a href="https://www.google.com/maps?q=Imus+Cathedral" target="_blank">View on Google Maps</a></div>'
         });
                 // EVENT LISTENER FOR WINDOWS
         marker_imus_cathedral.addListener('click', function() {

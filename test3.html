@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .slider-container {
+            width: 50%;
+            overflow: hidden;
+            position: absolute;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            min-width: 100%;
+            overflow: hidden;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="images/imus_cathedral/1.jpg" alt="Slide 1"></div>
+            <div class="slide"><img src="images/imus_cathedral/2.jpg" alt="Slide 2"></div>
+            <div class="slide"><img src="images/imus_cathedral/3.jpg" alt="Slide 3"></div>
+            <!-- Add more slides if needed -->
+        </div>
+    </div>
+
+
+    <script>
+//SOURCE PATH - images/imus_cathedral/1.jpg
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const slideWidth = slides[0].clientWidth;
+    let currentIndex = 0;
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        slider.style.transition = 'transform 0.5s ease-in-out';
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>

@@ -1,84 +1,22 @@
-/*=========================================================================================================================================================*/
-/*OLD MUNICIPAL BUILDING STYLE CONTENT*/
-.slideshow-container {
-    max-width: 100%;
+/*LANDMARKS OVERALL STYLE CONTENT*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.slider-container {
+    width: 100%;
+    overflow: hidden;
     position: relative;
-    margin: auto;
 }
-
-.mySlides {
-    display: none;
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
 }
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+.slide {
+    min-width: 100%;
+    overflow: hidden;
 }
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
+.slide img {
+    width: 100%;
+    height: auto;
 }
-
-/* Navigation buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-#showPhotosButton {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-    outline: 2px solid black; /* Outline style */
-    color: rgb(255, 255, 255); /* Default color */
-    transition: color 0.3s; /* Smooth color transition */
-    font-size: 20px;
-    padding: 10px 20px; /* Adjust padding as needed */
-    border: 2px solid rgb(255, 255, 255); /* Button-like border */
-    border-radius: 5px; /* Rounded corners */
-}
-
-
-#showPhotosButton:hover {
-    color: rgb(142, 255, 49); /* Color on hover */
-    cursor: pointer;
-    font-size: 22px;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-}
-/*=========================================================================================================================================================*/
