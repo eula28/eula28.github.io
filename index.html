@@ -42,7 +42,7 @@
         <div id="sideMenu_0" class="side-menu_0">
             <a href="javascript:void(0)" class="close-btn_0" onclick="toggleMenu_0()">&times;</a>
             <h1 style="color: #999999; position: absolute; left: 27%; top: 1px;">NAVIGATE</h1>
-            <img src="images/AppLogo.png" alt="Description of the image" class="applogo">
+            <img src="images/_resourcesimages/AppLogo.png" alt="Description of the image" class="applogo">
             <h3 style="color: #999999; position: absolute; left: 2%; top: 70px;">Historical Landmarks:</h3>
 
 
@@ -61,8 +61,21 @@
             <a <button id="gotoBantayogngmgaBayani" onclick="toggleMenu_0()">→ Bantayog ng mga Bayani</button></a>
             <a <button id="gotoBattleofAlapan" onclick="toggleMenu_0()">→ Battle of Alapan</button></a>
 
-        
-        
+            <!-- SOCIAL MEDIA BUTTONS FOR CITY TOURISM -->
+
+            <div style="position: relative; margin-top: 220%; margin-left: 76%;">
+
+                <a href="https://www.facebook.com/ImusCityTourism" target="_blank">
+                    <img src="images/_resourcesimages/imuscity_tourism_logo.jpg" title="Imus City Tourism Facebook Page" alt="Facebook" width="45" height="45" style="border-radius: 50%;">
+                </a>
+
+                <a href="https://www.facebook.com/ImusCityTourism" target="_blank" style="margin-left: -70%; margin-top: -84%;">
+                    <img src="images/_resourcesimages/fb_logo.png" title="Imus City Tourism Facebook Page" alt="Facebook" width="45" height="45" style="border-radius: 50%;">
+                </a>
+
+                <p style="font-size: 12px; position: absolute; bottom: 20px; left: -130%; transform: translateX(-50%); color: white;text-align: center;">© Imus City Tourism</p>
+            </div>
+
         </div>
 <!--======================================================================================================================================================================================================= -->
 <!--OLD MUNICIPAL BUILDING DETAILS WINDOW -->
@@ -75,6 +88,7 @@
                 <div class="slider slider-1">
                     <div class="slide"><img src="images/old_municipal_hall/1.jpg" alt="Slide 1"></div>
                     <div class="slide"><img src="images/old_municipal_hall/2.jpg" alt="Slide 2"></div>
+                    <div class="slide"><img src="images/old_municipal_hall/3.jpg" alt="Slide 3"></div>
                     <!-- Add more slides if needed -->
                 </div>
             </div>
@@ -94,7 +108,6 @@
             }
             setInterval(nextSlide1, 3000); // EVERY 3 SECONDS SLIDES
         </script>
-        
 <!--======================================================================================================================================================================================================= -->
 <!--IMUS CATHEDRAL DETAILS WINDOW-->
         <div id="sideMenu_2" class="side-menu_2">
@@ -164,69 +177,151 @@
 <!--BAHAY NG MGA TIRONA DETAILS WINDOW-->
         <div id="sideMenu_4" class="side-menu_4">
             <a href="javascript:void(0)" class="close-btn_4" onclick="toggleMenu_4_bahay_ngmga_tirona()">&times;</a>
-            <a href="#">BAHAY NG MGA TIRONA</a>
+            <a style="text-align: center; color: white; font-size: 30px;">ANG BAHAY NG MGA TIRONA</a>
+            <h5 style="color: white; text-align: center;">DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
+
+           
+            <div class="slider-container">
+                <div class="slider slider-4">
+                    <div class="slide"><img src="images/bahay_ngmga_tirona/1.png" alt="Slide 1"></div>
+                    <div class="slide" style="margin-top: 25%;"><img src="images/bahay_ngmga_tirona/2.jpg" alt="Slide 2"></div>
+                    <div class="slide" style="margin-top: 25%;"><img src="images/bahay_ngmga_tirona/3.jpg" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+
+            <h5 style="color: white; text-align: center;">MORE DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
         </div>
+        <script>
+            const slider4 = document.querySelector('.slider-4');
+            const slides4 = document.querySelectorAll('.slider-4 .slide');
+            const slideWidth4 = slides4[0].clientWidth;
+            let currentIndex4 = 0;
         
+            function nextSlide4() {
+                currentIndex4 = (currentIndex4 + 1) % slides4.length;
+                slider4.style.transition = 'transform 0.5s ease-in-out';
+                slider4.style.transform = `translateX(-${currentIndex4 * slideWidth4}px)`;
+            }
+        
+            setInterval(nextSlide4, 3000); // EVERY 3 SECONDS SLIDES
+        </script>
+<!--=======================================================================================================================================================================================================-->
 <!--PILLAR LODGE No.3 DETAILS WINDOW-->
         <div id="sideMenu_5" class="side-menu_5">
             <a href="javascript:void(0)" class="close-btn_5" onclick="toggleMenu_5_pillar_lodge_no3()">&times;</a>
-            <a href="#">PILLAR LODGE NO.3</a>
-        </div>
+            <a style="text-align: center; color: white; font-size: 30px;">ANG BAHAY NG MGA TIRONA</a>
+            <h5 style="color: white; text-align: center;">DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
 
+
+            <div class="slider-container">
+                <div class="slider slider-5">
+                    <div class="slide"><img src="images/pillar_lodge_no3/1.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images/pillar_lodge_no3/2.jpg" alt="Slide 2"></div>
+                    <div class="slide"><img src="images/pillar_lodge_no3/3.jpg" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+
+            <h5 style="color: white; text-align: center;">MORE DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
+        </div>
+        <script>
+            const slider5 = document.querySelector('.slider-5');
+            const slides5 = document.querySelectorAll('.slider-5 .slide');
+            const slideWidth5 = slides5[0].clientWidth;
+            let currentIndex5 = 0;
+
+            function nextSlide5() {
+                currentIndex5 = (currentIndex5 + 1) % slides5.length;
+                slider5.style.transition = 'transform 0.5s ease-in-out';
+                slider5.style.transform = `translateX(-${currentIndex5 * slideWidth5}px)`;
+            }
+
+            setInterval(nextSlide5, 3000); // 3 SECONDS SLIDE
+        </script>
+<!--=======================================================================================================================================================================================================-->
 <!--ARSENAL NG IMUS DETAILS WINDOW-->
         <div id="sideMenu_6" class="side-menu_6">
             <a href="javascript:void(0)" class="close-btn_6" onclick="toggleMenu_6_arsenal_ng_imus()">&times;</a>
-            <a href="#">ARSENAL NG IMUS</a>
-        </div>
+            <a style="text-align: center; color: white; font-size: 30px;">ARSENAL NG IMUS</a>
+            <h5 style="color: white; text-align: center;">DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
 
+
+            <div class="slider-container">
+                <div class="slider slider-6">
+                    <div class="slide"><img src="images/arsenal_ng_imus/1.jpg" alt="Slide 1"></div>
+                    <div class="slide" style="margin-top: 15%;"><img src="images/arsenal_ng_imus/2.jpg" alt="Slide 2"></div>
+                    <div class="slide" style="margin-top: 13%;"><img src="images/arsenal_ng_imus/3.jpg" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+            
+            <h5 style="color: white; text-align: center;">MORE DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
+
+        </div>
+        <script>
+            const slider6 = document.querySelector('.slider-6');
+            const slides6 = document.querySelectorAll('.slider-6 .slide');
+            const slideWidth6 = slides6[0].clientWidth;
+            let currentIndex6 = 0;
+
+            function nextSlide6() {
+                currentIndex6 = (currentIndex6 + 1) % slides6.length;
+                slider6.style.transition = 'transform 0.5s ease-in-out';
+                slider6.style.transform = `translateX(-${currentIndex6 * slideWidth6}px)`;
+            }
+
+            setInterval(nextSlide6, 3000); // Change slide every 3 seconds
+        </script>
+<!--=======================================================================================================================================================================================================-->
 <!--LABANAN SA IMUS DETAILS WINDOW-->
         <div id="sideMenu_7" class="side-menu_7">
             <a href="javascript:void(0)" class="close-btn_7" onclick="toggleMenu_7_labanan_sa_imus()">&times;</a>
             <a href="#">LABANAN SA IMUS</a>
         </div>
-
+<!--=======================================================================================================================================================================================================-->
 <!-- BRIDGE OF ISABEL DETAILS WINDOW-->
         <div id="sideMenu_8" class="side-menu_8">
             <a href="javascript:void(0)" class="close-btn_8" onclick="toggleMenu_8_bridge_of_isabel()">&times;</a>
             <a href="#">BRIDGE OF ISABEL</a>
         </div>
-
+<!--=======================================================================================================================================================================================================-->
 <!-- FRANCISCA TIRONA BENITEZ DETAILS WINDOW-->
         <div id="sideMenu_9" class="side-menu_9">
             <a href="javascript:void(0)" class="close-btn_9" onclick="toggleMenu_9_francisca_tirona_benitez()">&times;</a>
             <a href="#">FRANCISCA TIRONA BENITEZ</a>
         </div>
-
+<!--=======================================================================================================================================================================================================-->
 <!-- BAYAN LUMA DETAILS WINDOW-->
         <div id="sideMenu_10" class="side-menu_10">
             <a href="javascript:void(0)" class="close-btn_10" onclick="toggleMenu_10_bayan_luma()">&times;</a>
             <a href="#">BAYAN LUMA</a>
         </div>
-
+<!--=======================================================================================================================================================================================================-->
 <!-- JULIAN BRIDGE CANNON DETAILS WINDOW-->
         <div id="sideMenu_11" class="side-menu_11">
             <a href="javascript:void(0)" class="close-btn_11" onclick="toggleMenu_11_julian_bridge_cannon()">&times;</a>
             <a href="#">JULIAN BRIDGE CANNON</a>
         </div>
-
+<!--=======================================================================================================================================================================================================-->
 <!-- LABANAN SA PASONG SANTOL DETAILS WINDOW-->
         <div id="sideMenu_12" class="side-menu_12">
             <a href="javascript:void(0)" class="close-btn_12" onclick="toggleMenu_12_labanan_sa_pasongsantol()">&times;</a>
             <a href="#">LABANAN SA PASONG SANTOL</a>
         </div>
-    
+    <!--=======================================================================================================================================================================================================-->
 <!-- BANTAYOG NG MGA BAYANI DETAILS WINDOW-->
         <div id="sideMenu_13" class="side-menu_13">
             <a href="javascript:void(0)" class="close-btn_13" onclick="toggleMenu_13_bantayog_ngmga_bayani()">&times;</a>
             <a href="#">BANTAYOG NG MGA BAYANI</a>
         </div>
-
+<!--=======================================================================================================================================================================================================-->
 <!-- BATTLE OF ALAPAN DETAILS WINDOW-->
         <div id="sideMenu_14" class="side-menu_14">
             <a href="javascript:void(0)" class="close-btn_14" onclick="toggleMenu_14_battle_of_alapan()">&times;</a>
             <a href="#">BATTLE OF ALAPAN</a>
         </div>
-
+<!--=======================================================================================================================================================================================================-->
 
     <!-- Button to switch to another HTML page -->
     <!--<button id="switchButton">Go ></button>-->
@@ -392,7 +487,7 @@
         }
 
         // Add event listener to the button to switch pages
-        document.getElementById("switchButton").addEventListener("click", switchPage);
+        //document.getElementById("switchButton").addEventListener("click", switchPage);
 
         // Initialize and display the map
         function initMap() {
@@ -731,9 +826,6 @@
                 fillOpacity: 1          // Full opacity for fill
             });
 
-        
-
-
         //============================================================================================================================
 
         // Create a new map centered at the specified coordinates
@@ -793,8 +885,6 @@
 
                 map.setCenter(new google.maps.LatLng(y, x));
             });
-
-
 
 // FOR MARKERS FUNCTIONALITY IN THE MAP
 //======================================================================================================================================
