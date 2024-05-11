@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/menu_screen.css">
     <link rel="stylesheet" type="text/css" href="css/go_to.css">
     <link rel="stylesheet" type="text/css" href="css/landmarks_content_style.css">
-    <script src="script/landmarks_content_functions.js"></script>
+    <script src="script/functiontortl.js"></script>
     <style>
 
         /* MAP */
@@ -29,6 +29,19 @@
         cursor: pointer;
         z-index: 1000; /* Ensure the button appears above the map */
         }
+
+        #rtlofuser {
+        position: absolute;
+        top: 70px; /* Adjust as needed */
+        right: 42px; /* Adjust as needed */
+        background-color: #74d3ff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure the button appears above the map */
+        }
         
     </style>
 </head>
@@ -36,6 +49,7 @@
 
         <div id="map"></div>    
         <button id="navigationmenu" onclick="toggleMenu_0()">NAVIGATE</button>
+        <button id="rtlofuser" onclick="tortlmap()">RTL</button>
 
 
 <!--========================================== NAVIGATION PANEL CONTROL=================================================================================================================================== -->
