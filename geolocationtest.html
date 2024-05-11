@@ -10,16 +10,16 @@
             width: 100%;
         }
         #tomainmap {
-        position: absolute;
-        top: 20px; /* Adjust as needed */
-        right: 20px; /* Adjust as needed */
-        background-color: #74d3ff;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        z-index: 1000; /* Ensure the button appears above the map */
+            position: absolute;
+            top: 20px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+            background-color: #74d3ff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1000; /* Ensure the button appears above the map */
         }
     </style>
 </head>
@@ -28,27 +28,19 @@
     <button id="tomainmap" onclick="tomainmap()">MAIN MAP</button>
     <script>
         function tomainmap() {
-        window.location.href = 'index.html';
-    }
+            window.location.href = 'index.html';
+        }
     </script>
     <script>
         // Initialize and add the map
         function initMap() {
-            // The location of your desired center
-            var center = { lat: 14.395677384943586, lng: 120.9367301272163 }; 
-            
             // The map, centered at your desired location
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 10, // Set the initial zoom level
-                center: center // Set the map center to your desired center
+                center: { lat: 14.395677384943586, lng: 120.9367301272163 } // Set the map center to your desired center
             });
-            
-            // Add a marker at the center of the map
-            var marker = new google.maps.Marker({
-                position: center,
-                map: map,
-                title: 'Hello World!'
-            });
+
+            var marker; // Declare marker variable
 
             // Update the user's location continuously
             if (navigator.geolocation) {
@@ -58,8 +50,17 @@
                         lng: position.coords.longitude
                     };
 
-                    // Update the marker position
-                    marker.setPosition(userLocation);
+                    // Remove the existing marker if it exists
+                    if (marker) {
+                        marker.setMap(null);
+                    }
+
+                    // Add a new marker at the user's location
+                    marker = new google.maps.Marker({
+                        position: userLocation,
+                        map: map,
+                        title: 'Your Location'
+                    });
 
                     // Center the map on the user's location
                     map.setCenter(userLocation);
