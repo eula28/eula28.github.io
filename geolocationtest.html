@@ -4,21 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Map Example</title>
-    <script>
-        function requestLocationPermission() {
-            if (navigator.geolocation) {
-                navigator.geolocation.requestPermission().then(function(permissionStatus) {
-                    if (permissionStatus === 'granted') {
-                        initMap();
-                    } else {
-                        console.log('Error: Location permission denied.');
-                    }
-                });
-            } else {
-                console.log('Error: Your browser doesn\'t support geolocation.');
-            }
-        }
-    </script>
     <style>
         #map {
             height: 100vh;
@@ -26,21 +11,21 @@
         }
         #tomainmap {
             position: absolute;
-            top: 20px; /* Adjust as needed */
-            right: 20px; /* Adjust as needed */
+            top: 20px;
+            right: 20px;
             background-color: #74d3ff;
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            z-index: 1000; /* Ensure the button appears above the map */
+            z-index: 1000;
         }
     </style>
 </head>
 <body>
     <div id="map"></div>
-    <button id="tomainmap" onclick="requestLocationPermission()">MAIN MAP</button>
+    <button id="tomainmap" onclick="tomainmap()">MAIN MAP</button>
     <script>
         function tomainmap() {
             window.location.href = 'index.html';
@@ -49,45 +34,40 @@
     <script>
         // Initialize and add the map
         function initMap() {
-    // The map, centered at your desired location
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10, // Set the initial zoom level
-        center: { lat: 14.395677384943586, lng: 120.9367301272163 } // Set the map center to your desired center
-    });
-
-    var marker; // Declare marker variable
-
-    // Update the user's location continuously
-    if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(function(position) {
-            var userLocation = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-
-            // Remove the existing marker if it exists
-            if (marker) {
-                marker.setMap(null);
-            }
-
-            // Add a new marker at the user's location
-            marker = new google.maps.Marker({
-                position: userLocation,
-                map: map,
-                title: 'Your Location'
+            // The map, centered at your desired location
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: { lat: 14.395677384943586, lng: 120.9367301272163 }
             });
 
-            // Center the map on the user's location
-            map.setCenter(userLocation);
-        }, function() {
-            // Handle geolocation errors
-            console.log('Error: The Geolocation service failed.');
-        }, { maximumAge: Infinity }); // Set maximumAge to a large value to always allow access by default
-    } else {
-        // Browser doesn't support Geolocation
-        console.log('Error: Your browser doesn\'t support geolocation.');
-    }
-}
+            var marker;
+
+            // Update the user's location continuously
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(function(position) {
+                    var userLocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    if (marker) {
+                        marker.setMap(null);
+                    }
+
+                    marker = new google.maps.Marker({
+                        position: userLocation,
+                        map: map,
+                        title: 'Your Location'
+                    });
+
+                    map.setCenter(userLocation);
+                }, function() {
+                    console.log('Error: The Geolocation service failed.');
+                }, { maximumAge: Infinity });
+            } else {
+                console.log('Error: Your browser doesn\'t support geolocation.');
+            }
+        }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo-JsadJUL3sFBFYqC7sVJekHuCUhQwj8&callback=initMap" async defer></script>
 </body>
