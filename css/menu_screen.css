@@ -1,14 +1,17 @@
 .side-menu_0 {
-    width: 0; /* Change height to width */
-    height: 100%; /* Add height: 100% to cover the whole height of the viewport */
+    width: 0; 
+    height: 100%; 
     position: fixed;
-    top: 0; /* Change bottom to top */
-    left: -300px; /* Initial position off the screen from the left */
-    background-color: #000000;
+    top: 0; 
+    left: -300px; 
+    background-color: black;
     overflow-y: auto;
-    transition: width 0.5s; /* Change height to width */
+    transition: width 0.5s; 
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_0 a {
@@ -45,6 +48,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_1 a {
@@ -80,6 +86,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_2 a {
@@ -115,6 +124,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_3 a {
@@ -150,6 +162,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_4 a {
@@ -185,6 +200,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_5 a {
@@ -220,6 +238,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_6 a {
@@ -255,6 +276,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_7 a {
@@ -290,6 +314,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_8 a {
@@ -325,6 +352,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_9 a {
@@ -360,6 +390,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_10 a {
@@ -395,6 +428,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_11 a {
@@ -430,6 +466,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_12 a {
@@ -465,6 +504,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_13 a {
@@ -500,6 +542,9 @@
     transition: height 0.5s;
     padding-top: 0px;
     z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .side-menu_14 a {
@@ -511,7 +556,7 @@
     transition: 0.3s;
 }
 
-.side-menu_13 a:hover {
+.side-menu_14 a:hover {
     color: #c62828;
 }
 

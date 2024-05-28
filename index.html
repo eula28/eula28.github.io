@@ -18,17 +18,22 @@
         }
 
         #navigationmenu {
-        position: absolute;
-        top: 20px; /* Adjust as needed */
-        right: 20px; /* Adjust as needed */
-        background-color: #74d3ff;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        z-index: 1000; /* Ensure the button appears above the map */
+            position: absolute;
+            top: 20px;
+            right: 20px; 
+            background-color: transparent;
+            border: none; 
+            padding: 0; 
+            cursor: pointer;
+            z-index: 1000;
         }
+
+        #navigationmenu img {
+            width: 140px; 
+            height: 40px;
+            border-radius: 5px;
+        }
+
 
         #rtlofuser {
         position: absolute;
@@ -48,32 +53,32 @@
 <body>
 
         <div id="map"></div>    
-        <button id="navigationmenu" onclick="toggleMenu_0()">NAVIGATE</button>
-        <button id="rtlofuser" onclick="tortlmap()">RTL</button>
-
+        <button id="navigationmenu" onclick="toggleMenu_0();">
+            <img src="navigate.png" alt="NAVIGATE">
+        </button>
 
 <!--========================================== NAVIGATION PANEL CONTROL=================================================================================================================================== -->
         <div id="sideMenu_0" class="side-menu_0">
             <a href="javascript:void(0)" class="close-btn_0" onclick="toggleMenu_0()">&times;</a>
-            <h1 style="color: #999999; position: absolute; left: 27%; top: 1px;">NAVIGATE</h1>
+            <h1 style="color: white; position: absolute; left: 27%; top: 1px;">NAVIGATE</h1>
             <img src="images/resourcesimages/AppLogo.png" alt="Description of the image" class="applogo">
-            <h3 style="color: #999999; position: absolute; left: 2%; top: 70px;">Historical Landmarks:</h3>
+            <h3 style="color: white; position: absolute; left: 2%; top: 70px;">Historical Landmarks:</h3>
 
 
-            <a <button id="gotoOldMunicipalBuilding" onclick="toggleMenu_0()">→ Old Municipal Building</button></a>
-            <a <button id="gotoImusCathedral" onclick="toggleMenu_0()">→ Imus Cathedral</button></a>
-            <a <button id="gotoGenTopacioMonument" onclick="toggleMenu_0()">→ Gen. Topacio Monument</button></a>
-            <a <button id="gotoBahayngmgaTirona" onclick="toggleMenu_0()">→ Bahay ng mga Tirona</button></a>
-            <a <button id="gotoPillarLodgeNo3" onclick="toggleMenu_0()">→ Pillar Lodge No.3</button></a>
-            <a <button id="gotoArsenalngImus" onclick="toggleMenu_0()">→ Arsenal ng Imus</button></a>
-            <a <button id="gotoLabanansaImus" onclick="toggleMenu_0()">→ Labanan sa Imus</button></a>
-            <a <button id="gotoBridgeofIsabel" onclick="toggleMenu_0()">→ Bridge of Isabel</button></a>
-            <a <button id="gotoFranciscaTironaBenitez" onclick="toggleMenu_0()">→ Francisca Tirona Benitez</button></a>
-            <a <button id="gotoBayanLuma" onclick="toggleMenu_0()">→ Bayan Luma</button></a>
-            <a <button id="gotoJulianBridgeCannon" onclick="toggleMenu_0()">→ Julian Bridge Cannon</button></a>
-            <a <button id="gotoLabanansaPasongSantol" onclick="toggleMenu_0()">→ Labanan sa Pasong Santol</button></a>
-            <a <button id="gotoBantayogngmgaBayani" onclick="toggleMenu_0()">→ Bantayog ng mga Bayani</button></a>
-            <a <button id="gotoBattleofAlapan" onclick="toggleMenu_0()">→ Battle of Alapan</button></a>
+            <a <button id="gotoOldMunicipalBuilding" onclick="toggleMenu_0()" style="color: white;">→ Old Municipal Building</button></a>
+            <a <button id="gotoImusCathedral" onclick="toggleMenu_0()"style="color: white;">→ Imus Cathedral</button></a>
+            <a <button id="gotoGenTopacioMonument" onclick="toggleMenu_0()"style="color: white;">→ Gen. Topacio Monument</button></a>
+            <a <button id="gotoBahayngmgaTirona" onclick="toggleMenu_0()"style="color: white;">→ Bahay ng mga Tirona</button></a>
+            <a <button id="gotoPillarLodgeNo3" onclick="toggleMenu_0()"style="color: white;">→ Pillar Lodge No.3</button></a>
+            <a <button id="gotoArsenalngImus" onclick="toggleMenu_0()"style="color: white;">→ Arsenal ng Imus</button></a>
+            <a <button id="gotoLabanansaImus" onclick="toggleMenu_0()"style="color: white;">→ Labanan sa Imus</button></a>
+            <a <button id="gotoBridgeofIsabel" onclick="toggleMenu_0()"style="color: white;">→ Bridge of Isabel</button></a>
+            <a <button id="gotoFranciscaTironaBenitez" onclick="toggleMenu_0()"style="color: white;">→ Francisca Tirona Benitez</button></a>
+            <a <button id="gotoBayanLuma" onclick="toggleMenu_0()"style="color: white;">→ Bayan Luma</button></a>
+            <a <button id="gotoJulianBridgeCannon" onclick="toggleMenu_0()"style="color: white;">→ Julian Bridge Cannon</button></a>
+            <a <button id="gotoLabanansaPasongSantol" onclick="toggleMenu_0()"style="color: white;">→ Labanan sa Pasong Santol</button></a>
+            <a <button id="gotoBantayogngmgaBayani" onclick="toggleMenu_0()"style="color: white;">→ Bantayog ng mga Bayani</button></a>
+            <a <button id="gotoBattleofAlapan" onclick="toggleMenu_0()"style="color: white;">→ Battle of Alapan</button></a>
 
             <!-- SOCIAL MEDIA BUTTONS FOR CITY TOURISM -->
             <div style="position: absolute; bottom: 0px; right: 0px;">
@@ -95,7 +100,6 @@
         <div id="sideMenu_1" class="side-menu_1">
             <a href="javascript:void(0)" class="close-btn_1" onclick="toggleMenu_1_old_municipal_building()">&times;</a>
             <a style="text-align: center; color: white; font-size: 30px;">OLD MUNICIPAL BUILDING</a>
-            <h5 style="color: white; text-align: center;">DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
             
             <div class="slider-container">
                 <div class="slider slider-1">
@@ -106,27 +110,57 @@
                 </div>
             </div>
 
-            <h5 style="color: white; text-align: center;">MORE DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
+            <h5 style="color: white; text-align: center; font-weight: normal    ;">The Old Municipal Building of Imus City, Philippines, is a historic structure that served as the center of local government administration. It is known for its colonial architecture and historical significance, reflecting the rich cultural heritage and history of Imus City.</h5>
+
         </div>
+
         <script>
             const slider1 = document.querySelector('.slider-1');
             const slides1 = document.querySelectorAll('.slider-1 .slide');
             const slideWidth1 = slides1[0].clientWidth;
             let currentIndex1 = 0;
-        
+            let startX1 = 0;
+            let endX1 = 0;
+          
             function nextSlide1() {
                 currentIndex1 = (currentIndex1 + 1) % slides1.length;
                 slider1.style.transition = 'transform 0.5s ease-in-out';
                 slider1.style.transform = `translateX(-${currentIndex1 * slideWidth1}px)`;
             }
-            setInterval(nextSlide1, 3000); // EVERY 3 SECONDS SLIDES
-        </script>
+          
+            function prevSlide1() {
+                currentIndex1 = (currentIndex1 - 1 + slides1.length) % slides1.length;
+                slider1.style.transition = 'transform 0.5s ease-in-out';
+                slider1.style.transform = `translateX(-${currentIndex1 * slideWidth1}px)`;
+            }
+          
+            function handleTouchStart(event) {
+                startX1 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove(event) {
+                endX1 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd() {
+                if (startX1 > endX1 + 50) {
+                    nextSlide1();
+                } else if (startX1 < endX1 - 50) {
+                    prevSlide1();
+                }
+            }
+          
+            slider1.addEventListener('touchstart', handleTouchStart);
+            slider1.addEventListener('touchmove', handleTouchMove);
+            slider1.addEventListener('touchend', handleTouchEnd);
+          
+            setInterval(nextSlide1, 3000); // Slide every 3 seconds
+          </script>
 <!--======================================================================================================================================================================================================= -->
 <!--IMUS CATHEDRAL DETAILS WINDOW-->
         <div id="sideMenu_2" class="side-menu_2">
             <a href="javascript:void(0)" class="close-btn_2" onclick="toggleMenu_2_imus_cathedral()">&times;</a>
             <a style="text-align: center; color: white; font-size: 30px;">IMUS CATHEDRAL</a>
-            <h5 style="color: white; text-align: center;">DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
 
 
             <div class="slider-container">
@@ -137,28 +171,57 @@
                     <!-- Add more slides if needed -->
                 </div>
             </div>
+            <h5 style="color: white; text-align: center;font-weight: normals;">The Imus Cathedral, officially known as the Diocesan Shrine and Parish of Our Lady of the Pillar (Imus Cathedral), is a prominent Roman Catholic church in Imus City, Philippines. It serves as the seat of the Diocese of Imus and is known for its Spanish colonial architecture and historical significance as a religious and cultural landmark.</h5>
 
-            <h5 style="color: white; text-align: center;">MORE DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
         </div>
+
         <script>
             const slider2 = document.querySelector('.slider-2');
             const slides2 = document.querySelectorAll('.slider-2 .slide');
             const slideWidth2 = slides2[0].clientWidth;
             let currentIndex2 = 0;
-
+            let startX2 = 0;
+            let endX2 = 0;
+          
             function nextSlide2() {
                 currentIndex2 = (currentIndex2 + 1) % slides2.length;
                 slider2.style.transition = 'transform 0.5s ease-in-out';
                 slider2.style.transform = `translateX(-${currentIndex2 * slideWidth2}px)`;
             }
-            setInterval(nextSlide2, 3000); // EVERY 3 SECONDS SLIDES
-        </script>
+          
+            function prevSlide2() {
+                currentIndex2 = (currentIndex2 - 1 + slides2.length) % slides2.length;
+                slider2.style.transition = 'transform 0.5s ease-in-out';
+                slider2.style.transform = `translateX(-${currentIndex2 * slideWidth2}px)`;
+            }
+          
+            function handleTouchStart2(event) {
+                startX2 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove2(event) {
+                endX2 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd2() {
+                if (startX2 > endX2 + 50) {
+                    nextSlide2();
+                } else if (startX2 < endX2 - 50) {
+                    prevSlide2();
+                }
+            }
+          
+            slider2.addEventListener('touchstart', handleTouchStart2);
+            slider2.addEventListener('touchmove', handleTouchMove2);
+            slider2.addEventListener('touchend', handleTouchEnd2);
+          
+            setInterval(nextSlide2, 3000); // Slide every 3 seconds
+          </script>
 <!--======================================================================================================================================================================================================= -->
 <!--GENERAL TOPACIO MONUMENT DETAILS WINDOW-->
         <div id="sideMenu_3" class="side-menu_3">
             <a href="javascript:void(0)" class="close-btn_3" onclick="toggleMenu_3_gen_topacio()">&times;</a>
             <a style="text-align: center; color: white; font-size: 30px;">GEN. TOPACIO MONUMENT</a>
-            <h5 style="color: white; text-align: center;">DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
 
            
             <div class="slider-container">
@@ -169,30 +232,57 @@
                     <!-- Add more slides if needed -->
                 </div>
             </div>
+            <h5 style="color: white; text-align: center;font-weight: normal;">The General Topacio Monument in Imus City, Philippines, is a historical monument dedicated to General Licerio Topacio, a prominent Filipino revolutionary leader. The monument honors his contributions to the fight for Philippine independence and serves as a symbol of the city's rich historical heritage.</h5>
 
-            <h5 style="color: white; text-align: center;">MORE DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
         </div>
+
         <script>
             const slider3 = document.querySelector('.slider-3');
             const slides3 = document.querySelectorAll('.slider-3 .slide');
             const slideWidth3 = slides3[0].clientWidth;
             let currentIndex3 = 0;
-
+            let startX3 = 0;
+            let endX3 = 0;
+          
             function nextSlide3() {
                 currentIndex3 = (currentIndex3 + 1) % slides3.length;
                 slider3.style.transition = 'transform 0.5s ease-in-out';
                 slider3.style.transform = `translateX(-${currentIndex3 * slideWidth3}px)`;
             }
-
-            setInterval(nextSlide3, 3000); // EVERY 3 SECONDS SLIDES
+          
+            function prevSlide3() {
+                currentIndex3 = (currentIndex3 - 1 + slides3.length) % slides3.length;
+                slider3.style.transition = 'transform 0.5s ease-in-out';
+                slider3.style.transform = `translateX(-${currentIndex3 * slideWidth3}px)`;
+            }
+          
+            function handleTouchStart3(event) {
+                startX3 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove3(event) {
+                endX3 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd3() {
+                if (startX3 > endX3 + 50) {
+                    nextSlide3();
+                } else if (startX3 < endX3 - 50) {
+                    prevSlide3();
+                }
+            }
+          
+            slider3.addEventListener('touchstart', handleTouchStart3);
+            slider3.addEventListener('touchmove', handleTouchMove3);
+            slider3.addEventListener('touchend', handleTouchEnd3);
+          
+            setInterval(nextSlide3, 3000); // Slide every 3 seconds
         </script>
 <!--======================================================================================================================================================================================================= -->
 <!--BAHAY NG MGA TIRONA DETAILS WINDOW-->
         <div id="sideMenu_4" class="side-menu_4">
             <a href="javascript:void(0)" class="close-btn_4" onclick="toggleMenu_4_bahay_ngmga_tirona()">&times;</a>
             <a style="text-align: center; color: white; font-size: 30px;">ANG BAHAY NG MGA TIRONA</a>
-            <h5 style="color: white; text-align: center;">DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
-
            
             <div class="slider-container">
                 <div class="slider slider-4">
@@ -202,30 +292,57 @@
                     <!-- Add more slides if needed -->
                 </div>
             </div>
+            <h5 style="color: white; text-align: center;font-weight: normal;">The Bahay ng mga Tirona in Imus City, Philippines, is a historic house that belonged to the Tirona family, notable figures in the Philippine revolution. The house is recognized for its Spanish colonial architecture and its significance in the local history and heritage of Imus.</h5>
 
-            <h5 style="color: white; text-align: center;">MORE DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
         </div>
+
         <script>
             const slider4 = document.querySelector('.slider-4');
             const slides4 = document.querySelectorAll('.slider-4 .slide');
             const slideWidth4 = slides4[0].clientWidth;
             let currentIndex4 = 0;
-        
+            let startX4 = 0;
+            let endX4 = 0;
+          
             function nextSlide4() {
                 currentIndex4 = (currentIndex4 + 1) % slides4.length;
                 slider4.style.transition = 'transform 0.5s ease-in-out';
                 slider4.style.transform = `translateX(-${currentIndex4 * slideWidth4}px)`;
             }
-        
-            setInterval(nextSlide4, 3000); // EVERY 3 SECONDS SLIDES
-        </script>
+          
+            function prevSlide4() {
+                currentIndex4 = (currentIndex4 - 1 + slides4.length) % slides4.length;
+                slider4.style.transition = 'transform 0.5s ease-in-out';
+                slider4.style.transform = `translateX(-${currentIndex4 * slideWidth4}px)`;
+            }
+          
+            function handleTouchStart4(event) {
+                startX4 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove4(event) {
+                endX4 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd4() {
+                if (startX4 > endX4 + 50) {
+                    nextSlide4();
+                } else if (startX4 < endX4 - 50) {
+                    prevSlide4();
+                }
+            }
+          
+            slider4.addEventListener('touchstart', handleTouchStart4);
+            slider4.addEventListener('touchmove', handleTouchMove4);
+            slider4.addEventListener('touchend', handleTouchEnd4);
+          
+            setInterval(nextSlide4, 3000); // Slide every 3 seconds
+          </script>   
 <!--=======================================================================================================================================================================================================-->
 <!--PILLAR LODGE No.3 DETAILS WINDOW-->
         <div id="sideMenu_5" class="side-menu_5">
             <a href="javascript:void(0)" class="close-btn_5" onclick="toggleMenu_5_pillar_lodge_no3()">&times;</a>
             <a style="text-align: center; color: white; font-size: 30px;">ANG BAHAY NG MGA TIRONA</a>
-            <h5 style="color: white; text-align: center;">DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
-
 
             <div class="slider-container">
                 <div class="slider slider-5">
@@ -235,29 +352,57 @@
                     <!-- Add more slides if needed -->
                 </div>
             </div>
+            <h5 style="color: white; text-align: center;font-weight: normal;">Pilar Lodge No. 3 in Imus City, Philippines, is a Masonic lodge known for its historical significance in the local Freemasonry community. It is one of the oldest lodges in the country, contributing to the cultural and social history of the area.</h5>
 
-            <h5 style="color: white; text-align: center;">MORE DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
         </div>
+        
         <script>
             const slider5 = document.querySelector('.slider-5');
             const slides5 = document.querySelectorAll('.slider-5 .slide');
             const slideWidth5 = slides5[0].clientWidth;
             let currentIndex5 = 0;
-
+            let startX5 = 0;
+            let endX5 = 0;
+          
             function nextSlide5() {
                 currentIndex5 = (currentIndex5 + 1) % slides5.length;
                 slider5.style.transition = 'transform 0.5s ease-in-out';
                 slider5.style.transform = `translateX(-${currentIndex5 * slideWidth5}px)`;
             }
-
-            setInterval(nextSlide5, 3000); // 3 SECONDS SLIDE
-        </script>
+          
+            function prevSlide5() {
+                currentIndex5 = (currentIndex5 - 1 + slides5.length) % slides5.length;
+                slider5.style.transition = 'transform 0.5s ease-in-out';
+                slider5.style.transform = `translateX(-${currentIndex5 * slideWidth5}px)`;
+            }
+          
+            function handleTouchStart5(event) {
+                startX5 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove5(event) {
+                endX5 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd5() {
+                if (startX5 > endX5 + 50) {
+                    nextSlide5();
+                } else if (startX5 < endX5 - 50) {
+                    prevSlide5();
+                }
+            }
+          
+            slider5.addEventListener('touchstart', handleTouchStart5);
+            slider5.addEventListener('touchmove', handleTouchMove5);
+            slider5.addEventListener('touchend', handleTouchEnd5);
+          
+            setInterval(nextSlide5, 3000); // Slide every 3 seconds
+          </script>
 <!--=======================================================================================================================================================================================================-->
 <!--ARSENAL NG IMUS DETAILS WINDOW-->
         <div id="sideMenu_6" class="side-menu_6">
             <a href="javascript:void(0)" class="close-btn_6" onclick="toggleMenu_6_arsenal_ng_imus()">&times;</a>
             <a style="text-align: center; color: white; font-size: 30px;">ARSENAL NG IMUS</a>
-            <h5 style="color: white; text-align: center;">DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
 
 
             <div class="slider-container">
@@ -268,72 +413,542 @@
                     <!-- Add more slides if needed -->
                 </div>
             </div>
-            
-            <h5 style="color: white; text-align: center;">MORE DESCRIPTION HERE, INTRODUCTION SA LUGAR NA ITO HEHE</h5>
+            <h5 style="color: white; text-align: center; font-weight: normal;">The Arsenal ng Imus, located in Imus City, Philippines, is a historic site that served as an armory during the Philippine Revolution. It played a crucial role in the struggle for independence, storing weapons and supplies for revolutionary forces.</h5>
 
         </div>
+
         <script>
             const slider6 = document.querySelector('.slider-6');
             const slides6 = document.querySelectorAll('.slider-6 .slide');
             const slideWidth6 = slides6[0].clientWidth;
             let currentIndex6 = 0;
-
+            let startX6 = 0;
+            let endX6 = 0;
+          
             function nextSlide6() {
                 currentIndex6 = (currentIndex6 + 1) % slides6.length;
                 slider6.style.transition = 'transform 0.5s ease-in-out';
                 slider6.style.transform = `translateX(-${currentIndex6 * slideWidth6}px)`;
             }
-
-            setInterval(nextSlide6, 3000); // Change slide every 3 seconds
-        </script>
+          
+            function prevSlide6() {
+                currentIndex6 = (currentIndex6 - 1 + slides6.length) % slides6.length;
+                slider6.style.transition = 'transform 0.5s ease-in-out';
+                slider6.style.transform = `translateX(-${currentIndex6 * slideWidth6}px)`;
+            }
+          
+            function handleTouchStart6(event) {
+                startX6 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove6(event) {
+                endX6 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd6() {
+                if (startX6 > endX6 + 50) {
+                    nextSlide6();
+                } else if (startX6 < endX6 - 50) {
+                    prevSlide6();
+                }
+            }
+          
+            slider6.addEventListener('touchstart', handleTouchStart6);
+            slider6.addEventListener('touchmove', handleTouchMove6);
+            slider6.addEventListener('touchend', handleTouchEnd6);
+          
+            setInterval(nextSlide6, 3000); // Slide every 3 seconds
+          </script>
 <!--=======================================================================================================================================================================================================-->
 <!--LABANAN SA IMUS DETAILS WINDOW-->
         <div id="sideMenu_7" class="side-menu_7">
             <a href="javascript:void(0)" class="close-btn_7" onclick="toggleMenu_7_labanan_sa_imus()">&times;</a>
-            <a href="#">LABANAN SA IMUS</a>
+            <a style="text-align: center; color: white; font-size: 30px;">LABANAN SA IMUS</a>
+
+
+            <div class="slider-container">
+                <div class="slider slider-7">
+                    <div class="slide"><img src="images/labanan_sa_imus/1.jpg" alt="Slide 1"></div>
+                    <div class="slide" style="margin-top: 15%;"><img src="images/labanan_sa_imus/2.jpg" alt="Slide 2"></div>
+                    <div class="slide" style="margin-top: 13%;"><img src="images/labanan_sa_imus/3.jpg" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+            <h5 style="color: white; text-align: center; font-weight: normal;">The Battle of Imus (Labanan sa Imus) was a significant conflict during the Philippine Revolution against Spanish colonial rule. Fought on September 3, 1896, in Imus City, it marked a major victory for Filipino revolutionaries and boosted the morale of the revolutionary movement.</h5>
+
         </div>
+
+        <script>
+            const slider7 = document.querySelector('.slider-7');
+            const slides7 = document.querySelectorAll('.slider-7 .slide');
+            const slideWidth7 = slides7[0].clientWidth;
+            let currentIndex7 = 0;
+            let startX7 = 0;
+            let endX7 = 0;
+          
+            function nextSlide7() {
+                currentIndex7 = (currentIndex7 + 1) % slides7.length;
+                slider7.style.transition = 'transform 0.5s ease-in-out';
+                slider7.style.transform = `translateX(-${currentIndex7 * slideWidth7}px)`;
+            }
+          
+            function prevSlide7() {
+                currentIndex7 = (currentIndex7 - 1 + slides7.length) % slides7.length;
+                slider7.style.transition = 'transform 0.5s ease-in-out';
+                slider7.style.transform = `translateX(-${currentIndex7 * slideWidth7}px)`;
+            }
+          
+            function handleTouchStart7(event) {
+                startX7 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove7(event) {
+                endX7 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd7() {
+                if (startX7 > endX7 + 50) {
+                    nextSlide7();
+                } else if (startX7 < endX7 - 50) {
+                    prevSlide7();
+                }
+            }
+          
+            slider7.addEventListener('touchstart', handleTouchStart7);
+            slider7.addEventListener('touchmove', handleTouchMove7);
+            slider7.addEventListener('touchend', handleTouchEnd7);
+          
+            setInterval(nextSlide7, 3000); // Slide every 3 seconds
+          </script>
+          
 <!--=======================================================================================================================================================================================================-->
 <!-- BRIDGE OF ISABEL DETAILS WINDOW-->
         <div id="sideMenu_8" class="side-menu_8">
             <a href="javascript:void(0)" class="close-btn_8" onclick="toggleMenu_8_bridge_of_isabel()">&times;</a>
-            <a href="#">BRIDGE OF ISABEL</a>
+            <a style="text-align: center; color: white; font-size: 30px;">BRIDGE OF ISABEL</a>
+
+
+            <div class="slider-container">
+                <div class="slider slider-8">
+                    <div class="slide"><img src="images/bridge_of_isabel/1.jpg" alt="Slide 1"></div>
+                    <div class="slide" style="margin-top: 15%;"><img src="images/bridge_of_isabel/2.jpg" alt="Slide 2"></div>
+                    <div class="slide" style="margin-top: 13%;"><img src="images/bridge_of_isabel/3.jpg" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+            <h5 style="color: white; text-align: center; font-weight: normal;">The Bridge of Isabel, located in Imus City, Philippines, is a historic bridge named after Queen Isabella II of Spain. It played a significant role during the Philippine Revolution and is known for its colonial architecture and historical importance.</h5>
+
         </div>
+
+        <script>
+            const slider8 = document.querySelector('.slider-8');
+            const slides8 = document.querySelectorAll('.slider-8 .slide');
+            const slideWidth8 = slides8[0].clientWidth;
+            let currentIndex8 = 0;
+            let startX8 = 0;
+            let endX8 = 0;
+          
+            function nextSlide8() {
+                currentIndex8 = (currentIndex8 + 1) % slides8.length;
+                slider8.style.transition = 'transform 0.5s ease-in-out';
+                slider8.style.transform = `translateX(-${currentIndex8 * slideWidth8}px)`;
+            }
+          
+            function prevSlide8() {
+                currentIndex8 = (currentIndex8 - 1 + slides8.length) % slides8.length;
+                slider8.style.transition = 'transform 0.5s ease-in-out';
+                slider8.style.transform = `translateX(-${currentIndex8 * slideWidth8}px)`;
+            }
+          
+            function handleTouchStart8(event) {
+                startX8 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove8(event) {
+                endX8 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd8() {
+                if (startX8 > endX8 + 50) {
+                    nextSlide8();
+                } else if (startX8 < endX8 - 50) {
+                    prevSlide8();
+                }
+            }
+          
+            slider8.addEventListener('touchstart', handleTouchStart8);
+            slider8.addEventListener('touchmove', handleTouchMove8);
+            slider8.addEventListener('touchend', handleTouchEnd8);
+          
+            setInterval(nextSlide8, 3000); // Slide every 3 seconds
+          </script>
+          
 <!--=======================================================================================================================================================================================================-->
 <!-- FRANCISCA TIRONA BENITEZ DETAILS WINDOW-->
         <div id="sideMenu_9" class="side-menu_9">
             <a href="javascript:void(0)" class="close-btn_9" onclick="toggleMenu_9_francisca_tirona_benitez()">&times;</a>
-            <a href="#">FRANCISCA TIRONA BENITEZ</a>
+            <a style="text-align: center; color: white; font-size: 30px;">FRANCISCA TIRONA BENITEZ</a>
+
+            <div class="slider-container">
+                <div class="slider slider-9">
+                    <div class="slide"><img src="images/francisca_benitez/1.jpg" alt="Slide 1"></div>
+                    <div class="slide" style="margin-top: 15%;"><img src="images/francisca_benitez/2.jpg" alt="Slide 2"></div>
+                    <div class="slide" style="margin-top: 13%;"><img src="images/francisca_benitez/3.png" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+            <h5 style="color: white; text-align: center; font-weight: normal;">Francisca Tirona Benitez, born in Imus City, Philippines, was a prominent educator and co-founder of the Philippine Women's University. She is recognized for her contributions to women's education and empowerment in the Philippines.</h5>
+
         </div>
+
+        <script>
+            const slider9 = document.querySelector('.slider-9');
+            const slides9 = document.querySelectorAll('.slider-9 .slide');
+            const slideWidth9 = slides9[0].clientWidth;
+            let currentIndex9 = 0;
+            let startX9 = 0;
+            let endX9 = 0;
+          
+            function nextSlide9() {
+                currentIndex9 = (currentIndex9 + 1) % slides9.length;
+                slider9.style.transition = 'transform 0.5s ease-in-out';
+                slider9.style.transform = `translateX(-${currentIndex9 * slideWidth9}px)`;
+            }
+          
+            function prevSlide9() {
+                currentIndex9 = (currentIndex9 - 1 + slides9.length) % slides9.length;
+                slider9.style.transition = 'transform 0.5s ease-in-out';
+                slider9.style.transform = `translateX(-${currentIndex9 * slideWidth9}px)`;
+            }
+          
+            function handleTouchStart9(event) {
+                startX9 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove9(event) {
+                endX9 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd9() {
+                if (startX9 > endX9 + 50) {
+                    nextSlide9();
+                } else if (startX9 < endX9 - 50) {
+                    prevSlide9();
+                }
+            }
+          
+            slider9.addEventListener('touchstart', handleTouchStart9);
+            slider9.addEventListener('touchmove', handleTouchMove9);
+            slider9.addEventListener('touchend', handleTouchEnd9);
+          
+            setInterval(nextSlide9, 3000); // Slide every 3 seconds
+          </script>
+          
 <!--=======================================================================================================================================================================================================-->
 <!-- BAYAN LUMA DETAILS WINDOW-->
         <div id="sideMenu_10" class="side-menu_10">
             <a href="javascript:void(0)" class="close-btn_10" onclick="toggleMenu_10_bayan_luma()">&times;</a>
-            <a href="#">BAYAN LUMA</a>
+            <a style="text-align: center; color: white; font-size: 30px;">BAYAN LUMA - JOSE S. TAGLE</a>
+
+            <div class="slider-container">
+                <div class="slider slider-10">
+                    <div class="slide"><img src="images/bayan_luma/1.jpg" alt="Slide 1"></div>
+                    <div class="slide" style="margin-top: 15%;"><img src="images/bayan_luma/2.jpg" alt="Slide 2"></div>
+                    <div class="slide" style="margin-top: 13%;"><img src="images/bayan_luma/3.jpg" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+            <h5 style="color: white; text-align: center; font-weight: normal;">Bayan Luma - Jose S. Tagle in Imus City, Philippines, is a historic area named after Jose S. Tagle, a notable revolutionary leader. The district is recognized for its contributions to the Philippine Revolution and its cultural heritage.</h5>
+
         </div>
+
+        <script>
+            const slider10 = document.querySelector('.slider-10');
+            const slides10 = document.querySelectorAll('.slider-10 .slide');
+            const slideWidth10 = slides10[0].clientWidth;
+            let currentIndex10 = 0;
+            let startX10 = 0;
+            let endX10 = 0;
+          
+            function nextSlide10() {
+                currentIndex10 = (currentIndex10 + 1) % slides10.length;
+                slider10.style.transition = 'transform 0.5s ease-in-out';
+                slider10.style.transform = `translateX(-${currentIndex10 * slideWidth10}px)`;
+            }
+          
+            function prevSlide10() {
+                currentIndex10 = (currentIndex10 - 1 + slides10.length) % slides10.length;
+                slider10.style.transition = 'transform 0.5s ease-in-out';
+                slider10.style.transform = `translateX(-${currentIndex10 * slideWidth10}px)`;
+            }
+          
+            function handleTouchStart10(event) {
+                startX10 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove10(event) {
+                endX10 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd10() {
+                if (startX10 > endX10 + 50) {
+                    nextSlide10();
+                } else if (startX10 < endX10 - 50) {
+                    prevSlide10();
+                }
+            }
+          
+            slider10.addEventListener('touchstart', handleTouchStart10);
+            slider10.addEventListener('touchmove', handleTouchMove10);
+            slider10.addEventListener('touchend', handleTouchEnd10);
+          
+            setInterval(nextSlide10, 3000); // Slide every 3 seconds
+          </script>
+          
 <!--=======================================================================================================================================================================================================-->
 <!-- JULIAN BRIDGE CANNON DETAILS WINDOW-->
         <div id="sideMenu_11" class="side-menu_11">
             <a href="javascript:void(0)" class="close-btn_11" onclick="toggleMenu_11_julian_bridge_cannon()">&times;</a>
-            <a href="#">JULIAN BRIDGE CANNON</a>
+            <a style="text-align: center; color: white; font-size: 30px;">JULIAN BRIDGE CANNON</a>
+
+            <div class="slider-container">
+                <div class="slider slider-11">
+                    <div class="slide"><img src="images/julian_bridge_cannon/1.jpg" alt="Slide 1"></div>
+                    <div class="slide" style="margin-top: 15%;"><img src="images/julian_bridge_cannon/2.jpg" alt="Slide 2"></div>
+                    <div class="slide" style="margin-top: 13%;"><img src="images/julian_bridge_cannon/3.jpg" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+            <h5 style="color: white; text-align: center; font-weight: normal;">The Julian Bridge Cannon in Imus City, Philippines, is a historical artifact from the Philippine Revolution. Located near Julian Bridge, it serves as a reminder of the battles fought in the area and the city's revolutionary history.</h5>
+
         </div>
+
+        <script>
+            const slider11 = document.querySelector('.slider-11');
+            const slides11 = document.querySelectorAll('.slider-11 .slide');
+            const slideWidth11 = slides11[0].clientWidth;
+            let currentIndex11 = 0;
+            let startX11 = 0;
+            let endX11 = 0;
+          
+            function nextSlide11() {
+                currentIndex11 = (currentIndex11 + 1) % slides11.length;
+                slider11.style.transition = 'transform 0.5s ease-in-out';
+                slider11.style.transform = `translateX(-${currentIndex11 * slideWidth11}px)`;
+            }
+          
+            function prevSlide11() {
+                currentIndex11 = (currentIndex11 - 1 + slides11.length) % slides11.length;
+                slider11.style.transition = 'transform 0.5s ease-in-out';
+                slider11.style.transform = `translateX(-${currentIndex11 * slideWidth11}px)`;
+            }
+          
+            function handleTouchStart11(event) {
+                startX11 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove11(event) {
+                endX11 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd11() {
+                if (startX11 > endX11 + 50) {
+                    nextSlide11();
+                } else if (startX11 < endX11 - 50) {
+                    prevSlide11();
+                }
+            }
+          
+            slider11.addEventListener('touchstart', handleTouchStart11);
+            slider11.addEventListener('touchmove', handleTouchMove11);
+            slider11.addEventListener('touchend', handleTouchEnd11);
+          
+            setInterval(nextSlide11, 3000); // Slide every 3 seconds
+          </script>
+          
 <!--=======================================================================================================================================================================================================-->
 <!-- LABANAN SA PASONG SANTOL DETAILS WINDOW-->
         <div id="sideMenu_12" class="side-menu_12">
             <a href="javascript:void(0)" class="close-btn_12" onclick="toggleMenu_12_labanan_sa_pasongsantol()">&times;</a>
-            <a href="#">LABANAN SA PASONG SANTOL</a>
+            <a style="text-align: center; color: white; font-size: 30px;">LABANAN SA PASONG SANTOL</a>
+
+            <div class="slider-container">
+                <div class="slider slider-12">
+                    <div class="slide"><img src="images/labanan_sa_pasongsantol/1.jpg" alt="Slide 1"></div>
+                    <div class="slide" style="margin-top: 15%;"><img src="images/labanan_sa_pasongsantol/2.jpg" alt="Slide 2"></div>
+                    <div class="slide" style="margin-top: 13%;"><img src="images/labanan_sa_pasongsantol/3.jpg" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+            <h5 style="color: white; text-align: center; font-weight: normal;">The Battle of Pasong Santol (Labanan sa Pasong Santol) in Imus City, Philippines, was a key conflict during the Philippine Revolution against Spanish colonial forces. It is noted for its strategic importance and the significant role it played in the struggle for independence.</h5>
+
         </div>
+
+        <script>
+            const slider12 = document.querySelector('.slider-12');
+            const slides12 = document.querySelectorAll('.slider-12 .slide');
+            const slideWidth12 = slides12[0].clientWidth;
+            let currentIndex12 = 0;
+            let startX12 = 0;
+            let endX12 = 0;
+          
+            function nextSlide12() {
+                currentIndex12 = (currentIndex12 + 1) % slides12.length;
+                slider12.style.transition = 'transform 0.5s ease-in-out';
+                slider12.style.transform = `translateX(-${currentIndex12 * slideWidth12}px)`;
+            }
+          
+            function prevSlide12() {
+                currentIndex12 = (currentIndex12 - 1 + slides12.length) % slides12.length;
+                slider12.style.transition = 'transform 0.5s ease-in-out';
+                slider12.style.transform = `translateX(-${currentIndex12 * slideWidth12}px)`;
+            }
+          
+            function handleTouchStart12(event) {
+                startX12 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove12(event) {
+                endX12 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd12() {
+                if (startX12 > endX12 + 50) {
+                    nextSlide12();
+                } else if (startX12 < endX12 - 50) {
+                    prevSlide12();
+                }
+            }
+          
+            slider12.addEventListener('touchstart', handleTouchStart12);
+            slider12.addEventListener('touchmove', handleTouchMove12);
+            slider12.addEventListener('touchend', handleTouchEnd12);
+          
+            setInterval(nextSlide12, 3000); // Slide every 3 seconds
+          </script>
+          
     <!--=======================================================================================================================================================================================================-->
 <!-- BANTAYOG NG MGA BAYANI DETAILS WINDOW-->
         <div id="sideMenu_13" class="side-menu_13">
             <a href="javascript:void(0)" class="close-btn_13" onclick="toggleMenu_13_bantayog_ngmga_bayani()">&times;</a>
-            <a href="#">BANTAYOG NG MGA BAYANI</a>
+            <a style="text-align: center; color: white; font-size: 30px;">BANTAYOG NG MGA BAYANI</a>
+
+            <div class="slider-container">
+                <div class="slider slider-13">
+                    <div class="slide"><img src="images/bantayog_ngmga_bayani/1.jpg" alt="Slide 1"></div>
+                    <div class="slide" style="margin-top: 15%;"><img src="images/bantayog_ngmga_bayani/2.jpg" alt="Slide 2"></div>
+                    <div class="slide" style="margin-top: 13%;"><img src="images/bantayog_ngmga_bayani/3.jpg" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+            <h5 style="color: white; text-align: center; font-weight: normal;">The Bantayog ng mga Bayani sa Pasong Santol in Imus City, Philippines, is a monument honoring the heroes of the Battle of Pasong Santol. It commemorates the bravery and sacrifices of Filipino revolutionaries in their fight for independence against Spanish colonial rule.</h5>
+
         </div>
+
+        <script>
+            const slider13 = document.querySelector('.slider-13');
+            const slides13 = document.querySelectorAll('.slider-13 .slide');
+            const slideWidth13 = slides13[0].clientWidth;
+            let currentIndex13 = 0;
+            let startX13 = 0;
+            let endX13 = 0;
+          
+            function nextSlide13() {
+                currentIndex13 = (currentIndex13 + 1) % slides13.length;
+                slider13.style.transition = 'transform 0.5s ease-in-out';
+                slider13.style.transform = `translateX(-${currentIndex13 * slideWidth13}px)`;
+            }
+          
+            function prevSlide13() {
+                currentIndex13 = (currentIndex13 - 1 + slides13.length) % slides13.length;
+                slider13.style.transition = 'transform 0.5s ease-in-out';
+                slider13.style.transform = `translateX(-${currentIndex13 * slideWidth13}px)`;
+            }
+          
+            function handleTouchStart13(event) {
+                startX13 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove13(event) {
+                endX13 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd13() {
+                if (startX13 > endX13 + 50) {
+                    nextSlide13();
+                } else if (startX13 < endX13 - 50) {
+                    prevSlide13();
+                }
+            }
+          
+            slider13.addEventListener('touchstart', handleTouchStart13);
+            slider13.addEventListener('touchmove', handleTouchMove13);
+            slider13.addEventListener('touchend', handleTouchEnd13);
+          
+            setInterval(nextSlide13, 3000); // Slide every 3 seconds
+          </script>
+          
 <!--=======================================================================================================================================================================================================-->
 <!-- BATTLE OF ALAPAN DETAILS WINDOW-->
         <div id="sideMenu_14" class="side-menu_14">
             <a href="javascript:void(0)" class="close-btn_14" onclick="toggleMenu_14_battle_of_alapan()">&times;</a>
-            <a href="#">BATTLE OF ALAPAN</a>
+            <a style="text-align: center; color: white; font-size: 30px;">BATTLE OF ALAPAN</a>
+
+            <div class="slider-container">
+                <div class="slider slider-14">
+                    <div class="slide" style="margin-top: 25%;"><img src="images/battle_of_alapan/1.jpg" alt="Slide 1"></div>
+                    <div class="slide" style="margin-top: 15%;"><img src="images/battle_of_alapan/2.jpg" alt="Slide 2"></div>
+                    <div class="slide" style="margin-top: 13%;"><img src="images/battle_of_alapan/3.jpg" alt="Slide 3"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+            <h5 style="color: white; text-align: center; font-weight: normal;">The Battle of Alapan, fought on May 28, 1898, in Imus City, Philippines, was a pivotal conflict during the Philippine Revolution. It marked the first time the Philippine flag was unfurled in victory, symbolizing a significant triumph against Spanish colonial forces.</h5>
+
         </div>
+
+        <script>
+            const slider14 = document.querySelector('.slider-14');
+            const slides14 = document.querySelectorAll('.slider-14 .slide');
+            const slideWidth14 = slides14[0].clientWidth;
+            let currentIndex14 = 0;
+            let startX14 = 0;
+            let endX14 = 0;
+          
+            function nextSlide14() {
+                currentIndex14 = (currentIndex14 + 1) % slides14.length;
+                slider14.style.transition = 'transform 0.5s ease-in-out';
+                slider14.style.transform = `translateX(-${currentIndex14 * slideWidth14}px)`;
+            }
+          
+            function prevSlide14() {
+                currentIndex14 = (currentIndex14 - 1 + slides14.length) % slides14.length;
+                slider14.style.transition = 'transform 0.5s ease-in-out';
+                slider14.style.transform = `translateX(-${currentIndex14 * slideWidth14}px)`;
+            }
+          
+            function handleTouchStart14(event) {
+                startX14 = event.touches[0].clientX;
+            }
+          
+            function handleTouchMove14(event) {
+                endX14 = event.touches[0].clientX;
+            }
+          
+            function handleTouchEnd14() {
+                if (startX14 > endX14 + 50) {
+                    nextSlide14();
+                } else if (startX14 < endX14 - 50) {
+                    prevSlide14();
+                }
+            }
+          
+            slider14.addEventListener('touchstart', handleTouchStart14);
+            slider14.addEventListener('touchmove', handleTouchMove14);
+            slider14.addEventListener('touchend', handleTouchEnd14);
+          
+            setInterval(nextSlide14, 3000); // Slide every 3 seconds
+          </script>
+          
 <!--=======================================================================================================================================================================================================-->
 
     <!-- Button to switch to another HTML page -->
@@ -356,6 +971,21 @@
                 sideMenu_0.style.width = '350px'; /* Change 400px to 300px */
                 sideMenu_0.style.left = '0'; /* Slide the menu into view from the left */
             }
+
+            document.getElementById('sideMenu_1').style.display = 'none';
+            document.getElementById('sideMenu_2').style.display = 'none';
+            document.getElementById('sideMenu_3').style.display = 'none';
+            document.getElementById('sideMenu_4').style.display = 'none';
+            document.getElementById('sideMenu_5').style.display = 'none';
+            document.getElementById('sideMenu_6').style.display = 'none';
+            document.getElementById('sideMenu_7').style.display = 'none';
+            document.getElementById('sideMenu_8').style.display = 'none';
+            document.getElementById('sideMenu_9').style.display = 'none';
+            document.getElementById('sideMenu_10').style.display = 'none';
+            document.getElementById('sideMenu_11').style.display = 'none';
+            document.getElementById('sideMenu_12').style.display = 'none';
+            document.getElementById('sideMenu_13').style.display = 'none';
+            document.getElementById('sideMenu_14').style.display = 'none';
         }
 
 
@@ -367,6 +997,7 @@
         } else {
             sideMenu_1.style.height = '400px';
             }
+            document.getElementById('sideMenu_1').style.display = 'block';
         }
 
         //FOR IMUS CATHEDRAL
@@ -377,6 +1008,7 @@
         } else {
             sideMenu_2.style.height = '400px';
             }
+            document.getElementById('sideMenu_2').style.display = 'block';
         }
 
         //FOR IMUS CATHEDRAL
@@ -387,6 +1019,7 @@
         } else {
             sideMenu_3.style.height = '400px';
             }
+            document.getElementById('sideMenu_3').style.display = 'block';
         }
         
         //FOR BAHAY NG MGA TIRONA
@@ -397,6 +1030,7 @@
         } else {
             sideMenu_4.style.height = '400px';
             }
+            document.getElementById('sideMenu_4').style.display = 'block';
         }
 
         //FOR PILLAR LODGE NO.3
@@ -407,6 +1041,7 @@
         } else {
             sideMenu_5.style.height = '400px';
             }
+            document.getElementById('sideMenu_5').style.display = 'block';
         }
         
         //FOR ARSENAL NG IMUS
@@ -417,6 +1052,7 @@
         } else {
             sideMenu_6.style.height = '400px';
             }
+            document.getElementById('sideMenu_6').style.display = 'block';
         }
 
         //FOR LABANAN SA IMUS
@@ -427,6 +1063,7 @@
         } else {
             sideMenu_7.style.height = '400px';
             }
+            document.getElementById('sideMenu_7').style.display = 'block';
         }
 
         //FOR BRIDGE OF ISABEL
@@ -437,6 +1074,7 @@
         } else {
             sideMenu_8.style.height = '400px';
             }
+            document.getElementById('sideMenu_8').style.display = 'block';
         }
 
         //FOR FRANCISCA TORINA BENITEZ
@@ -447,6 +1085,7 @@
         } else {
             sideMenu_9.style.height = '400px';
             }
+            document.getElementById('sideMenu_9').style.display = 'block';
         }
         
         //FOR BAYAN LUMA
@@ -457,6 +1096,7 @@
         } else {
             sideMenu_10.style.height = '400px';
             }
+            document.getElementById('sideMenu_10').style.display = 'block';
         }
 
         //FOR JuLIAN BRIDGE CANNON
@@ -467,6 +1107,7 @@
         } else {
             sideMenu_11.style.height = '400px';
             }
+            document.getElementById('sideMenu_11').style.display = 'block';
         }
 
         //FOR LABANAN SA PASONG SANTOL
@@ -477,6 +1118,7 @@
         } else {
             sideMenu_12.style.height = '400px';
             }
+            document.getElementById('sideMenu_12').style.display = 'block';
         }
 
         //FOR BANTAYOG NG MGA BAYANI
@@ -487,6 +1129,7 @@
         } else {
             sideMenu_13.style.height = '400px';
             }
+            document.getElementById('sideMenu_13').style.display = 'block';
         }
 
         //FOR BATTLE OF ALAPAN
@@ -497,6 +1140,7 @@
         } else {
             sideMenu_14.style.height = '400px';
             }
+            document.getElementById('sideMenu_14').style.display = 'block';
         }
 
         // Add event listener to the button to switch pages
