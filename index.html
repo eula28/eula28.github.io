@@ -1558,10 +1558,16 @@
             }   
         });
 
-        // Info Window for Old Municipal Building
         var infoWindow_oldMunicipalBuilding = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Old Municipal Building<br><a href="https://www.google.com/maps?q=Old+Municipal+Building+Imus">NAVIGATE HERE</a></div>'
+            content: `
+                <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                    <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Old Municipal Building</h3>
+                    <a href="https://www.google.com/maps?q=Old+Municipal+Building+Imus" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                        NAVIGATE HERE
+                    </a>
+                </div>`
         });
+
 
 
         // Event Listener for Old Municipal Building Marker
@@ -1623,10 +1629,22 @@
                         scaledSize: new google.maps.Size(90, 100), // Size of the marker icon
                     }   
                 }); 
+
+
                 // INFO WINDOWS
-        var infoWindow_imuscathedral = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Imus Cathedral (Diocesan Shrine and Parish of Our Lady of the Pillar)<br><a href="https://www.google.com/maps?q=Imus+Cathedral">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_imuscathedral = new google.maps.InfoWindow({
+            content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Imus Cathedral</h3>
+                        <p style="margin: 5px 0 10px; padding: 0; font-size: 14px;">(Diocesan Shrine and Parish of Our Lady of the Pillar)</p>
+                        <a href="https://www.google.com/maps?q=Imus+Cathedral" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
+
+
+        
                 // EVENT LISTENER FOR WINDOWS
         marker_imus_cathedral.addListener('click', function() {
             infoWindow_imuscathedral.open(map, marker_imus_cathedral);
@@ -1686,9 +1704,16 @@
                     }   
                 }); 
                 // INFO WINDOWS
-        var infoWindow_gen_topacio_monument = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">General Licerio Topacio Monument<br><a href="https://www.google.com/maps?q=General+Licerio+Topacio+Monument">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_gen_topacio_monument = new google.maps.InfoWindow({
+                content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">General Licerio Topacio Monument</h3>
+                        <a href="https://www.google.com/maps?q=General+Licerio+Topacio+Monument" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
+
                 // EVENT LISTENER FOR WINDOWS
         marker_gen_topacio_monument.addListener('click', function() {
             infoWindow_gen_topacio_monument.open(map, marker_gen_topacio_monument);
@@ -1749,9 +1774,15 @@
                     }
                 });
                 // INFO WINDOWS
-        var infoWindow_bahay_ng_mga_tirona = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Ang Bahay ng mga Tirona<br><a href="https://www.google.com/maps?q=Ang+bahay+ng+mga+tirona">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_bahay_ng_mga_tirona = new google.maps.InfoWindow({
+                content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Ang Bahay ng mga Tirona</h3>
+                        <a href="https://www.google.com/maps?q=Ang+bahay+ng+mga+tirona" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
                 // EVENT LISTENER FOR WINDOWS
         marker_bahay_ng_mga_tirona.addListener('click', function() {
             infoWindow_bahay_ng_mga_tirona.open(map, marker_bahay_ng_mga_tirona);
@@ -1812,9 +1843,15 @@
                     }   
                 }); 
                 // INFO WINDOWS
-        var infoWindow_pillar_lodge_no3 = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Pillar Lodge No.3<br><a href="https://www.google.com/maps?q=Pilar+Lodge+No.:+3+F&AM">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_pillar_lodge_no3 = new google.maps.InfoWindow({
+                content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Pillar Lodge No.3</h3>
+                        <a href="https://www.google.com/maps?q=Pilar+Lodge+No.:+3+F&AM" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
                 // EVENT LISTENER FOR WINDOWS
         marker_pillar_lodge_no3.addListener('click', function() {
             infoWindow_pillar_lodge_no3.open(map, marker_pillar_lodge_no3);
@@ -1876,9 +1913,15 @@
                     }   
                 }); 
                 // INFO WINDOWS
-        var infoWindow_arsenal_ng_imus = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Arsenal ng Imus<br><a href="https://www.google.com/maps?q=Arsenal+ng+Imus">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_arsenal_ng_imus = new google.maps.InfoWindow({
+                content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Arsenal ng Imus</h3>
+                        <a href="https://www.google.com/maps?q=Arsenal+ng+Imus" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
                 // EVENT LISTENER FOR WINDOWS
         marker_arsenal_ng_imus.addListener('click', function() {
             infoWindow_arsenal_ng_imus.open(map, marker_arsenal_ng_imus);
@@ -1939,9 +1982,15 @@
                     }   
                 }); 
                 // INFO WINDOWS
-        var infoWindow_labanan_sa_imus = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Labanan sa Imus<br><a href="https://www.google.com/maps?q=Battle+of+Imus+Monument+and+Labanan+Sa+Imus+Historical+Marker">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_labanan_sa_imus = new google.maps.InfoWindow({
+                content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Labanan sa Imus</h3>
+                        <a href="https://www.google.com/maps?q=Battle+of+Imus+Monument+and+Labanan+Sa+Imus+Historical+Marker" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
                 // EVENT LISTENER FOR WINDOWS
         marker_labanan_sa_imus.addListener('click', function() {
             infoWindow_labanan_sa_imus.open(map, marker_labanan_sa_imus);
@@ -2003,9 +2052,15 @@
                     }   
                 }); 
                 // INFO WINDOWS
-        var infoWindow_bridge_of_isabel = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Bridge of Isabel II<br><a href="https://www.google.com/maps?q=Bridge+of+Isabel+II+Historical+Marker">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_bridge_of_isabel = new google.maps.InfoWindow({
+                content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Bridge of Isabel II</h3>
+                        <a href="https://www.google.com/maps?q=Bridge+of+Isabel+II+Historical+Marker" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
                 // EVENT LISTENER FOR WINDOWS
         marker_bridge_of_isabel.addListener('click', function() {
             infoWindow_bridge_of_isabel.open(map, marker_bridge_of_isabel);
@@ -2066,9 +2121,15 @@
                     }   
                 }); 
                 // INFO WINDOWS
-        var infoWindow_francisca_tirona_benitez = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Francisca Tirona Benitez<br><a href="https://www.google.com/maps?q=Francisca+Tirona+Benitez+Historical+Marker">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_francisca_tirona_benitez = new google.maps.InfoWindow({
+                content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Francisca Tirona Benitez</h3>
+                        <a href="https://www.google.com/maps?q=Francisca+Tirona+Benitez+Historical+Marker" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
                 // EVENT LISTENER FOR WINDOWS
         marker_francisca_tirona_benitez.addListener('click', function() {
             infoWindow_francisca_tirona_benitez.open(map, marker_francisca_tirona_benitez);
@@ -2130,9 +2191,16 @@
                     }   
                 }); 
                 // INFO WINDOWS
-        var infoWindow_bayan_luma = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Bayan Luma - Jose S. Tagle<br><a href="https://www.google.com/maps?q=Col.+Jose+S.+Tagle+NHI+Marker">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_bayan_luma = new google.maps.InfoWindow({
+                content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Bayan Luma - Jose S. Tagle</h3>
+                        <a href="https://www.google.com/maps?q=Col.+Jose+S.+Tagle+NHI+Marker" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
+
                 // EVENT LISTENER FOR WINDOWS
         marker_bayan_luma.addListener('click', function() {
             infoWindow_bayan_luma.open(map, marker_bayan_luma);
@@ -2194,9 +2262,15 @@
                     }   
                 }); 
                 // INFO WINDOWS
-        var infoWindow_julian_bridge_cannon = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Battle of Julian Bridge Memorial Cannon<br><a href="https://www.google.com/maps?q=Battle+of+Julian+Bridge+Memorial+Cannon">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_julian_bridge_cannon = new google.maps.InfoWindow({
+                content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Battle of Julian Bridge Memorial Cannon</h3>
+                        <a href="https://www.google.com/maps?q=Battle+of+Julian+Bridge+Memorial+Cannon" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
                 // EVENT LISTENER FOR WINDOWS
         marker_julian_bridge_cannon.addListener('click', function() {
             infoWindow_julian_bridge_cannon.open(map, marker_julian_bridge_cannon);
@@ -2258,9 +2332,15 @@
                     }   
                 }); 
                 // INFO WINDOWS
-        var infoWindow_labanan_sa_pasongsantol = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Labanan sa Pasong Santol<br><a href="https://www.google.com/maps?q=Labanan+sa+Pasong+Santol">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_labanan_sa_pasongsantol = new google.maps.InfoWindow({
+                content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Labanan sa Pasong Santol</h3>
+                        <a href="https://www.google.com/maps?q=Labanan+sa+Pasong+Santol" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
                 // EVENT LISTENER FOR WINDOWS
         marker_labanan_sa_pasongsantol.addListener('click', function() {
             infoWindow_labanan_sa_pasongsantol.open(map, marker_labanan_sa_pasongsantol);
@@ -2323,9 +2403,15 @@
                     }   
                 }); 
                 // INFO WINDOWS
-        var infoWindow_bantayog_ngmga_bayani = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Bantayog ng mga Bayani sa Pasong Santol<br><a href="https://www.google.com/maps?q=Bantayog+ng+Labanan+sa+Pasong+Santol">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_bantayog_ngmga_bayani = new google.maps.InfoWindow({
+                content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Bantayog ng mga Bayani sa Pasong Santol</h3>
+                        <a href="https://www.google.com/maps?q=Bantayog+ng+Labanan+sa+Pasong+Santol" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
                 // EVENT LISTENER FOR WINDOWS
         marker_bantayog_ngmga_bayani.addListener('click', function() {
             infoWindow_bantayog_ngmga_bayani.open(map, marker_bantayog_ngmga_bayani);
@@ -2384,12 +2470,18 @@
                     icon: {
                         url: 'https://github.com/eula28/eula28.github.io/blob/main/images/battle_of_alapan.png?raw=true', // URL of the marker icon
                         scaledSize: new google.maps.Size(90, 90), // Size of the marker icon
-                    }   
-                }); 
+                    }
+                });
                 // INFO WINDOWS
-        var infoWindow_battle_of_alapan = new google.maps.InfoWindow({
-            content: '<div style="text-align: center;">Battle of Alapan<br><a href="https://www.google.com/maps?q=Battle+of+Alapan+Historical+Marker">NAVIGATE HERE</a></div>'
-        });
+                var infoWindow_battle_of_alapan = new google.maps.InfoWindow({
+                content: `
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                        <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Battle of Alapan</h3>
+                        <a href="https://www.google.com/maps?q=Battle+of+Alapan+Historical+Marker" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                            NAVIGATE HERE
+                        </a>
+                    </div>`
+            });
                 // EVENT LISTENER FOR WINDOWS
         marker_battle_of_alapan.addListener('click', function() {
             infoWindow_battle_of_alapan.open(map, marker_battle_of_alapan);
