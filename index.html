@@ -1172,8 +1172,8 @@
         var julian_bridge_cannon = {lat:14.40631342719528  , lng:120.93219619005443};
         var labanan_sa_pasongsantol = {lat:14.366308087704255 , lng:120.93897462985774};
         var bantayog_ngmga_bayani = {lat:14.361940709037837 , lng:120.9405616839925 };
-        var battle_of_alapan = {lat:14.404023544887746 , lng:120.9150278744321};  
-
+        var battle_of_alapan = {lat:14.404023544887746 , lng:120.9150278744321};
+        var licerio_topacio_marker = {lat:14.42925036714624 , lng:120.93707272158397};
         
         // POLYLINES BOUNDARIES OF IMUS
         var mainBoundaryImus = [
@@ -2475,7 +2475,6 @@
         });
 
 //======================================================================================================================================
-
 // BATTLE OF ALAPAN
 
         var marker_battle_of_alapan = new google.maps.Marker({
@@ -2544,8 +2543,74 @@
                 marker_battle_of_alapan.setAnimation(null);
             }, 2100);
         });
+//======================================================================================================================================
+//LICERIO TOPACIO MARKER
+var marker_licerio_topacio_marker = new google.maps.Marker({
+                    position: licerio_topacio_marker,  
+                    map: map,
+                    title: 'Licerio Topacio Marker)', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/battle_of_alapan.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(90, 90), // Size of the marker icon
+                    }
+                });
+                // INFO WINDOWS
+                var infoWindow_battle_of_alapan = new google.maps.InfoWindow({
+    content: `
+        <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+            <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Battle of Alapan</h3>
+            <a href="https://www.google.com/maps?q=Battle+of+Alapan+Historical+Marker" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                NAVIGATE HERE
+            </a>
+            <br><br><br>
+        </div>`
+});
+                // EVENT LISTENER FOR WINDOWS
+        marker_battle_of_alapan.addListener('click', function() {
+            infoWindow_battle_of_alapan.open(map, marker_battle_of_alapan);
+            map.setZoom(19);
+            map.panTo(marker_battle_of_alapan.getPosition(), 2000);
+            toggleMenu_14_battle_of_alapan();
+            document.getElementById('sideMenu_1').style.display = 'none';
+            document.getElementById('sideMenu_2').style.display = 'none';
+            document.getElementById('sideMenu_3').style.display = 'none';
+            document.getElementById('sideMenu_4').style.display = 'none';
+            document.getElementById('sideMenu_5').style.display = 'none';
+            document.getElementById('sideMenu_6').style.display = 'none';
+            document.getElementById('sideMenu_7').style.display = 'none';
+            document.getElementById('sideMenu_8').style.display = 'none';
+            document.getElementById('sideMenu_9').style.display = 'none';
+            document.getElementById('sideMenu_10').style.display = 'none';
+            document.getElementById('sideMenu_11').style.display = 'none';
+            document.getElementById('sideMenu_12').style.display = 'none';
+            document.getElementById('sideMenu_13').style.display = 'none';
+            document.getElementById('sideMenu_14').style.display = 'block';
 
+        // Add bouncing animation
+        marker_battle_of_alapan.setAnimation(google.maps.Animation.BOUNCE);
 
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_battle_of_alapan.setAnimation(null);
+        }, 2100);
+        });
+
+        // Add event listener to the button
+        document.getElementById('gotoBattleofAlapan').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_battle_of_alapan.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_battle_of_alapan.open(map, marker_battle_of_alapan);
+            toggleMenu_14_battle_of_alapan();
+
+            // Optionally, animate the marker
+            marker_battle_of_alapan.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_battle_of_alapan.setAnimation(null);
+            }, 2100);
+        });
 
 //======================================================================================================================================
         // Only the Markers can User Interacts //G MAP JAVASCRIPT JS DEFAULT CONTROLS // DISABLE USER INTERACT BY DEFAULT
