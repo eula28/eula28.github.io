@@ -79,10 +79,14 @@
             <a <button id="gotoLabanansaPasongSantol" onclick="toggleMenu_0()"style="color: white;">→ Labanan sa Pasong Santol</button></a>
             <a <button id="gotoBantayogngmgaBayani" onclick="toggleMenu_0()"style="color: white;">→ Bantayog ng mga Bayani</button></a>
             <a <button id="gotoBattleofAlapan" onclick="toggleMenu_0()"style="color: white;">→ Battle of Alapan</button></a>
-            <a <button id="gotoLicerioTopacioMarker" onclick="toggleMenu_0()"style="color: white;">→ General. Licerio Topacio Marker</button></a>
+            <a <button id="gotoLicerioTopacioMarker" onclick="toggleMenu_0()"style="color: white;">→ Gen. Topacio Marker</button></a>
+            <a <button id="gotoImusHistoricalMarker" onclick="toggleMenu_0()"style="color: white;">→ Imus Historical Marker</button></a>
+            <a <button id="gotoEnriqueVirata" onclick="toggleMenu_0()"style="color: white;">→ Enrique Virata Marker</button></a>
+
+
 
             <!-- SOCIAL MEDIA BUTTONS FOR CITY TOURISM -->
-            <div style="position: absolute; bottom: 0px; right: 0px;">
+            <div style="position: absolute; bottom: -100px; right: 0px;">
                 
                 <a href="https://www.facebook.com/ImusCityTourism" target="_blank">
                     <img src="images/resourcesimages/imuscity_tourism_logo.jpg" title="Imus City Tourism Facebook Page" alt="Facebook" width="45" height="45" style="border-radius: 50%;">
@@ -1011,7 +1015,134 @@
             </script>
         
 <!--=======================================================================================================================================================================================================-->
-    <!-- Button to switch to another HTML page -->
+ <!-- IMUS HISTORICAL MARKER DETAILS WINDOW-->
+        <div id="sideMenu_16" class="side-menu_16">
+            <a href="javascript:void(0)" style="text-align: center; font-size: 60px; color: rgb(103, 203, 71);" onclick="toggleMenu_16_imus_historical_marker()">&times;</a>
+            <a style="text-align: center; color: white; font-size: 30px;">IMUS HISTORICAL MARKER</a>
+
+            <div class="slider-container">
+                <div class="slider slider-16">
+                    <div class="slide" style="margin-top: 25%;"><img src="images/imus_historical_marker/1.jpg" alt="Slide 1"></div>
+                    <div class="slide" style="margin-top: 15%;"><img src="images/imus_historical_marker/2.jpg" alt="Slide 2"></div>
+                    <div class="slide" style="margin-top: 15%;"><img src="images/imus_historical_marker/3.jpg" alt="Slide 2"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+            <h5 style="color: white; text-align: center; font-weight: normal;">The Imus historical marker commemorates the Battle of Imus, a significant event in the Philippine Revolution against Spanish rule. Fought in September 1896, it was a pivotal victory for Filipino revolutionaries, led by General Emilio Aguinaldo, boosting their morale and advancing the struggle for independence. The marker honors this crucial moment in Philippine history.</h5>
+
+        </div>
+
+        <script>
+            const slider16 = document.querySelector('.slider-16');
+            const slides16 = document.querySelectorAll('.slider-16 .slide');
+            const slideWidth16 = slides16[0].clientWidth;
+            let currentIndex16 = 0;
+            let startX16 = 0;
+            let endX16 = 0;
+
+            function nextSlide16() {
+                currentIndex16 = (currentIndex16 + 1) % slides16.length;
+                slider16.style.transition = 'transform 0.5s ease-in-out';
+                slider16.style.transform = `translateX(-${currentIndex16 * slideWidth16}px)`;
+            }
+
+            function prevSlide16() {
+                currentIndex16 = (currentIndex16 - 1 + slides16.length) % slides16.length;
+                slider16.style.transition = 'transform 0.5s ease-in-out';
+                slider16.style.transform = `translateX(-${currentIndex16 * slideWidth16}px)`;
+            }
+
+            function handleTouchStart16(event) {
+                startX16 = event.touches[0].clientX;
+            }
+
+            function handleTouchMove16(event) {
+                endX16 = event.touches[0].clientX;
+            }
+
+            function handleTouchEnd16() {
+                if (startX16 > endX16 + 50) {
+                    nextSlide16();
+                } else if (startX16 < endX16 - 50) {
+                    prevSlide16();
+                }
+            }
+
+            slider16.addEventListener('touchstart', handleTouchStart16);
+            slider16.addEventListener('touchmove', handleTouchMove16);
+            slider16.addEventListener('touchend', handleTouchEnd16);
+
+            setInterval(nextSlide16, 5000); // Slide every 5 seconds
+        </script>
+
+<!--=======================================================================================================================================================================================================-->
+ <!-- ENRIQUE VIRATA DETAILS WINDOW-->
+        <div id="sideMenu_17" class="side-menu_17">
+            <a href="javascript:void(0)" style="text-align: center; font-size: 60px; color: rgb(103, 203, 71);" onclick="toggleMenu_17_enrique_virata_marker()">&times;</a>
+            <a style="text-align: center; color: white; font-size: 30px;">ENRIQUE VIRATA MARKER</a>
+
+            <div class="slider-container">
+                <div class="slider slider-17">
+                    <div class="slide" style="margin-top: 25%;"><img src="images/enrique_virata/1.jpg" alt="Slide 1"></div>
+                    <div class="slide" style="margin-top: 15%;"><img src="images/enrique_virata/2.jpg" alt="Slide 2"></div>
+                    <!-- Add more slides if needed -->
+                </div>
+            </div>
+            <h5 style="color: white; text-align: center; font-weight: normal;">
+                The Enrique Virata marker in Imus, Cavite, honors Enrique Virata, a prominent figure in the Philippine Revolution. Virata played a significant role in supporting the revolutionary movement against Spanish colonial rule. The marker commemorates his contributions to the fight for Philippine independence.</h5>
+
+        </div>
+
+        <script>
+            const slider17 = document.querySelector('.slider-17');
+            const slides17 = document.querySelectorAll('.slider-17 .slide');
+            const slideWidth17 = slides17[0].clientWidth;
+            let currentIndex17 = 0;
+            let startX17 = 0;
+            let endX17 = 0;
+
+            function nextSlide17() {
+                currentIndex17 = (currentIndex17 + 1) % slides17.length;
+                slider17.style.transition = 'transform 0.5s ease-in-out';
+                slider17.style.transform = `translateX(-${currentIndex17 * slideWidth17}px)`;
+            }
+
+            function prevSlide17() {
+                currentIndex17 = (currentIndex17 - 1 + slides17.length) % slides17.length;
+                slider17.style.transition = 'transform 0.5s ease-in-out';
+                slider17.style.transform = `translateX(-${currentIndex17 * slideWidth17}px)`;
+            }
+
+            function handleTouchStart17(event) {
+                startX17 = event.touches[0].clientX;
+            }
+
+            function handleTouchMove17(event) {
+                endX17 = event.touches[0].clientX;
+            }
+
+            function handleTouchEnd17() {
+                if (startX17 > endX17 + 50) {
+                    nextSlide17();
+                } else if (startX17 < endX17 - 50) {
+                    prevSlide17();
+                }
+            }
+
+            slider17.addEventListener('touchstart', handleTouchStart17);
+            slider17.addEventListener('touchmove', handleTouchMove17);
+            slider17.addEventListener('touchend', handleTouchEnd17);
+
+            setInterval(nextSlide17, 5000); // Slide every 5 seconds
+        </script>
+
+<!--=======================================================================================================================================================================================================-->
+
+
+
+
+
+<!-- Button to switch to another HTML page -->
     <!--<button id="switchButton">Go ></button>-->
 
     
@@ -1047,6 +1178,8 @@
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
             document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
         }
 
 
@@ -1204,7 +1337,7 @@
             document.getElementById('sideMenu_14').style.display = 'block';
         }
         
-        //FOR BATTLE OF ALAPAN
+        //FOR LICERIO TOPACIO MARKER
         function toggleMenu_15_licerio_topacio_marker() {
         var sideMenu = document.getElementById('sideMenu_15');
         if (sideMenu_15.style.height === '400px') {
@@ -1215,6 +1348,27 @@
             document.getElementById('sideMenu_15').style.display = 'block';
         }
 
+        //FOR IMUS HISTORICAL MARKER
+        function toggleMenu_16_imus_historical_marker() {
+        var sideMenu = document.getElementById('sideMenu_16');
+        if (sideMenu_16.style.height === '400px') {
+            sideMenu_16.style.height = '0';
+        } else {
+            sideMenu_16.style.height = '400px';
+            }
+            document.getElementById('sideMenu_16').style.display = 'block';
+        }
+
+        //FOR IMUS HISTORICAL MARKER
+        function toggleMenu_17_enrique_virata_marker() {
+        var sideMenu = document.getElementById('sideMenu_17');
+        if (sideMenu_17.style.height === '400px') {
+            sideMenu_17.style.height = '0';
+        } else {
+            sideMenu_17.style.height = '400px';
+            }
+            document.getElementById('sideMenu_17').style.display = 'block';
+        }
         // Add event listener to the button to switch pages
         //document.getElementById("switchButton").addEventListener("click", switchPage);
 
@@ -1247,6 +1401,7 @@
         var battle_of_alapan = {lat:14.404023544887746 , lng:120.9150278744321};
         var licerio_topacio_marker = {lat:14.42925036714624 , lng: 120.93707272158397};
         var imus_historical_marker = {lat:14.42897796089191 , lng: 120.93620538257211};
+        var enrique_virata_marker = {lat:14.438231214817101 , lng: 120.9268601353716}; //NOT ACCURATE
         
         // POLYLINES BOUNDARIES OF IMUS
         var mainBoundaryImus = [
@@ -1665,6 +1820,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_old_municipal_building_imus.setAnimation(google.maps.Animation.BOUNCE);
@@ -1742,6 +1900,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
         // Add bouncing animation
         marker_imus_cathedral.setAnimation(google.maps.Animation.BOUNCE);
 
@@ -1812,6 +1973,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_gen_topacio_monument.setAnimation(google.maps.Animation.BOUNCE);
@@ -1882,6 +2046,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_bahay_ng_mga_tirona.setAnimation(google.maps.Animation.BOUNCE);
@@ -1952,6 +2119,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_pillar_lodge_no3.setAnimation(google.maps.Animation.BOUNCE);
@@ -2023,6 +2193,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_arsenal_ng_imus.setAnimation(google.maps.Animation.BOUNCE);
@@ -2093,6 +2266,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_labanan_sa_imus.setAnimation(google.maps.Animation.BOUNCE);
@@ -2164,6 +2340,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_bridge_of_isabel.setAnimation(google.maps.Animation.BOUNCE);
@@ -2234,6 +2413,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_francisca_tirona_benitez.setAnimation(google.maps.Animation.BOUNCE);
@@ -2306,6 +2488,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_bayan_luma.setAnimation(google.maps.Animation.BOUNCE);
@@ -2377,6 +2562,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_julian_bridge_cannon.setAnimation(google.maps.Animation.BOUNCE);
@@ -2448,6 +2636,9 @@
             document.getElementById('sideMenu_12').style.display = 'block';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
             
 
         // Add bouncing animation
@@ -2520,6 +2711,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'block';
             document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_bantayog_ngmga_bayani.setAnimation(google.maps.Animation.BOUNCE);
@@ -2590,6 +2784,9 @@
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'block';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_battle_of_alapan.setAnimation(google.maps.Animation.BOUNCE);
@@ -2659,6 +2856,8 @@ var marker_licerio_topacio_marker = new google.maps.Marker({
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
             document.getElementById('sideMenu_15').style.display = 'block';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
         marker_licerio_topacio_marker.setAnimation(google.maps.Animation.BOUNCE);
@@ -2688,32 +2887,32 @@ var marker_licerio_topacio_marker = new google.maps.Marker({
 
 //======================================================================================================================================
 //IMUS HISTORICAL MARKER
-var imus_historical_marker = new google.maps.Marker({
+var marker_imus_historical_marker = new google.maps.Marker({
                     position: imus_historical_marker,  
                     map: map,
-                    title: 'Imus Historical Marker)', // Optional title for the marker
+                    title: 'Imus Historical Marker', // Optional title for the marker
                     icon: {
-                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/licerio_topacio_marker.png?raw=true', // URL of the marker icon
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/imus_historical_marker.png?raw=true', // URL of the marker icon
                         scaledSize: new google.maps.Size(80, 80), // Size of the marker icon
                     }
                 });
                 // INFO WINDOWS
-                var infoWindow_licerio_topacio_marker = new google.maps.InfoWindow({
+                var infoWindow_imus_historical_marker = new google.maps.InfoWindow({
     content: `
         <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
-            <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">General Licerio Topacio Marker</h3>
-            <a href="https://www.google.com/maps?q=Heneral+Licerio+Topacio+Y+Cuenca+Historical+Marker" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+            <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Imus Historical Marker</h3>
+            <a href="https://www.google.com/maps?q=Imus+Historical+Marker" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
                 NAVIGATE HERE
             </a>
             <br><br><br>
         </div>`
 });
                 // EVENT LISTENER FOR WINDOWS
-        marker_licerio_topacio_marker.addListener('click', function() {
-            infoWindow_licerio_topacio_marker.open(map, marker_licerio_topacio_marker);
+        marker_imus_historical_marker.addListener('click', function() {
+            infoWindow_imus_historical_marker.open(map, marker_imus_historical_marker);
             map.setZoom(19);
-            map.panTo(marker_licerio_topacio_marker.getPosition(), 2000);
-            toggleMenu_15_licerio_topacio_marker();
+            map.panTo(marker_imus_historical_marker.getPosition(), 2000);
+            toggleMenu_16_imus_historical_marker();
             document.getElementById('sideMenu_1').style.display = 'none';
             document.getElementById('sideMenu_2').style.display = 'none';
             document.getElementById('sideMenu_3').style.display = 'none';
@@ -2728,36 +2927,108 @@ var imus_historical_marker = new google.maps.Marker({
             document.getElementById('sideMenu_12').style.display = 'none';
             document.getElementById('sideMenu_13').style.display = 'none';
             document.getElementById('sideMenu_14').style.display = 'none';
-            document.getElementById('sideMenu_15').style.display = 'block';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'block';
+            document.getElementById('sideMenu_17').style.display = 'none';
 
         // Add bouncing animation
-        marker_licerio_topacio_marker.setAnimation(google.maps.Animation.BOUNCE);
+        marker_imus_historical_marker.setAnimation(google.maps.Animation.BOUNCE);
 
         // Stop bouncing animation after 3 bounces (approx. 2 seconds)
         setTimeout(function() {
-            marker_licerio_topacio_marker.setAnimation(null);
+            marker_imus_historical_marker.setAnimation(null);
         }, 2100);
         });
 
         // Add event listener to the button
-        document.getElementById('gotoLicerioTopacioMarker').addEventListener('click', function() {
+        document.getElementById('gotoImusHistoricalMarker').addEventListener('click', function() {
             // Center the map on the marker's position
-            map.panTo(marker_licerio_topacio_marker.getPosition(), 2000);
+            map.panTo(marker_imus_historical_marker.getPosition(), 2000);
             map.setZoom(19);
             // Open the info window
-            infoWindow_licerio_topacio_marker.open(map, marker_licerio_topacio_marker);
-            toggleMenu_15_licerio_topacio_marker();
+            infoWindow_imus_historical_marker.open(map, marker_imus_historical_marker);
+            toggleMenu_16_imus_historical_marker();
 
             // Optionally, animate the marker
-            marker_licerio_topacio_marker.setAnimation(google.maps.Animation.BOUNCE);
+            marker_imus_historical_marker.setAnimation(google.maps.Animation.BOUNCE);
             // Stop bouncing animation after 3 bounces (approx. 2 seconds)
             setTimeout(function() {
-                marker_licerio_topacio_marker.setAnimation(null);
+                marker_imus_historical_marker.setAnimation(null);
             }, 2100);
         });
 
 
+//======================================================================================================================================
+//ENRIQUE VIRATA MARKER
+var marker_enrique_virata = new google.maps.Marker({
+                    position: enrique_virata_marker,  
+                    map: map,
+                    title: 'Enrique Virata Marker', // Optional title for the marker
+                    icon: {
+                        url: 'https://github.com/eula28/eula28.github.io/blob/main/images/imus_historical_marker.png?raw=true', // URL of the marker icon
+                        scaledSize: new google.maps.Size(80, 80), // Size of the marker icon
+                    }
+                });
+                // INFO WINDOWS
+                var infoWindow_imus_historical_marker = new google.maps.InfoWindow({
+    content: `
+        <div style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+            <h3 style="margin: 0; padding: 0; font-size: 16px; color: #2C3E50;">Imus Historical Marker</h3>
+            <a href="https://www.google.com/maps?q=Imus+Historical+Marker" style="display: inline-block; margin-top: 8px; padding: 8px 12px; background-color: #3498DB; color: #fff; text-decoration: none; border-radius: 4px;">
+                NAVIGATE HERE
+            </a>
+            <br><br><br>
+        </div>`
+});
+                // EVENT LISTENER FOR WINDOWS
+        marker_imus_historical_marker.addListener('click', function() {
+            infoWindow_imus_historical_marker.open(map, marker_imus_historical_marker);
+            map.setZoom(19);
+            map.panTo(marker_imus_historical_marker.getPosition(), 2000);
+            toggleMenu_16_imus_historical_marker();
+            document.getElementById('sideMenu_1').style.display = 'none';
+            document.getElementById('sideMenu_2').style.display = 'none';
+            document.getElementById('sideMenu_3').style.display = 'none';
+            document.getElementById('sideMenu_4').style.display = 'none';
+            document.getElementById('sideMenu_5').style.display = 'none';
+            document.getElementById('sideMenu_6').style.display = 'none';
+            document.getElementById('sideMenu_7').style.display = 'none';
+            document.getElementById('sideMenu_8').style.display = 'none';
+            document.getElementById('sideMenu_9').style.display = 'none';
+            document.getElementById('sideMenu_10').style.display = 'none';
+            document.getElementById('sideMenu_11').style.display = 'none';
+            document.getElementById('sideMenu_12').style.display = 'none';
+            document.getElementById('sideMenu_13').style.display = 'none';
+            document.getElementById('sideMenu_14').style.display = 'none';
+            document.getElementById('sideMenu_15').style.display = 'none';
+            document.getElementById('sideMenu_16').style.display = 'none';
+            document.getElementById('sideMenu_17').style.display = 'block';
 
+        // Add bouncing animation
+        marker_imus_historical_marker.setAnimation(google.maps.Animation.BOUNCE);
+
+        // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+        setTimeout(function() {
+            marker_imus_historical_marker.setAnimation(null);
+        }, 2100);
+        });
+
+        // Add event listener to the button
+        document.getElementById('gotoImusHistoricalMarker').addEventListener('click', function() {
+            // Center the map on the marker's position
+            map.panTo(marker_imus_historical_marker.getPosition(), 2000);
+            map.setZoom(19);
+            // Open the info window
+            infoWindow_imus_historical_marker.open(map, marker_imus_historical_marker);
+            toggleMenu_16_imus_historical_marker();
+
+            // Optionally, animate the marker
+            marker_imus_historical_marker.setAnimation(google.maps.Animation.BOUNCE);
+            // Stop bouncing animation after 3 bounces (approx. 2 seconds)
+            setTimeout(function() {
+                marker_imus_historical_marker.setAnimation(null);
+            }, 2100);
+        });
 
 
 

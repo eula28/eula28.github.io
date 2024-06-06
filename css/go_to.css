@@ -201,3 +201,29 @@ text-underline-offset: 10px;
     font-size: 23px; /* Change cursor to indicate interactivity */
     text-decoration: underline;
     }
+
+#gotoImusHistoricalMarker {
+    position: absolute;
+    top: 645px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoImusHistoricalMarker:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoEnriqueVirata {
+    position: absolute;
+    top: 680px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoEnriqueVirata:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
