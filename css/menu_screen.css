@@ -567,3 +567,41 @@
     font-size: 36px;
     margin-left: 50px;
 }
+
+/*FOR GENERAL LICERIO TOPACIO MARKER */
+.side-menu_15 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.side-menu_15 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_15 a:hover {
+    color: #c62828;
+}
+
+.side-menu_15 .close-btn_15 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}

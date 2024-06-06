@@ -188,3 +188,16 @@ text-underline-offset: 10px;
     font-size: 23px; /* Change cursor to indicate interactivity */
     text-decoration: underline;
     }
+
+#gotoLicerioTopacioMarker {
+    position: absolute;
+    top: 610px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoLicerioTopacioMarker:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
