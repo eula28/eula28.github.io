@@ -227,3 +227,29 @@ text-underline-offset: 10px;
     font-size: 23px; /* Change cursor to indicate interactivity */
     text-decoration: underline;
     }
+
+#gotoTulayTomasMascardo {
+    position: absolute;
+    top: 715px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoTulayTomasMascardo:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }
+
+#gotoGenFlavianoYengko {
+    position: absolute;
+    top: 750px;
+    left: 40px;
+    font-size: 20px;
+}
+#gotoGenFlavianoYengko:hover {
+    color: #29ff3e; /* Change color on hover */
+    cursor: pointer;
+    font-size: 23px; /* Change cursor to indicate interactivity */
+    text-decoration: underline;
+    }

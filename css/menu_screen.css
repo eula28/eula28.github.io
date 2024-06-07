@@ -681,3 +681,79 @@
     font-size: 36px;
     margin-left: 50px;
 }
+
+/*FOR TULAY TOMAS MASCARDO */
+.side-menu_18 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.side-menu_18 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_18 a:hover {
+    color: #c62828;
+}
+
+.side-menu_18 .close-btn_18 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*FOR GEN FLAVIANO YENGKO */
+.side-menu_19 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: height 0.5s;
+    padding-top: 0px;
+    z-index: 1000;
+    background-image: url('navigation_menu_bg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.side-menu_19 a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu_19 a:hover {
+    color: #c62828;
+}
+
+.side-menu_19 .close-btn_19 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
